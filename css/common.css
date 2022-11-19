@@ -1,0 +1,8 @@
+@import './reset.css';
+
+body { font-family: LWhite; }
+
+.inner { width: calc( 100vw * 1440 / 1920 ); }
+.blind { display: none; }
+
+.Opening { display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; color: #fff; background-image: url(../source/Asset4.png); background-size: cover; font-family: LBlack; font-size: 70px; }
