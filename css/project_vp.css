@@ -1,0 +1,13 @@
+@import './reset.css';
+
+.projectImg article { height: 100vh; display: flex; justify-content: center; align-items: center; }
+.projectImg article img { width: calc( 100vw * 1000 / 1920 ); box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #ddd; }
+
+/* --------------- code explanation ----------------- */
+.codeEx { background: #e3e3e3; padding: calc( 100vw * 200 / 1920 ); }
+.codeEx h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; }
+
+.codeEx article { margin: calc( 100vw * 100 / 1920 ) 0; }
+.codeEx article h3 { margin-bottom: calc( 100vw * 60 / 1920 ); font-size: calc( 100vw * 30 / 1920 ); font-family: LBold;}
+.codeEx article p { width: calc( 100vw * 600 / 1920 ); word-break: keep-all; line-height: 150%; }
+.codeEx article img { width: calc( 100vw * 600 / 1920 ); border-radius: calc( 100vw * 20 / 1920 ); }

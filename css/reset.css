@@ -1,48 +1,148 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-a { 
-	text-decoration: none; color: #000; 
-} 
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: LWhite;
+}
+
+.inner {
+    width: calc(100vw * 1440 / 1920);
+    margin: 0 auto;
+}
+
+.blind {
+    display: none;
+}
 
 /* --------------------- font ---------------------------- */
 
@@ -50,30 +150,37 @@ a {
     font-family: LWhite;
     src: url(../source/LeferiPointWhite.ttf);
 }
+
 @font-face {
     font-family: LRegular;
     src: url(../source/LeferiBaseRegular.ttf);
 }
+
 @font-face {
     font-family: LBold;
     src: url(../source/LeferiBaseBold.ttf);
 }
+
 @font-face {
     font-family: LBlack;
     src: url(../source/LeferiPointBlack.ttf);
 }
+
 @font-face {
     font-family: LSpecial;
     src: url(../source/LeferiPointSpecial.ttf);
 }
+
 @font-face {
     font-family: LWhiteOB;
     src: url(../source/LeferiPointWhiteOblique.ttf);
 }
+
 @font-face {
     font-family: LBlackOB;
     src: url(../source/LeferiPointBlackOblique.ttf);
 }
+
 @font-face {
     font-family: LSpecialIt;
     src: url(../source/LeferiPointSpecialItalic.ttf);

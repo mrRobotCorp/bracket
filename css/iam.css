@@ -1,0 +1,73 @@
+@import './reset.css';
+.mainBanner { display: flex; align-items: center; height: 100vh; } 
+
+.mainBanner .introduce p { width: calc( 100vw * 530 / 1920 ); font-size: calc( 100vw * 23 / 1920 ); line-height: 130%; word-break: keep-all; } 
+.mainBanner .introduce p:first-child { margin-bottom: calc( 100vw * 20 / 1920 ); line-height: 160%; } 
+
+.mainBanner article { width: 100%; display: flex; justify-content: space-between; align-items: center;}
+
+.mainBanner .mainVisual { position: relative; margin-top: calc( 100vw * 160 / 1920 ); background: url(../source/iam_bannerBg.png) center center no-repeat; background-size: contain; width: calc( 100vw * 590 / 1920 ); height: calc( 100vw * 200 / 1920 );}
+.mainBanner .mainVisual p { position: absolute; font-family: LSpecial; }
+.mainBanner .mainVisual p:first-child { top: calc( 100vw * -180 / 1920 ); left: calc( 100vw * 110 / 1920 ); transform: rotate(-13deg); font-size: calc( 100vw * 45 / 1920 ); }
+.mainBanner .mainVisual p:nth-child(2) { top: calc( 100vw * -140 / 1920 ); left: calc( 100vw * 270 / 1920 ); transform: rotate(-12deg); font-size: calc( 100vw * 60 / 1920 ); }
+.mainBanner .mainVisual p:nth-child(3) { top: calc( 100vw * -30 / 1920 ); left: calc( 100vw * 70 / 1920 ); transform: rotate(10deg); font-size: calc( 100vw * 33 / 1920 ); }
+.mainBanner .mainVisual p:nth-child(4) { top: calc( 100vw * -10 / 1920 ); left: calc( 100vw * 335 / 1920 ); transform: rotate(-4deg); font-size: calc( 100vw * 40 / 1920 ); }
+
+.mainVisual .visual_circle span { position: absolute; width: calc( 100vw * 30 / 1920 ); height: calc( 100vw * 30 / 1920 ); border-radius: 50%; }
+.mainVisual .visual_circle span:first-child { top: calc( 100vw * -120 / 1920 ); left: calc( 100vw * 40 / 1920 ); background: #EC4636; }
+.mainVisual .visual_circle span:nth-child(2) { top: calc( 100vw * -220 / 1920 ); left: calc( 100vw * 400 / 1920 ); background: #FFD72F; }
+.mainVisual .visual_circle span:nth-child(3) { top: calc( 100vw * -90 / 1920 ); left: calc( 100vw * 150 / 1920 ); background: #5344FF; }
+.mainVisual .visual_circle span:last-child { top: calc( 100vw * -60 / 1920 ); left: calc( 100vw * 480 / 1920 ); background: #EC4636; }
+
+/* ------------------ banner ----------------------- */
+.introBanner { height: 45vh; background: url(../source/gradient2.jpg) center center no-repeat fixed; background-size: cover; } 
+.introBanner article { height: 100%; display: flex; justify-content: flex-start; align-items: center; } 
+.introBanner article p { font-size: calc( 100vw * 35 / 1920); line-height: 160%; } 
+
+/* --------------- profile ---------------------- */
+.profile { height: 100vh; padding-top: calc( 100vw * 200 / 1920 ); } 
+.profile h2 { margin-bottom: calc( 100vw * 60 / 1920 ); color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
+.profile article { display: flex; justify-content: space-around; align-items: stretch; } 
+
+.profile .mainProfile { width: calc( 100vw * 480 / 1920 ); position: relative; margin-right: calc( 100vw * 150 / 1920 ); } 
+.profile .mainProfile::before { content: ''; position: absolute; top: calc( 100vw * 10/ 1920 ); background: #EC4636; width: calc( 100vw * 400 / 1920 ); height: calc( 100vw * 400 / 1920 ); border-radius: 50%; } 
+
+.profile .profileInfo { display: flex; flex-wrap: wrap; justify-content: space-between; } 
+.profile .profileInfo dl dt { margin-bottom: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 25 / 1920 ); font-family: LBold; } 
+.profile .profileInfo dl dd { line-height: 160%; } 
+
+.profile .profileInfo .skills dd { display: inline-block; position: relative; padding: calc( 100vw * 10 / 1920 ) calc( 100vw * 30 / 1920 ) calc( 100vw * 10 / 1920 ) calc( 100vw * 70 / 1920 ); margin: calc( 100vw * 15 / 1920 ) calc( 100vw * 6 / 1920 ); border: calc( 100vw * 2 / 1920 ) solid #444; border-radius: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(2)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_js.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(3)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_html.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(4)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_css.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(5)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_jq.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(6)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_react.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(7)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_three.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+.profile .profileInfo .skills dd:nth-child(8)::before { content: ''; position: absolute; top: calc( 100vw * 8 / 1920 ); left: calc( 100vw * 15 / 1920 ); background: url(../source/icon_node.png) center center no-repeat; background-size: contain; width: calc( 100vw * 42 / 1920 ); height: calc( 100vw * 40 / 1920 ); } 
+
+.profile .profileInfo .contact dd { display: inline-block; } 
+.profile .profileInfo .contact img { width: calc( 100vw * 50 / 1920 ); margin-right: calc( 100vw * 20 / 1920 ); } 
+
+/* -------------------- mystory ---------------------- */
+.mystory { padding-bottom: calc( 100vw * 400 / 1920 );}
+.mystory h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial }
+.mystory .experience { position: relative; }
+.mystory .experience div { position: absolute; width: calc( 100vw * 500 / 1920 ); padding: calc( 100vw * 50 / 1920 ) 0; background-color: #fff; line-height: 150%; word-break: keep-all; } 
+.mystory .experience div h4 { margin-bottom: calc( 100vw * 20 / 1920 ); font-family: LBold; font-size: calc( 100vw * 30 / 1920 ); }
+.mystory .experience .stu_finance { top: calc( 100vw * 400 / 1920 ); right: calc( 100vw * 50 / 1920 ); }
+.mystory .experience .stu_health { top: calc( 100vw * 1000 / 1920 ); left: calc( 100vw * 50 / 1920 ); }
+.mystory .experience .stu_design { top: calc( 100vw * 1500 / 1920 ); right: calc( 100vw * 50 / 1920 ); }
+.mystory .experience .stu_program { top: calc( 100vw * 2820 / 1920 ); left: calc( 100vw * 450 / 1920 ); text-align: center; }
+
+.mystory .experience svg { display: block; margin: 0 auto; } 
+
+/* ---------------------- getInTouch ------------------------- */
+
+.getInTouch { height: 90vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
+.getInTouch h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; }
+
+.getInTouch .svgMail circle, .svgMail .svgPath, .svgMail .svgTxt { transition: all .4s; }
+.getInTouch .svgMail:hover { filter: drop-shadow(calc( 100vw * 3 / 1920 ) calc( 100vw * 3 / 1920 ) calc( 100vw * 25 / 1920 ) rgba(183, 183, 183, 0.502));}
+.getInTouch .svgMail:hover circle, .svgMail:hover .svgPath { fill: #fff; }
+.getInTouch .svgMail:hover .svgTxt { fill: #000; } 
+.getInTouch .svgMail:hover .svgPath { stroke-dashoffset: -13.5; }

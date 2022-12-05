@@ -1,8 +1,46 @@
 @import './reset.css';
+body { overflow-x: hidden; } 
 
-body { font-family: LWhite; }
+/* ------------------- header ------------------- */
+header { position: fixed; width: 100vw; display: flex; justify-content: center; align-items: center; top: 0; height: calc( 100vw * 83 / 1920 ); background: rgba(237, 237, 237, 0.304); backdrop-filter: blur(5px); z-index: 100; transition: all .4s; } 
 
-.inner { width: calc( 100vw * 1440 / 1920 ); }
-.blind { display: none; }
+header nav #gnb::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; white-space: nowrap; } 
+header nav #gnb::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; white-space: nowrap; } 
 
-.Opening { display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; color: #fff; background-image: url(../source/Asset4.png); background-size: cover; font-family: LBlack; font-size: 70px; }
+header nav #gnb li { display: none; margin: 0 calc( 100vw * 40 / 1920 ); padding: calc( 100vw * 8 / 1920 ) calc( 100vw * 18 / 1920 ); font-family: LBlack; font-size: calc( 100vw * 20 / 1920 ); } 
+header nav #gnb li.show { animation: show .5s ease-out; } 
+header nav #gnb li.hide { transition: all .4s; animation: hide .5s ease-in-out; } 
+
+header nav #gnb li.active { background-color: #EC4636; border-radius: calc( 100vw * 20 / 1920 ); } 
+header nav #gnb li.active a { color: #fff; } 
+
+@keyframes show { 
+ 0% { opacity: 0; margin: 0 calc( 100vw * -50 / 1920 ); } 
+ 30% { opacity: .3; margin: 0 calc( 100vw * -10 / 1920 ); } 
+ 100% { opacity: 1; margin: 0 calc( 100vw * 40 / 1920 ); } 
+}
+
+@keyframes hide { 
+ 0% { opacity: 1; margin: 0 calc( 100vw * 40 / 1920 ); } 
+ 100% { opacity: 1; margin: 0 calc( 100vw * -50 / 1920 ); } 
+}
+
+/* ------------------------------------------------- */
+.Opening { display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; color: #fff; background-image: url(../source/Asset4.png); background-size: cover; font-family: LBlack; font-size: 70px; } 
+
+::selection { color: #fff; background: #EC4636; } 
+
+::-webkit-scrollbar { width: calc(100vw * 12 / 1920); } 
+
+::-webkit-scrollbar-thumb { background-color: #EC4636; border-radius: calc(100vw * 5 / 1920); } 
+
+::-webkit-scrollbar-track { background-color: transparent; z-index: -10; } 
+
+.italic { font-family: LSpecialIt; } 
+
+.bold { font-family: LBlack; } 
+
+/* ---------------------- footer --------------------------- */
+
+footer { height: calc( 100vw * 100 / 1920 ); display: flex; justify-content: center; align-items: center; background: #e4e4e4c8; padding: 0 calc( 100vw * 30 / 1920 ); } 
+footer p { font-size: calc( 100vw * 15 / 1920 ); } 
