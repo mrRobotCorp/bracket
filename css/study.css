@@ -1,0 +1,11 @@
+h1 { position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%) scale(1.0,1.2); text-align: center; vertical-align: middle; margin: auto; letter-spacing: 0px; font-size: 4vw; color: #fff; /* mix-blend-mode: exclusion; */}
+
+#container { position: fixed; top: 0;}
+
+.stuAll { position: absolute; margin: 0 calc( 100vw * 250 / 1920); top: 10%; z-index: 10; }
+.stuAll section { height: 80vh; margin: calc( 100vw * 100 / 1920 ) 0; padding: calc( 100vw * 50 / 1920 ) calc( 100vw * 50 / 1920 ); background: #ffffff56; border: calc( 100vw * 1 / 1920 ) solid #ffffff65; border-radius: calc( 100vw * 50 / 1920 ); backdrop-filter: blur(3px); line-height: 150%; }
+
+.stuAll section article h3 { font-size: calc( 100vw * 30 / 1920 ); font-family: LSpecial; }
+.stuAll section article p { width: calc( 100vw * 700 / 1920 );}
+
+footer { width: 100vw; margin-left: calc( 100vw * -250 / 1920 ); }

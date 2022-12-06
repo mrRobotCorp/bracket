@@ -1,3 +1,4 @@
+// --------------------------- mainBanner bg ----------------------------
 document.querySelector('.main').addEventListener("pointermove", (e)=>{
     const { currentTarget: el, clientX: x, clientY: y } = e;
     const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
@@ -5,6 +6,7 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
     el.style.setProperty('--posY',  y-t-h/2);
 })
 
+// -------------------------------------------------------------
 document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
   <img class='overview_img0' src='./source/overview_img0.png'>
 `)
@@ -17,7 +19,28 @@ document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
   <img class='overview_img2' src='./source/overview_img2.png'>
 `)
 
-// ----------------- hover img change --------------------------
+// ------------------------- keyword scrollTrigger -----------------------------------
+gsap.registerPlugin(ScrollTrigger);
+
+const showDemo = () => {
+  document.body.style.overflow = 'auto';
+  document.scrollingElement.scrollTo(0, 0);
+
+  gsap.utils.toArray('section').forEach((section, index) => {
+    const w = section.querySelectorAll('.wrapper');
+    const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+    gsap.fromTo(w, { x }, {
+      x: xEnd,
+      scrollTrigger: {
+        trigger: section,
+        scrub: 0.5 } });
+  });
+  };
+
+showDemo();
+
+
+// ----------------- thumbnail img change --------------------------
 const overview_img0 = document.querySelector('.overview_img0');
 const overview_img2 = document.querySelector('.overview_img2');
 

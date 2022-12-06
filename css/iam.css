@@ -1,7 +1,7 @@
 @import './reset.css';
 .mainBanner { display: flex; align-items: center; height: 100vh; } 
 
-.mainBanner .introduce p { width: calc( 100vw * 530 / 1920 ); font-size: calc( 100vw * 23 / 1920 ); line-height: 130%; word-break: keep-all; } 
+.mainBanner .introduce p { width: calc( 100vw * 530 / 1920 ); font-size: calc( 100vw * 23 / 1920 ); line-height: 130%; } 
 .mainBanner .introduce p:first-child { margin-bottom: calc( 100vw * 20 / 1920 ); line-height: 160%; } 
 
 .mainBanner article { width: 100%; display: flex; justify-content: space-between; align-items: center;}
@@ -53,7 +53,7 @@
 .mystory { padding-bottom: calc( 100vw * 400 / 1920 );}
 .mystory h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial }
 .mystory .experience { position: relative; }
-.mystory .experience div { position: absolute; width: calc( 100vw * 500 / 1920 ); padding: calc( 100vw * 50 / 1920 ) 0; background-color: #fff; line-height: 150%; word-break: keep-all; } 
+.mystory .experience div { position: absolute; width: calc( 100vw * 500 / 1920 ); padding: calc( 100vw * 50 / 1920 ) 0; background-color: #fff; line-height: 150%; } 
 .mystory .experience div h4 { margin-bottom: calc( 100vw * 20 / 1920 ); font-family: LBold; font-size: calc( 100vw * 30 / 1920 ); }
 .mystory .experience .stu_finance { top: calc( 100vw * 400 / 1920 ); right: calc( 100vw * 50 / 1920 ); }
 .mystory .experience .stu_health { top: calc( 100vw * 1000 / 1920 ); left: calc( 100vw * 50 / 1920 ); }
@@ -61,6 +61,28 @@
 .mystory .experience .stu_program { top: calc( 100vw * 2820 / 1920 ); left: calc( 100vw * 450 / 1920 ); text-align: center; }
 
 .mystory .experience svg { display: block; margin: 0 auto; } 
+
+/* .mystory .experience svg {
+    max-width: 600px;
+    overflow: visible;
+    margin-top: 60vh;
+  }
+  
+  .ball {
+    fill: #000;
+    visibility: hidden;
+  }
+  
+  .line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2px;
+  }
+  text {
+    fill: #000;
+    font-size: 15px; 
+    visibility: hidden;
+  } */
 
 /* ---------------------- getInTouch ------------------------- */
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,10 +22,11 @@
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
 
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/overview.css">
+    <link rel="stylesheet" href="./css/overview02.css">
 
     <title>In Bracket | Project</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -33,60 +35,73 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./project.html">Project</a></li>
                 <li><a href="./study.html">Study</a></li>
-                <li><a href="./iam.html">Iam</a></li> 
+                <li><a href="./iam.html">Iam</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="scrollbar">
-        <div class="wrapper">
-            <div class="item">
-                <div>
-                    <h3>알픽 : Alpick</h3>
+    <div class="images-wrapper">
+        <div class="image-container image-1">
+            <div class="image"></div>
+        </div>
+        <div class="image-container image-2">
+            <div class="image"></div>
+        </div>
+        <div class="image-container image-3">
+            <div class="image"></div>
+        </div>
+    </div>
+
+    <div class="text-container">
+        <div class="text-wrapper">
+            <div class="title-container">
+                <div class="title-item active">Alpick</div>
+                <div class="title-item">Vegan Planner</div>
+                <div class="title-item">JS Class Project</div>
+            </div>
+            <div class="number-container">
+                <div class="number-item active">
+                    <h3>01</h3>
                     <p>
                         졸업학기에 마지막으로 진행했던 팀 프로젝트 웹사이트.
                         알픽은 AI 캐릭터가 건강한 음주 습관을 형성하도록 도와주는 앱 서비스입니다.
                         해당 앱 서비스를 기획 단계부터 디자인까지 소개하기 위한 웹사이트입니다. 
                     </p>
                 </div>
-                <a href="./project_alpick.html">
-                    <img class="thumbnail" src="./source/project0.png">
-                </a>
-            </div>
-            <div class="item">
-                <div>
-                    <h3>비플 : Vegan Planner</h3>
+                <div class="number-item">
+                    <h3>02</h3>
                     <p>
                         국제 커뮤니케이션 디자인 공모전에 출전하였던 웹사이트. 
                         비건 생활에 도움을 주는 앱 서비스를 소개하고 디자인을 
                         설명하는 내용의 웹사이트입니다.
                     </p>
                 </div>
-                <a href="./project_vp.html">
-                    <img class="thumbnail" src="./source/overview_img0.png">
-                </a>
-            </div>
-            <div class="item">
-                <div>
-                    <h3>비플 : Vegan Planner</h3>
+                <div class="number-item">
+                    <h3>03</h3>
                     <p>
-                        2학년 1학기, 자바스크립트 강의 중 배운 기능들을 토대로 제작해 본 과제물 프로젝트. 
-                        JS를 통해 반응형 웹을 구현하였습니다.
+                        졸업학기에 마지막으로 진행했던 팀 프로젝트 웹사이트.
+                        알픽은 AI 캐릭터가 건강한 음주 습관을 형성하도록 도와주는 앱 서비스입니다.
+                        해당 앱 서비스를 기획 단계부터 디자인까지 소개하기 위한 웹사이트입니다. 
                     </p>
                 </div>
-                <img class="thumbnail" src="./source/project0.png">
+            </div>
+            <div class="date-container">
+                <p class="date-item active">view on website</p>
+                <p class="date-item">view on website</p>
+                <p class="date-item">view on website</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <p>© All rights reserved Yoon A Kim.</p>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="./js/header.js"></script>
-    <script src="./js/smooth-scrollbar.js"></script>
-    <script src="./js/overview.js"></script>
+    <script src="./js/overview02.js"></script>
 </body>
+
 </html>
