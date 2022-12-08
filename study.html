@@ -40,7 +40,7 @@
         </nav>
     </header>
 
-    <div id="container"></div>
+    <div class="p-gradation js-target"></div>
 
     <div class="stuAll inner">
         <section class="stuJS">
@@ -84,58 +84,6 @@
         </footer>
     </div>
 
-
-    <script id="vertexShader" type="x-shader/x-vertex">
-        void main() {
-            gl_Position = vec4( position, 1.0 );
-        }
-    </script>
-
-    <script id="fragmentShader" type="x-shader/x-fragment">
-        #ifdef GL_ES
-        precision mediump float;
-        #endif
-        uniform float time;
-        uniform vec2 resolution;
-    
-        const int   complexity      =3;    // More points of color.
-        const float fluid_speed     = 11.0;  // スピード
-        const float color_intensity = 0.8;  //明度
-    
-        float random (in vec2 st) {
-            return fract(sin(dot(st.xy,
-                                vec2(12.9898,78.233)))
-                        * 43758.5453123);
-        }
-    
-        void main(){
-            vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-    
-    
-            float r = sqrt( dot( uv, uv ) );
-            for(int i=1;i<complexity;i++){
-            vec2 newUv = uv + time*0.01; //模様の移動
-    
-            newUv.x+= 1.5/float(i) * 
-                        sin(float(i) * uv.y + time/fluid_speed) 
-                        + 1.0;
-            
-            newUv.y+= 1.4/float(i) * 
-                        cos(float(i) * uv.x + time/fluid_speed) 
-                        - 0.9;
-            uv=newUv;
-            }
-    
-            vec3 col = vec3(color_intensity*cos(uv.x)*0.9,
-                            color_intensity*sin(uv.x)*sqrt(cos(time*0.01)),
-                            color_intensity);
-    
-            gl_FragColor=vec4(col, 1.0);
-        }
-    </script>
-
-
-    
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
