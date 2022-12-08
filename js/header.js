@@ -29,6 +29,26 @@ $(window).on('load', function(){
         $('header #gnb > li').eq(3).addClass('active');
     } else {
         $('header #gnb > li').eq(0).addClass('active'); 
-        //메인 url은 main이라는 단어가 들어가지 않아서 모든 조건이 아닐때 실행하도록 함
+        //메인 url은 main이라는 단어가 들어가지 않아서 모든 조건이 아닐때 실행
     }
 });
+
+// -----------------------------------------------------------
+const cursor = document.createElement("div");
+cursor.setAttribute("class", "cursor");
+const follower = document.createElement("div");
+follower.setAttribute("class", "cursor_follower");
+
+document.querySelector("body").prepend(cursor, follower);
+
+function myCursor(e) {
+    cursor.style.top = e.pageY + 20 + "px";
+    cursor.style.left = e.pageX + 20 + "px";
+}
+
+function Trailer(e) {
+    gsap.to(follower, { duration: 0.5, left: e.pageX - 10, top: e.pageY - 10 });
+}
+
+window.addEventListener("mousemove", myCursor);
+window.addEventListener("mousemove", Trailer);
