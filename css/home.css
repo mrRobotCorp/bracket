@@ -14,10 +14,6 @@ section ul { padding-left: 1rem; list-style: none; }
 
 section li { flex-shrink: 0; padding-right: 1rem; } 
 
-.df { display: flex } 
-.aic { align-items: center } 
-.jcc { justify-content: center } 
-
 .wordsAll { overflow-x: hidden; padding-bottom: calc( 100vw * 50 / 1920 ); } 
 
 .wrapper { display: flex; } 
