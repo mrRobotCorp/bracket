@@ -3,7 +3,7 @@
 .projectImg article .pro_thumbnail { width: calc( 100vw * 1000 / 1920 ); box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #ddd; } 
 
 .thumbHover::before { content: 'view\Aon\Awebsite'; display: flex; justify-content: center; align-items: center; text-align: center; margin-top: calc( 100vw * 15 / 1920 ); white-space: pre; line-height: 150%; font-size: calc( 100vw * 24 / 1920); font-family: LBold; }
-.thumbHover { width: calc( 100vw * 150 / 1920 ); height: calc( 100vw * 150 / 1920 ); border: calc( 100vw * 2 / 1920 ) solid #EC4636; color: #EC4636; background: transparent; backdrop-filter: blur(3px);}
+.thumbHover { width: calc( 100vw * 150 / 1920 ); height: calc( 100vw * 150 / 1920 ); border: calc( 100vw * 2 / 1920 ) solid #EC4636; color: #EC4636; background: transparent; backdrop-filter: blur(3px); transition: width .4s ease, height .4s ease; overflow: hidden; }
 
 .container { display: flex; justify-content: center; align-items: center;}
 

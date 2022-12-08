@@ -33,7 +33,7 @@ $(window).on('load', function(){
     }
 });
 
-// -----------------------------------------------------------
+// ----------------------- custom mouse --------------------------------
 const cursor = document.createElement("div");
 cursor.setAttribute("class", "cursor");
 const follower = document.createElement("div");
@@ -42,8 +42,8 @@ follower.setAttribute("class", "cursor_follower");
 document.querySelector("body").prepend(cursor, follower);
 
 function myCursor(e) {
-    cursor.style.top = e.pageY + 20 + "px";
-    cursor.style.left = e.pageX + 20 + "px";
+    cursor.style.top = e.pageY + 10 + "px";
+    cursor.style.left = e.pageX + 10 + "px";
 }
 
 function Trailer(e) {
