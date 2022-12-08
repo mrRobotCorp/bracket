@@ -3,7 +3,7 @@
 header { background: rgba(255, 255, 255, 0.804); }
 
 .projectImg { position: relative; }
-.projectImg::before { content: ''; position: absolute; top: 0; width: 100vw; height: 100vh; background: url(../source/overview_img0.png) center center no-repeat; background-size: cover; filter: blur(5px) brightness(.8); }
+.projectImg::before { content: ''; position: absolute; top: 0; width: 100vw; height: 100vh; background: url(../source/overview_img0.png) center center no-repeat; background-size: cover; filter: blur(5px) brightness(.8); opacity: .7;}
 
 .projectImg article { height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 10;} 
 .projectImg article .pro_thumbnail { width: calc( 100vw * 1100 / 1920 ); box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #47474761; backdrop-filter: blur(5px); } 

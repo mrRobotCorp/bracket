@@ -1,3 +1,4 @@
+// ------------------ img hover custom mouse ------------------
 const thumbnail = document.querySelectorAll(".pro_thumbnail");
 
 thumbnail.forEach(function (thumb) {
@@ -21,7 +22,7 @@ thumbnail.forEach(function (thumb) {
     });
 });
 
-
+// ------------------------------------------
 document.querySelector('.pro_thumbnail').insertAdjacentHTML('afterend', `
     <div class="container">
         <div class="chevron"></div>
