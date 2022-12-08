@@ -32,13 +32,13 @@ body { overflow-x: hidden; }
 }
 
 /* ------------------- header ------------------- */
-header { position: fixed; width: 100vw; display: flex; justify-content: center; align-items: center; top: 0; height: calc( 100vw * 83 / 1920 ); background: rgba(237, 237, 237, 0.304); backdrop-filter: blur(5px); z-index: 100; transition: all .4s; } 
+header { position: fixed; width: 100vw; display: flex; justify-content: center; align-items: center; top: 0; height: calc( 100vw * 83 / 1920 ); background: rgba(255, 255, 255, 0.304); backdrop-filter: blur(5px); z-index: 100; transition: all .4s; } 
 
 header nav #gnb::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; white-space: nowrap; } 
 header nav #gnb::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; white-space: nowrap; } 
 
 header nav #gnb li { display: none; margin: 0 calc( 100vw * 40 / 1920 ); padding: calc( 100vw * 8 / 1920 ) calc( 100vw * 18 / 1920 ); border-radius: calc( 100vw * 20 / 1920 ); font-family: LBlack; font-size: calc( 100vw * 20 / 1920 ); transition: all .3s ease-in-out; } 
-header nav #gnb li a { transition: all .1s ease-in-out; }
+header nav #gnb li a { transition: all .3s ease-in-out; }
 header nav #gnb li:hover { background-color: #EC4636;  }
 header nav #gnb li:hover a { color: #fff; }
 

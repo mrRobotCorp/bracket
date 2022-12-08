@@ -1,9 +1,18 @@
 document.querySelector('.mainBanner article').insertAdjacentHTML('afterbegin', `
     <div class='introduce'>
-        <p>탄탄한 마크업을 기초로 다양하고 새로운 시각을 가지고 바라보는 개발자 김윤아입니다.</p>
+        <p>탄탄한 마크업을 기초로 <span class="text-highlight">다양하고 새로운 시각</span>을 가지고 바라보는 <span class="text-highlight">개발자 김윤아</span>입니다.</p>
         <p>Hello, I’m developer who looks at various and new perspectives based on a solid markup.</p>
     </div>
 `);
+
+const highlight = document.querySelectorAll(".text-highlight");
+
+window.addEventListener('load', function () {
+    highlight.forEach( function(line) {
+        line.classList.add("lineActive");
+    })
+    
+});
 
 document.querySelector('.mainVisual').insertAdjacentHTML('afterbegin', `
     <p><span class="italic">C</span>reat<span class="italic">ive</span></p>

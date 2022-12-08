@@ -25,9 +25,7 @@ bullets[active].classList.add('active');
 scrollbar.addListener(listener);
 
 
-/*--------------------
-Pagination
--------------------*/
+// ------------------ page bullet --------------------
 let active = 0;
 let pag, bullets;
 

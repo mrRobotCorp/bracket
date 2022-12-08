@@ -1,23 +1,27 @@
 @import './reset.css';
+header { background: rgba(224, 224, 224, 0.34); } 
+
 .mainBanner { display: flex; align-items: center; height: 100vh; } 
+.mainBanner article { width: 100%; display: flex; justify-content: space-between; align-items: center; } 
 
 .mainBanner .introduce p { width: calc( 100vw * 530 / 1920 ); font-size: calc( 100vw * 23 / 1920 ); line-height: 130%; } 
-.mainBanner .introduce p:first-child { margin-bottom: calc( 100vw * 20 / 1920 ); line-height: 160%; } 
+.mainBanner .introduce p:first-child { margin-bottom: calc( 100vw * 20 / 1920 ); line-height: 180%; } 
 
-.mainBanner article { width: 100%; display: flex; justify-content: space-between; align-items: center;}
+.text-highlight { background-repeat: no-repeat; background-size: 0% 100%; transition: color calc(4s / 4) cubic-bezier(0.25, 1, 0.52, 1.1), background-color calc(4s / 4) cubic-bezier(0.25, 1, 0.52, 1.1), background-size 4s cubic-bezier(0.25, 1, 0.52, 1.1); transition-delay: .6s; } 
+.lineActive { padding: 0 calc( 100vw * 6 / 1920 ); background-size: 100% 100%; background-image: linear-gradient(#FFD72F, #FFD72F); } 
 
-.mainBanner .mainVisual { position: relative; margin-top: calc( 100vw * 160 / 1920 ); background: url(../source/iam_bannerBg.png) center center no-repeat; background-size: contain; width: calc( 100vw * 590 / 1920 ); height: calc( 100vw * 200 / 1920 );}
-.mainBanner .mainVisual p { position: absolute; font-family: LSpecial; }
-.mainBanner .mainVisual p:first-child { top: calc( 100vw * -180 / 1920 ); left: calc( 100vw * 110 / 1920 ); transform: rotate(-13deg); font-size: calc( 100vw * 45 / 1920 ); }
-.mainBanner .mainVisual p:nth-child(2) { top: calc( 100vw * -140 / 1920 ); left: calc( 100vw * 270 / 1920 ); transform: rotate(-12deg); font-size: calc( 100vw * 60 / 1920 ); }
-.mainBanner .mainVisual p:nth-child(3) { top: calc( 100vw * -30 / 1920 ); left: calc( 100vw * 70 / 1920 ); transform: rotate(10deg); font-size: calc( 100vw * 33 / 1920 ); }
-.mainBanner .mainVisual p:nth-child(4) { top: calc( 100vw * -10 / 1920 ); left: calc( 100vw * 335 / 1920 ); transform: rotate(-4deg); font-size: calc( 100vw * 40 / 1920 ); }
+.mainBanner .mainVisual { position: relative; margin-top: calc( 100vw * 160 / 1920 ); background: url(../source/iam_bannerBg.png) center center no-repeat; background-size: contain; width: calc( 100vw * 590 / 1920 ); height: calc( 100vw * 200 / 1920 ); } 
+.mainBanner .mainVisual p { position: absolute; font-family: LSpecial; } 
+.mainBanner .mainVisual p:first-child { top: calc( 100vw * -180 / 1920 ); left: calc( 100vw * 110 / 1920 ); transform: rotate(-13deg); font-size: calc( 100vw * 45 / 1920 ); } 
+.mainBanner .mainVisual p:nth-child(2) { top: calc( 100vw * -140 / 1920 ); left: calc( 100vw * 270 / 1920 ); transform: rotate(-12deg); font-size: calc( 100vw * 60 / 1920 ); } 
+.mainBanner .mainVisual p:nth-child(3) { top: calc( 100vw * -30 / 1920 ); left: calc( 100vw * 70 / 1920 ); transform: rotate(10deg); font-size: calc( 100vw * 33 / 1920 ); } 
+.mainBanner .mainVisual p:nth-child(4) { top: calc( 100vw * -10 / 1920 ); left: calc( 100vw * 335 / 1920 ); transform: rotate(-4deg); font-size: calc( 100vw * 40 / 1920 ); } 
 
-.mainVisual .visual_circle span { position: absolute; width: calc( 100vw * 30 / 1920 ); height: calc( 100vw * 30 / 1920 ); border-radius: 50%; }
-.mainVisual .visual_circle span:first-child { top: calc( 100vw * -120 / 1920 ); left: calc( 100vw * 40 / 1920 ); background: #EC4636; }
-.mainVisual .visual_circle span:nth-child(2) { top: calc( 100vw * -220 / 1920 ); left: calc( 100vw * 400 / 1920 ); background: #FFD72F; }
-.mainVisual .visual_circle span:nth-child(3) { top: calc( 100vw * -90 / 1920 ); left: calc( 100vw * 150 / 1920 ); background: #5344FF; }
-.mainVisual .visual_circle span:last-child { top: calc( 100vw * -60 / 1920 ); left: calc( 100vw * 480 / 1920 ); background: #EC4636; }
+.mainVisual .visual_circle span { position: absolute; width: calc( 100vw * 30 / 1920 ); height: calc( 100vw * 30 / 1920 ); border-radius: 50%; } 
+.mainVisual .visual_circle span:first-child { top: calc( 100vw * -120 / 1920 ); left: calc( 100vw * 40 / 1920 ); background: #EC4636; } 
+.mainVisual .visual_circle span:nth-child(2) { top: calc( 100vw * -220 / 1920 ); left: calc( 100vw * 400 / 1920 ); background: #FFD72F; } 
+.mainVisual .visual_circle span:nth-child(3) { top: calc( 100vw * -90 / 1920 ); left: calc( 100vw * 150 / 1920 ); background: #5344FF; } 
+.mainVisual .visual_circle span:last-child { top: calc( 100vw * -60 / 1920 ); left: calc( 100vw * 480 / 1920 ); background: #EC4636; } 
 
 /* ------------------ banner ----------------------- */
 .introBanner { height: 45vh; background: url(../source/gradient2.jpg) center center no-repeat fixed; background-size: cover; } 
@@ -50,47 +54,32 @@
 .profile .profileInfo .contact img { width: calc( 100vw * 50 / 1920 ); margin-right: calc( 100vw * 20 / 1920 ); } 
 
 /* -------------------- mystory ---------------------- */
-.mystory { padding-bottom: calc( 100vw * 400 / 1920 );}
-.mystory h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial }
-.mystory .experience { position: relative; }
+.mystory { padding-bottom: calc( 100vw * 400 / 1920 ); } 
+.mystory h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial } 
+.mystory .experience { position: relative; } 
 .mystory .experience div { position: absolute; width: calc( 100vw * 500 / 1920 ); padding: calc( 100vw * 50 / 1920 ) 0; background-color: #fff; line-height: 150%; } 
-.mystory .experience div h4 { margin-bottom: calc( 100vw * 20 / 1920 ); font-family: LBold; font-size: calc( 100vw * 30 / 1920 ); }
-.mystory .experience .stu_finance { top: calc( 100vw * 400 / 1920 ); right: calc( 100vw * 50 / 1920 ); }
-.mystory .experience .stu_health { top: calc( 100vw * 1000 / 1920 ); left: calc( 100vw * 50 / 1920 ); }
-.mystory .experience .stu_design { top: calc( 100vw * 1500 / 1920 ); right: calc( 100vw * 50 / 1920 ); }
-.mystory .experience .stu_program { top: calc( 100vw * 2820 / 1920 ); left: calc( 100vw * 450 / 1920 ); text-align: center; }
+.mystory .experience div h4 { margin-bottom: calc( 100vw * 20 / 1920 ); font-family: LBold; font-size: calc( 100vw * 30 / 1920 ); } 
+.mystory .experience .stu_finance { top: calc( 100vw * 400 / 1920 ); right: calc( 100vw * 50 / 1920 ); } 
+.mystory .experience .stu_health { top: calc( 100vw * 1000 / 1920 ); left: calc( 100vw * 50 / 1920 ); } 
+.mystory .experience .stu_design { top: calc( 100vw * 1500 / 1920 ); right: calc( 100vw * 50 / 1920 ); } 
+.mystory .experience .stu_program { top: calc( 100vw * 2820 / 1920 ); left: calc( 100vw * 450 / 1920 ); text-align: center; } 
 
 .mystory .experience svg { display: block; margin: 0 auto; } 
 
-/* .mystory .experience svg {
-    max-width: 600px;
-    overflow: visible;
-    margin-top: 60vh;
-  }
-  
-  .ball {
-    fill: #000;
-    visibility: hidden;
-  }
-  
-  .line {
-    fill: none;
-    stroke: #000;
-    stroke-width: 2px;
-  }
-  text {
-    fill: #000;
-    font-size: 15px; 
-    visibility: hidden;
-  } */
+/* .mystory .experience svg { max-width: 600px; overflow: visible; margin-top: 60vh; } 
+ 
+ .ball { fill: #000; visibility: hidden; } 
+ 
+ .line { fill: none; stroke: #000; stroke-width: 2px; } 
+ text { fill: #000; font-size: 15px; visibility: hidden; } */
 
 /* ---------------------- getInTouch ------------------------- */
 
-.getInTouch { height: 90vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
-.getInTouch h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; }
+.getInTouch { height: 90vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; } 
+.getInTouch h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
 
-.getInTouch .svgMail circle, .svgMail .svgPath, .svgMail .svgTxt { transition: all .4s; }
-.getInTouch .svgMail:hover { filter: drop-shadow(calc( 100vw * 3 / 1920 ) calc( 100vw * 3 / 1920 ) calc( 100vw * 25 / 1920 ) rgba(183, 183, 183, 0.502));}
-.getInTouch .svgMail:hover circle, .svgMail:hover .svgPath { fill: #fff; }
+.getInTouch .svgMail circle, .svgMail .svgPath, .svgMail .svgTxt { transition: all .4s; } 
+.getInTouch .svgMail:hover { filter: drop-shadow(calc( 100vw * 3 / 1920 ) calc( 100vw * 3 / 1920 ) calc( 100vw * 25 / 1920 ) rgba(183, 183, 183, 0.502)); } 
+.getInTouch .svgMail:hover circle, .svgMail:hover .svgPath { fill: #fff; } 
 .getInTouch .svgMail:hover .svgTxt { fill: #000; } 
-.getInTouch .svgMail:hover .svgPath { stroke-dashoffset: -13.5; }
+.getInTouch .svgMail:hover .svgPath { stroke-dashoffset: -13.5; } 

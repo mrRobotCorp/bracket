@@ -1,5 +1,7 @@
 @import './reset.css';
 
+header { background: rgba(224, 224, 224, 0.34); }
+
 .scrollbar-track-x { height: 1px !important; bottom: 40px !important; margin: 0 auto !important; left: 0 !important; right: 0 !important; background: rgba(0, 0, 0, 0.06) !important; } 
 .scrollbar-track-x .scrollbar-thumb { height: 3px; top: -1px; background: rgba(0, 0, 0, 0.1); } 
 
