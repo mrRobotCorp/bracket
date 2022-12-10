@@ -10,10 +10,16 @@ document.querySelector('header').addEventListener('mouseover', (e) => {
 
 document.querySelector('header').addEventListener('mouseout', (e) => {
     gnbMenu.forEach( function(menu) {
-        menu.style.display = 'none';
         menu.classList.add('hide');
         menu.classList.remove('show');
-    })
+        menu.style.display = 'none';
+
+        // function gnbHide() {
+        //     setTimeout(() => menu.style.display = 'none', 400);
+        // };
+        // gnbHide();
+        // clearTimeout(gnbHide);
+    });
 });
 
 // ----------------- gnb active ---------------------------

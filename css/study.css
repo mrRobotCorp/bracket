@@ -1,11 +1,11 @@
-.p-gradation { min-width: 100%; min-height: 100%; animation: move_gradation 30s ease infinite; position: fixed; top: 0; left: 0; background: linear-gradient(45deg, #ec4636 0%, rgba(157, 237, 244, 0) 70%), linear-gradient(135deg, #fff851 10%, rgba(235, 170, 236, 0) 80%), linear-gradient(225deg, #f59942 10%, rgba(170, 236, 170, 0) 80%), linear-gradient(315deg, #5344ff 100%, rgba(244, 234, 122, 0) 70%); } 
+.p-gradation { min-width: 100%; min-height: 100%; animation: move_gradation 30s ease infinite; position: fixed; top: 0; left: 0; background: linear-gradient(45deg, rgb(225, 77, 48) 0%, rgba(157, 237, 244, 0) 70%), linear-gradient(135deg, rgb(255, 235, 81) 10%, rgba(235, 170, 236, 0) 80%), linear-gradient(225deg, #f59942 10%, rgba(170, 236, 170, 0) 80%), linear-gradient(315deg, #5344ff 100%, rgba(244, 234, 122, 0) 70%); } 
 
 /* ---------------------------------------------------- */
 .stuAll { position: absolute; width: 80vw; margin: 0 calc( 100vw * 190 / 1920); top: 2%; z-index: 10; } 
-.stuAll section { height: 80vh; margin: calc( 100vw * 100 / 1920 ) 0; padding: calc( 100vw * 60 / 1920 ) calc( 100vw * 70 / 1920 ); background: #ffffff56; border: calc( 100vw * 1 / 1920 ) solid #ffffff65; border-radius: calc( 100vw * 50 / 1920 ); backdrop-filter: blur(3px); line-height: 150%; } 
+.stuAll section { height: 85vh; margin: calc( 100vw * 100 / 1920 ) 0; padding: calc( 100vw * 60 / 1920 ) calc( 100vw * 70 / 1920 ); background: #ffffff56; border: calc( 100vw * 1 / 1920 ) solid #ffffff65; border-radius: calc( 100vw * 50 / 1920 ); backdrop-filter: blur(3px); line-height: 150%; } 
 
 .stuAll section article h3 { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 30 / 1920 ); font-family: LSpecial; } 
-.stuAll section article p { font-size: calc( 100vw * 20 / 1920 ); line-height: 150%; } 
+.stuAll section article p { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); line-height: 150%; } 
 
 /* --------------------- flip ------------------------- */
 .wrapper {
@@ -16,23 +16,22 @@ grid-template-columns: repeat(6, 1fr);
 }
 
 .card {
-cursor: pointer;
-overflow: hidden;
-border-radius: 12px;
-background-color: rgba(255, 255, 255, 0.582);
-grid-column: span 3;
-box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #4d4d4d29;
-height: calc( 100vw * 180 / 1920 );
-padding: 20px;
-display: flex;
-justify-content: flex-end;
-flex-direction: column;
-position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.582);
+    grid-column: span 3;
+    box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #4d4d4d29;
+    height: calc( 100vw * 220 / 1920 );
+    padding: calc( 100vw * 25 / 1920 );
+    border-radius: calc( 100vw * 15 / 1920 );
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .card__heading,
 .card__text {
-height: 15px;
 width: 100%;
 border-radius: 4px;
 }
@@ -43,12 +42,13 @@ width: 50%;
 
 .card__text {
 margin-top: 10px;
+font-size: calc( 100vw * 18 / 1920 );
 }
 
 .card.is-active {
 grid-row: 1;
 grid-column: 1/span 6;
-height: calc( 100vw * 250 / 1920 );
+height: calc( 100vw * 300 / 1920 );
 order: 0;
 }
 .card.is-active:after {
