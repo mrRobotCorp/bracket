@@ -1,3 +1,34 @@
+gsap.registerPlugin(Flip);
+
+const activeClass = "is-active";
+const inactiveClass = "is-inactive";
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card, idx) => {
+card.addEventListener("click", () => {
+    const state = Flip.getState(cards);
+    const isCardActive = card.classList.contains(activeClass);
+
+    cards.forEach((otherCard, otherIdx) => {
+        otherCard.classList.remove(activeClass);
+        otherCard.classList.remove(inactiveClass);
+        if (!isCardActive && idx !== otherIdx)
+        otherCard.classList.add(inactiveClass);
+    });
+
+    if (!isCardActive) {
+        card.classList.add(activeClass);
+    }
+
+    Flip.from(state, {
+        duration: 1,
+        ease: "expo.out",
+        absolute: true });
+
+    });
+});
+
+// --------------- background gradient -----------------
 $(function(){
     var gradation = {
         $content: $(".js-target"),
@@ -13,6 +44,5 @@ $(function(){
     };
     $(window).scroll(function(){
         gradation.scroll();
-        console.log('test')
     });
 });

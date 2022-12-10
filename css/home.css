@@ -11,7 +11,7 @@ background-blend-mode: overlay, difference, difference, difference, difference; 
 /* ---------------- banner ------------------- */
 .wordsAll { overflow-x: hidden; padding-bottom: calc( 100vw * 50 / 1920 ); } 
 
-.wordsAll .wrapper { display: flex; padding-left: 1rem; } 
+.wordsAll .wrapper { display: flex; } 
 .wordsAll .wrapper li {  flex-shrink: 0; padding-right: 1rem;  padding: calc( 100vw * 80 / 1920 ) calc( 100vw * 70 / 1920 ); font-size: calc( 100vw * 80 / 1920 ); box-shadow: calc( 100vw * 2 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 20 / 1920 ) #acacac85; transition: all .4s; }
 .wordsAll .wrapper li:hover { background: #ec45363e; }
 
