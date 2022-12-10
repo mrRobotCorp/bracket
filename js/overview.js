@@ -1,12 +1,9 @@
-
 let option = {
     x: 0,
     speed: 1.5,
     limit: 2,
     time: 0.3 
 };
-
-
 
 /*--------------------
 Init Scrollbar
@@ -16,14 +13,13 @@ overscrollEffect: 'bounce',
 alwaysShowTracks: true });
 
 const listener = status => {
-// console.log('scrollbar', status.offset.x);
-active = parseInt(status.offset.x / 1550);
+    active = parseInt(status.offset.x / 1550);
 
-bullets.forEach(b => {b.classList.remove('active');});
-bullets[active].classList.add('active');
+    bullets.forEach(b => {b.classList.remove('active');});
+    bullets[active].classList.add('active');
 };
-scrollbar.addListener(listener);
 
+scrollbar.addListener(listener);
 
 // ------------------ page bullet --------------------
 let active = 0;
@@ -39,6 +35,7 @@ items.forEach((item, i) => {
     bullet.innerHTML = i;
     pag.appendChild(bullet);
 });
+
 document.getElementById('scrollbar').appendChild(pag);
 bullets = document.querySelectorAll('.bullet');
 
@@ -59,7 +56,6 @@ bullets.forEach((b, i) => {
                 x: x,
                 ease: Power4.easeOut,
                 onUpdate: () => {
-                // window.console.log('option', option.x);
                 scrollbar.scrollTo(option.x, 0, 0);
             } 
         });
@@ -70,9 +66,7 @@ bullets.forEach((b, i) => {
 
 pagination();
 
-/*--------------------
-Mousewheel
--------------------*/
+/* ------------------ Mousewheel ------------------- */
 const horizontalScroll = e => {
 const y = parseInt(e.deltaY * option.speed);
 let x = scrollbar.offset.x + y;

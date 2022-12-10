@@ -9,24 +9,17 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255));
 background-blend-mode: overlay, difference, difference, difference, difference; } 
 
 /* ---------------- banner ------------------- */
-
-section ul { padding-left: 1rem; list-style: none; } 
-
-section li { flex-shrink: 0; padding-right: 1rem; } 
-
 .wordsAll { overflow-x: hidden; padding-bottom: calc( 100vw * 50 / 1920 ); } 
 
-.wrapper { display: flex; } 
-.wrapper li { padding: calc( 100vw * 80 / 1920 ) calc( 100vw * 70 / 1920 ); font-size: calc( 100vw * 80 / 1920 ); box-shadow: calc( 100vw * 2 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 20 / 1920 ) #acacac85; }
-
-/* .keywordAll article p { display: inline-block; padding: calc( 100vw * 35 / 1920 ) calc( 100vw * 45 / 1920 ); font-size: calc( 100vw * 30 / 1920 ); box-shadow: calc( 100vw * 2 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 20 / 1920 ) #acacac85; } */
-
+.wordsAll .wrapper { display: flex; padding-left: 1rem; } 
+.wordsAll .wrapper li {  flex-shrink: 0; padding-right: 1rem;  padding: calc( 100vw * 80 / 1920 ) calc( 100vw * 70 / 1920 ); font-size: calc( 100vw * 80 / 1920 ); box-shadow: calc( 100vw * 2 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 20 / 1920 ) #acacac85; transition: all .4s; }
+.wordsAll .wrapper li:hover { background: #ec45363e; }
 
 /* ----------------- overview --------------------- */
 .overview { height: 190vh; } 
 .overview article { display: flex; justify-content: space-between; align-items: center; } 
 .overview article { margin: calc( 100vw * 180 / 1920 ) 0; } 
 .overview article div h3 { color: #EC4636; margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
-.overview article div p { width: calc( 100vw * 450 / 1920 ); line-height: 150%; } 
+.overview article div p { width: calc( 100vw * 490 / 1920 ); font-size: calc( 100vw * 19 / 1920 ); line-height: 155%; } 
 .overview article img { display: inline-block; width: 49%; box-shadow: calc( 100vw * 3 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 20 / 1920 ) #b0b0b085; } 
 

@@ -3,6 +3,13 @@
 @media screen and (max-width: 800px) {:root { --gutter: 26px; } 
 }
 
+.overview { height: 100vh; }
+
+
+
+
+
+/* ------------------------------------------------ */
 .images-wrapper { display: flex; width: calc(var(--section-count) * 100vw); position: fixed; } 
 
 .image-container {width: 90vw; height: 100vh; display: flex; justify-content: flex-end; align-items: center; } 
