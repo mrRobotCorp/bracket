@@ -11,6 +11,6 @@
 #container .project p { width: calc( 100vw * 500 / 1920 ); line-height: 150%; }
 #container .project .thumbnail { width: calc( 100vw * 800 / 1920 ); box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #90909061; }
 
-.section01 { background: #b1b1b1; }
+.section01 { background: #e4e4e4; }
 .section02 { background: rgb(198, 198, 198); }
-.section03 { background: #b1b1b1; }
+.section03 { background: #dadada; }
