@@ -7,7 +7,7 @@ radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), #EC4636
 linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255));
 background-blend-mode: overlay, difference, difference, difference, difference; } 
 
-.shape { position:absolute; color: #fff; font-size: calc( 100vw * 100 / 1920 ); font-family: LBold; transition: all 5s linear; } 
+.shape { position:absolute; color: #fff; font-size: calc( 100vw * 130 / 1920 ); font-family: LBold; transition: all 5s linear; } 
 
 .a { font-family: LSpecial; } 
 .b { font-family: LSpecialIt; }

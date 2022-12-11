@@ -21,7 +21,7 @@ document.querySelector('.main article').insertAdjacentHTML('afterbegin', `
 
 function makeNewPosition(){
   let shapeHeight = $('.main').height() - 50;
-  let shapeWidth = $('.main').width() - 50;
+  let shapeWidth = $('.main').width() - 80;
 
   let nh = Math.floor(Math.random() * shapeHeight);
   let nw = Math.floor(Math.random() * shapeWidth);
