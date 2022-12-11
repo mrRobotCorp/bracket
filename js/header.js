@@ -69,31 +69,28 @@ document.querySelector('footer').insertAdjacentHTML('beforeend', `
 
             <div class="form-elements">
                 <fieldset class="pure-group">
-                    <label for="name">Name: </label>
+                    <label for="name">보내는 이: </label>
                     <input id="name" name="name" placeholder="Your name" />
                 </fieldset>
 
                 <fieldset class="pure-group">
-                    <label for="message">Message: </label>
+                    <label for="message">메세지: </label>
                     <textarea id="message" name="message" placeholder="Your message that you want to send"></textarea>
                 </fieldset>
 
                 <fieldset class="pure-group">
-                    <label for="email">From:</label>
+                    <label for="email">메일 주소: </label>
                     <input id="email" name="email" type="email" value="" required placeholder="your-address@email.com" />
-                </fieldset>
-
-                <fieldset class="pure-group">
-                    <label for="color">anything: </label>
-                    <input id="color" name="color" placeholder="i wanna jongkang" />
                 </fieldset>
 
                 <button class="button-success">Send</button>
             </div>
 
-            <div class="thankyou_message" style="display:none;">
-                <h4><em>Thanks</em> for contacting us!
-                    We will get back to you soon!</h4>
+            <div class="thankyou_message">
+                <p>
+                    연락 보내주셔서 감사합니다🌈 <br>
+                    빠른 시일 내에 연락드리겠습니다.
+                </p>
             </div>
         </form>
     </div>
