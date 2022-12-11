@@ -69,17 +69,17 @@ document.querySelector('footer').insertAdjacentHTML('beforeend', `
 
             <div class="form-elements">
                 <fieldset class="pure-group">
-                    <label for="name">보내는 이: </label>
+                    <label for="name">보내는 이 : </label>
                     <input id="name" name="name" placeholder="Your name" />
                 </fieldset>
 
                 <fieldset class="pure-group">
-                    <label for="message">메세지: </label>
+                    <label for="message">메세지 : </label>
                     <textarea id="message" name="message" placeholder="Your message that you want to send"></textarea>
                 </fieldset>
 
                 <fieldset class="pure-group">
-                    <label for="email">메일 주소: </label>
+                    <label for="email">메일 주소 : </label>
                     <input id="email" name="email" type="email" value="" required placeholder="your-address@email.com" />
                 </fieldset>
 

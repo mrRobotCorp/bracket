@@ -79,23 +79,26 @@ header nav #gnb li.active a { color: #fff; }
 footer { height: calc( 100vw * 600 / 1920 ); display: flex; justify-content: space-around; align-items: center; background: #f5f5f5; }
 footer .footerInfo { height: 100%; display: flex; align-items: flex-start; justify-content: space-evenly; flex-direction: column; }
 
-footer .footerBI { color: #EC4636; font-family: LSpecialIt; font-size: calc( 100vw * 35 / 1920 ); user-select: none; } 
+footer .footerBI { color: #EC4636; font-family: LSpecialIt; font-size: calc( 100vw * 38 / 1920 ); user-select: none; } 
 footer .footerBI::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 50 / 1920 ); }
 footer .footerBI::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 50 / 1920 ); }
 
-footer .footerGnb { width: calc( 100vw * 250 / 1920 ); padding-top: calc( 100vw * 30 / 1920 ); border-top: calc( 100vw * 2 / 1920 ) solid #1D1B1B; }
+footer .footerGnb { width: calc( 100vw * 250 / 1920 ); padding-top: calc( 100vw * 10 / 1920 ); border-top: calc( 100vw * 1.5 / 1920 ) solid #1D1B1B; }
 footer .footerGnb li { margin: calc( 100vw * 23 / 1920 ) 0; font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular;}
 footer .footerInfo p { font-size: calc( 100vw * 15 / 1920 ); } 
 
 footer .contact { width: calc( 100vw * 600 / 1920 ); }
 footer .contact .content-head { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 22 / 1920 ); font-family: LBold; }
 footer .contact .form-elements fieldset { display: flex; align-items: flex-start; margin: calc( 100vw * 15 / 1920 ) 0; }
-footer .contact .form-elements fieldset label { width: calc( 100vw * 180 / 1920 ); padding-top: calc( 100vw * 10 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); }
+footer .contact .form-elements fieldset label { width: calc( 100vw * 150 / 1920 ); padding-top: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); }
 footer .contact .form-elements fieldset input { width: 90%; padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; }
 footer .contact .form-elements fieldset textarea { width: 90%; height: calc( 100vw * 150 / 1920 ); padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; resize: none; }
 
-footer .contact .form-elements button { float: right; padding: calc( 100vw * 6 /1920 ) calc( 100vw * 18 / 1920 ); margin-top: calc( 100vw * 15 / 1920 ); color: #000; background: transparent; border: calc( 100vw * 2 / 1920 ) solid #1D1B1B; border-radius: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; transition: all .3s; cursor: pointer; }
-footer .contact .form-elements button:hover { background: #EC4636; color: #fff; border: calc( 100vw * 2 / 1920 ) solid #EC4636;}
+footer .contact .form-elements fieldset input:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
+footer .contact .form-elements fieldset textarea:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
+
+footer .contact .form-elements button { float: right; padding: calc( 100vw * 7 /1920 ) calc( 100vw * 19 / 1920 ); margin-top: calc( 100vw * 15 / 1920 ); background: #EC4636; color: #fff; border: none; border-radius: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; transition: all .4s; cursor: pointer; }
+footer .contact .form-elements button:hover { background: #1D1B1B; }
 
 footer .contact .thankyou_message { display: none; }
 footer .contact .thankyou_message p { background: #fff; padding: calc( 100vw * 40 / 1920 ) calc( 100vw * 25 / 1920 ); margin-top: calc( 100vw * 30 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); line-height: 180%; text-align: center; }

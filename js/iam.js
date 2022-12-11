@@ -78,21 +78,19 @@ skillCCS.addEventListener("mouseleave", function () {
 });
 
 
-
 // --------------------- original svg ------------------------
 
 document.querySelector('.experience').insertAdjacentHTML('beforeend', `
-
-    <svg class='svgLine' width="810" height="2200" viewBox="0 0 822 2303" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id="path" fill='none' stroke="#EC4D36" stroke-width='3' d="M18 18C18 67.9082 52.4999 163.437 263 201.186C402.068 226.125 548.612 231.108 613.5 235.671C690.5 241.085 825.5 252.456 800 444.136C775.5 575.713 554.782 628.361 385.5 653.5C277 669.612 55.5456 740.178 48.1316 899.289C44.6299 974.439 98.7078 1051.2 287 1105C357 1125 576.5 1159.74 716.5 1245C794.5 1292.5 838 1386.5 813 1485.5C763.193 1682.74 461.65 1623.4 392.5 1693C316.5 1769.5 379.363 1867.62 401.5 1919C428 1980.5 481 2041 441 2145.5C416 2224 406 2244 406 2301" stroke-linecap="round"/>
+    <svg class='svgLine' x='0' y='0' width="810" height="2200" viewBox="0 0 822 2303" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="path" fill='none' stroke="#EC4D36" stroke-width='3' d="M18 18C18 67.9082 52.4999 163.437 263 201.186C402.068 226.125 548.612 231.108 613.5 235.671C690.5 241.085 825.5 252.456 800 444.136C775.5 575.713 554.782 628.361 385.5 653.5C277 669.612 55.5456 740.178 48.1316 899.289C44.6299 974.439 98.7078 1051.2 287 1105C357 1125 576.5 1159.74 716.5 1245C794.5 1292.5 838 1386.5 813 1485.5C763.193 1682.74 461.65 1623.4 392.5 1693C316.5 1769.5 379.363 1867.62 401.5 1919C428 1980.5 481 2041 441 2145.5C416 2224 406 2244 406 2301" stroke-linecap="round"/>
         <line x1="387.071" y1="2271.13" x2="405.457" y2="2299.93" stroke="#EC4D36" stroke-width="3" stroke-linecap="round"/>
         <line x1="428.245" y1="2272.78" x2="406.107" y2="2300.75" stroke="#EC4D36" stroke-width="3" stroke-linecap="round"/>
         <circle id="startCircle" cx="18" cy="18" r="18" fill="#EC4636"/>
     </svg>
 `);
 
-// --------------------- svg line --------------------------
-var $doc = $(document),
+// --------------------- jquery draw svg --------------------------
+let $doc = $(document),
     $win = $(window),
     $svg = $('.svgLine').drawsvg(),
     max = $doc.height() - $win.height();
@@ -102,20 +100,41 @@ $win.on('scroll', function() {
     $svg.drawsvg('progress', p);
 });
 
-// --------------------- following line ----------------------
-// const path = document.getElementById('path');
-// const circle = document.getElementById('startCircle');
 
-// function update() {
-//     const d = document.querySelector('body').offsetHeight / path.getTotalLength();
-//     const offset = Math.floor(window.pageYOffset / d) + 500;
-//     const firePoint = path.getPointAtLength(offset -5750);
+// ---------------- scrollTrigger ------------------
+// const path = document.querySelector('.path');
+// const svgAll = document.querySelector('.svgLine');
 
-//     path.style.strokeDashoffset = offset;
-//     circle.setAttribute('cx', firePoint.x);
-//     circle.setAttribute('cy', firePoint.y);
+// let pathLength = path.getTotalLength();
+
+// path.style.strokeDasharray = pathLength;
+// path.style.strokeDashoffset = pathLength;
+
+// function svgDraw() {
+//     let scrollPercentage = (document.body.scrollTop + document.documentElement.scrollTop + 900) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+//     // let scrollPercentage = ( window.scrollY + window.innerHeight - svgAll.offsetTop ) / svgAll.offsetHeight;
+//     let draw = pathLength * scrollPercentage;
+    
+//     path.style.strokeDashoffset = pathLength - draw;
 // }
 
-// update();
+// window.addEventListener("scroll", svgDraw);
 
-// window.addEventListener('scroll', update);
+
+// // ------------------------------ youtube ---------------------------
+// path.style.strokeDasharray  = pathLength;
+// path.style.strokeDashoffset = calcDashoffset(window.innerHeight * 0.8, svgAll, pathLength);
+// // path.style.strokeDashoffset = pathLength;
+
+// function calcDashoffset(scrollY, element, length) {
+//     const ratio = (scrollY - element.offsetTop) / element.offsetHeight
+//     const value = length - (length * ratio)
+//     return value < 0 ? 0 : value > length ? length : value
+// }
+
+// function scrollHandler() {
+//     const scrollY = window.scrollY + (window.innerHeight * 0.8)
+//     path.style.strokeDashoffset = calcDashoffset(scrollY, svgAll, pathLength)
+// }
+
+// window.addEventListener('scroll', scrollHandler)
