@@ -59,6 +59,45 @@ function Trailer(e) {
 window.addEventListener("mousemove", myCursor);
 window.addEventListener("mousemove", Trailer);
 
+// --------------------- footer contact box Insert ---------------------
+document.querySelector('footer').insertAdjacentHTML('beforeend', `
+    <div class="contact">
+        <h4 class="content-head">Contact Me</h4>
+
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="depo89055@gmail.com"
+            action="https://script.google.com/macros/s/AKfycbwz1MqWC3Ub-CGKYgqbsnyHiRppekx_FAGdsbJErfRLvEj-CEuvE_GgTMKUxpM3qi18sA/exec">
+
+            <div class="form-elements">
+                <fieldset class="pure-group">
+                    <label for="name">Name: </label>
+                    <input id="name" name="name" placeholder="Your name" />
+                </fieldset>
+
+                <fieldset class="pure-group">
+                    <label for="message">Message: </label>
+                    <textarea id="message" name="message" placeholder="Your message that you want to send"></textarea>
+                </fieldset>
+
+                <fieldset class="pure-group">
+                    <label for="email">From:</label>
+                    <input id="email" name="email" type="email" value="" required placeholder="your-address@email.com" />
+                </fieldset>
+
+                <fieldset class="pure-group">
+                    <label for="color">anything: </label>
+                    <input id="color" name="color" placeholder="i wanna jongkang" />
+                </fieldset>
+
+                <button class="button-success">Send</button>
+            </div>
+
+            <div class="thankyou_message" style="display:none;">
+                <h4><em>Thanks</em> for contacting us!
+                    We will get back to you soon!</h4>
+            </div>
+        </form>
+    </div>
+`);
 
 // ---------------------- footer Contact ------------------------------
 (function() {
