@@ -8,57 +8,21 @@
 .stuAll section article p { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); line-height: 150%; } 
 
 /* --------------------- flip ------------------------- */
-.wrapper {
-width: 100%;
-display: grid;
-grid-gap: calc( 100vw * 20 / 1920 );
-grid-template-columns: repeat(6, 1fr);
-}
+.wrapper {width: 100%;display: grid;grid-gap: calc( 100vw * 20 / 1920 );grid-template-columns: repeat(6, 1fr); } 
 
-.card {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.582);
-    grid-column: span 3;
-    box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #4d4d4d29;
-    height: calc( 100vw * 220 / 1920 );
-    padding: calc( 100vw * 25 / 1920 );
-    border-radius: calc( 100vw * 15 / 1920 );
-    cursor: pointer;
-    overflow: hidden;
-}
+.card { display: flex; justify-content: flex-end; flex-direction: column; position: relative; background-color: rgba(255, 255, 255, 0.582); grid-column: span 3; box-shadow: calc( 100vw * 5 / 1920 ) calc( 100vw * 5 / 1920 ) calc( 100vw * 20 / 1920 ) #4d4d4d29; height: calc( 100vw * 220 / 1920 ); padding: calc( 100vw * 25 / 1920 ); border-radius: calc( 100vw * 15 / 1920 ); cursor: pointer; overflow: hidden; } 
 
 .card__heading,
-.card__text {
-width: 100%;
-border-radius: 4px;
-}
+.card__text {width: 100%; border-radius: 4px; } 
 
-.card__heading {
-width: 50%;
-}
+.card__heading {width: 50%; font-family: LBold; font-size: calc( 100vw * 25 / 1920 );} 
 
-.card__text {
-margin-top: 10px;
-font-size: calc( 100vw * 18 / 1920 );
-}
+.card__text {margin-top: 10px;font-size: calc( 100vw * 18 / 1920 ); } 
 
-.card.is-active {
-grid-row: 1;
-grid-column: 1/span 6;
-height: calc( 100vw * 300 / 1920 );
-order: 0;
-}
-.card.is-active:after {
-opacity: 1;
-transform: translateY(0);
-}
+.card.is-active {grid-row: 1;grid-column: 1/span 6;height: calc( 100vw * 300 / 1920 );order: 0; } 
+.card.is-active:after {opacity: 1;transform: translateY(0); } 
 
-.card.is-inactive {
-grid-column: span 2;
-}
+.card.is-inactive {grid-column: span 2; } 
 
 /* ------------------------------------------- */
 footer { width: 100vw; margin-left: calc( 100vw * -190 / 1920 ); } 

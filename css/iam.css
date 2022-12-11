@@ -32,7 +32,7 @@
 .profile h2 { margin-bottom: calc( 100vw * 60 / 1920 ); color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
 .profile article { display: flex; justify-content: space-around; align-items: stretch; } 
 
-.profile .mainProfile { width: calc( 100vw * 480 / 1920 ); position: relative; margin-right: calc( 100vw * 150 / 1920 ); } 
+.profile .mainProfile { width: calc( 100vw * 480 / 1920 ); height: calc( 100vw * 600 / 1920 ); position: relative; margin-right: calc( 100vw * 150 / 1920 ); } 
 .profile .mainProfile::before { content: ''; position: absolute; top: calc( 100vw * 10/ 1920 ); background: #EC4636; width: calc( 100vw * 400 / 1920 ); height: calc( 100vw * 400 / 1920 ); border-radius: 50%; } 
 
 .profile .profileInfo { display: flex; flex-wrap: wrap; justify-content: space-between; } 

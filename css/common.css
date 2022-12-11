@@ -24,7 +24,7 @@ body { overflow-x: hidden; }
     height: calc(100vw * 53 / 1920);
     background: transparent;
     z-index: 120;
-    border: calc( 100vw * 1 / 1920 ) solid #5444ff74;
+    border: calc( 100vw * 2 / 1920 ) solid rgb(228, 202, 0);
     border-radius: 50%;
     user-select: none;
     pointer-events: none;

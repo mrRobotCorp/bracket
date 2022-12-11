@@ -6,6 +6,75 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
     el.style.setProperty('--posY',  y-t-h/2);
 })
 
+// --------------------- floating -------------------------------
+
+document.querySelector('.main article').insertAdjacentHTML('afterbegin', `
+  <div class='shape a'>{ }</div>
+  <div class='shape b'>{ }</div>
+  <div class='shape c'>{ }</div>
+  <div class='shape d'>{ }</div>
+  <div class='shape e'>{ }</div>
+  <div class='shape f'>{ }</div>
+  <div class='shape g'>{ }</div>
+`)
+
+
+function makeNewPosition(){
+  let shapeHeight = $('.main').height() - 50;
+  let shapeWidth = $('.main').width() - 50;
+
+  let nh = Math.floor(Math.random() * shapeHeight);
+  let nw = Math.floor(Math.random() * shapeWidth);
+
+  return [nh,nw];
+}
+
+let animate = function() {
+  animateShape('.a');
+  animateShape('.b');
+  animateShape('.c');
+  animateShape('.d');
+  animateShape('.e');
+  animateShape('.f');
+  animateShape('.g');
+};
+
+animate();
+
+// Set loop with interval
+loop = window.setInterval(animate, 5000);
+
+function animateShape(shapeClass){
+  let newq = makeNewPosition();
+
+  $(shapeClass).css({
+    'transform' : 'translate(' + newq[1] +'px, ' + newq[0] + 'px)'});
+}
+
+function stopLoop(type) {
+  // Breaks the loop
+  clearInterval(loop);
+
+  // Speed up shapes repositioning
+  $('.shape').css({
+      // 'transform' : 'translate(50px, 50px)',
+      'transition': 'all 0.5s linear'
+  });
+}
+
+function restartLoop() {
+  // Reset animation speed after repositioning
+  $('.shape').css({
+      'transition': 'all 5s linear'
+  });
+  // Restarts animation without waiting
+  animate();
+
+  // Restarts loop on same instance
+  loop = window.setInterval(animate, 5000);
+
+}
+
 // -------------------------------------------------------------
 document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
   <img class='overview_img0' src='./source/overview_img0.png'>
