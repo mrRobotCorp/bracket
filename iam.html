@@ -58,13 +58,13 @@
             <div class="profileInfo">
                 <dl class="address">
                     <dt>Address</dt>
-                    <dd>Seoul, Korea</dd>
+                    <dd>서울 관악구</dd>
                 </dl>
                 <dl class="education">
                     <dt>Education</dt>
-                    <dd>Maehyang Girls' Information High School</dd>
-                    <dd>Digital Media Design, Kaywon university Art & Design</dd>
-                    <dd>Concentration Programming, Kaywon university Art & Design</dd>
+                    <dd>매향여자정보고등학교</dd>
+                    <dd>계원예술대학교 디지털 미디어 디자인 학과</dd>
+                    <dd>계원예술대학교 세부 전공 프로그래밍</dd>
                 </dl>
                 <dl class="skills">
                     <dt>My skills</dt>
@@ -138,12 +138,74 @@
     </section>
 
     <footer>
-        <p>© All rights reserved Yoon A Kim.</p>
+        <div class="footerAll">
+            <h2 class="footerBI">In Bracket</h2>
+            <ul class="footerGnb">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./project.html">Project</a></li>
+                <li><a href="./study.html">Study</a></li>
+                <li><a href="./iam.html">Iam</a></li> 
+            </ul>
+            <p>© All rights reserved Yoon A Kim.</p>
+        </div>
+
+        <div class="contact">
+            <h4 class="content-head is-center">Contact Me</h4>
+            <aside>
+                <p>
+                    We would <em>love</em> to hear from you! </p>
+                <p>Please use the <b><em>Contact Form</em></b>
+                    to send us a message.
+                </p>
+            </aside>
+    
+            <form class="gform pure-form pure-form-stacked" method="POST" data-email="depo89055@gmail.com"
+                action="https://script.google.com/macros/s/AKfycbwz1MqWC3Ub-CGKYgqbsnyHiRppekx_FAGdsbJErfRLvEj-CEuvE_GgTMKUxpM3qi18sA/exec">
+    
+                <div class="form-elements">
+                    <fieldset class="pure-group">
+                        <label for="name">Name: </label>
+                        <input id="name" name="name" placeholder="What your Mom calls you" />
+                    </fieldset>
+    
+                    <fieldset class="pure-group">
+                        <label for="message">Message: </label>
+                        <textarea id="message" name="message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+                    </fieldset>
+    
+                    <fieldset class="pure-group">
+                        <label for="email"><em>Your</em> Email Address:</label>
+                        <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
+                    </fieldset>
+    
+                    <fieldset class="pure-group">
+                        <label for="color">anything: </label>
+                        <input id="color" name="color" placeholder="green" />
+                    </fieldset>
+    
+                    <!-- <fieldset class="pure-group honeypot-field">
+                        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be
+                            empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                        <input id="honeypot" type="text" name="honeypot" value="" />
+                    </fieldset> -->
+    
+                    <button class="button-success pure-button button-xlarge">
+                        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                </div>
+    
+                <!-- Customise the Thankyou Message People See when they submit the form: -->
+                <div class="thankyou_message" style="display:none;">
+                    <h2><em>Thanks</em> for contacting us!
+                        We will get back to you soon!</h2>
+                </div>
+            </form>
+        </div>
+
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="./js/jquery.drawsvg.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="./js/jquery.drawsvg.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/iam.js"></script>
 </body>
