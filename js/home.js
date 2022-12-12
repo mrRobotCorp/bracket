@@ -49,7 +49,6 @@ $(function() {
   });
   
   $.stellar();
-  
   $('.main').addClass('active');
 });
 
