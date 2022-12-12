@@ -1,26 +1,52 @@
 const gnbMenu = document.querySelectorAll('#gnb li');
+const scrollNum = document.querySelector("html").scrollTop;
 
-document.querySelector('header').addEventListener('mouseover', (e) => {
-    gnbMenu.forEach( function(menu) {
-        menu.style.display = 'inline-block';
-        menu.classList.add('show');
-        menu.classList.remove('hide');
-    })
-});
+window.onscroll = function() {
+    if (scrollNum == 0 ) {
+        gnbMenu.forEach( function(menu) {
+            menu.style.display = 'inline-block';
+        });
+    } 
 
-document.querySelector('header').addEventListener('mouseout', (e) => {
+    if ( scrollNum > 1000) {
+        gnbMenu.forEach( function(menu) {
+            menu.classList.add('hide');
+            menu.classList.remove('show');
+            menu.style.display = 'none';
+        })
+    } else {
+        gnbMenu.forEach( function(menu) {
+            menu.style.display = 'inline-block';
+            menu.classList.add('show');
+            menu.classList.remove('hide');
+        })
+    }
+    
+    // --------------------------
+    
     gnbMenu.forEach( function(menu) {
-        menu.classList.add('hide');
-        menu.classList.remove('show');
         menu.style.display = 'none';
-
-        // function gnbHide() {
-        //     setTimeout(() => menu.style.display = 'none', 400);
-        // };
-        // gnbHide();
-        // clearTimeout(gnbHide);
     });
-});
+
+    document.querySelector('header').addEventListener('mouseover', (e) => {
+        gnbMenu.forEach( function(menu) {
+            menu.style.display = 'inline-block';
+            menu.classList.add('show');
+            menu.classList.remove('hide');
+        })
+    });
+    
+    document.querySelector('header').addEventListener('mouseout', (e) => {
+        gnbMenu.forEach( function(menu) {
+            menu.classList.add('hide');
+            menu.classList.remove('show');
+            menu.style.display = 'none';
+        });
+    });
+
+}
+
+
 
 // ----------------- gnb active ---------------------------
 var pageUrl = window.location.href;
