@@ -9,13 +9,13 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
 // ----------------------- floating bracket  -------------------------------
 document.querySelector('.main').insertAdjacentHTML('afterbegin', `
   <div class="confetti-layer front" data-stellar-ratio="1.25">
-  <div class="c_inner"></div>
+    <div class="c_inner"></div>
   </div>
   <div class="confetti-layer mid">
-  <div class="c_inner"></div>
+    <div class="c_inner"></div>
   </div>
   <div class="confetti-layer back" data-stellar-ratio="0.75">
-  <div class="c_inner"></div>
+    <div class="c_inner"></div>
   </div>
 `);
 
@@ -26,7 +26,7 @@ function makeConfetti(num, layer) {
 
 $(function() {
   makeConfetti(7, 'front');
-  makeConfetti(12, 'mid');
+  makeConfetti(10, 'mid');
   makeConfetti(11, 'back');
   
   $('.bracket').each(function() {
