@@ -13,7 +13,7 @@ gsap.to(sections, {
 	}
 });
 
-// ----------------- thumbnail cursor --------------------------
+// ----------------- main (overview) cursor --------------------------
 const overview = document.querySelector(".overview");
 
 overview.addEventListener("mouseover", function () {

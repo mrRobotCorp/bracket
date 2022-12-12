@@ -24,6 +24,8 @@ const activeClass = "is-active";
 const inactiveClass = "is-inactive";
 const cards = document.querySelectorAll(".card");
 
+let stuImg = document.querySelector('.card img');
+
 cards.forEach((card, idx) => {
 card.addEventListener("click", () => {
     const state = Flip.getState(cards);
@@ -32,18 +34,21 @@ card.addEventListener("click", () => {
     cards.forEach((otherCard, otherIdx) => {
         otherCard.classList.remove(activeClass);
         otherCard.classList.remove(inactiveClass);
+        stuImg.style.display = 'none';
         if (!isCardActive && idx !== otherIdx)
         otherCard.classList.add(inactiveClass);
     });
 
     if (!isCardActive) {
         card.classList.add(activeClass);
+        stuImg.style.display = 'inline-block';
     }
 
     Flip.from(state, {
         duration: 1,
         ease: "expo.out",
         absolute: true });
-
     });
 });
+
+
