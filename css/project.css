@@ -1,6 +1,10 @@
 @import './reset.css';
 
-.overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: center; align-items: center; } 
+.overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: space-around; align-items: center; background: url(../source/projectBg.jpg) center center no-repeat; background-size: cover; } 
+.mainHover { width: calc( 100vw * 60 / 1920 ); height: calc( 100vw * 150 / 1920 ); background: url(../source/downArrow.png) center center no-repeat; background-size: contain; }
+
+.overview article h3 { margin-bottom: calc( 100vw * 30 / 1920 ); color: #EC4636; font-family: LBold; font-size: calc( 100vw * 50 / 1920 );}
+
 
 /* ------------------------------------------ */
 #container { width: 500%; height: 100vh; display: flex; flex-wrap: nowrap; } 

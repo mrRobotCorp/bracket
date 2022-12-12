@@ -14,6 +14,30 @@ gsap.to(sections, {
 });
 
 // ----------------- thumbnail cursor --------------------------
+const overview = document.querySelector(".overview");
+
+overview.addEventListener("mouseover", function () {
+	cursor.classList.add("mainHover");
+	follower.classList.remove("cursor_follower");
+	function myCursor(e) {
+		cursor.style.top = e.pageY + 45 + "px";
+		cursor.style.left = e.pageX + 45 + "px";
+	}
+	window.addEventListener("mousemove", myCursor);
+});
+overview.addEventListener("mouseleave", function () {
+	cursor.classList.remove("mainHover");
+	follower.classList.add("cursor_follower");
+	function myCursor(e) {
+		cursor.style.top = e.pageY + 10 + "px";
+		cursor.style.left = e.pageX + 10 + "px";
+	}
+	window.addEventListener("mousemove", myCursor);
+});
+
+
+
+// ----------------- thumbnail cursor --------------------------
 const thumbnail = document.querySelectorAll(".thumbnail");
 
 thumbnail.forEach(function (thumb) {
