@@ -34,14 +34,15 @@ card.addEventListener("click", () => {
     cards.forEach((otherCard, otherIdx) => {
         otherCard.classList.remove(activeClass);
         otherCard.classList.remove(inactiveClass);
-        stuImg.style.display = 'none';
         if (!isCardActive && idx !== otherIdx)
         otherCard.classList.add(inactiveClass);
+        
+        // stuImg.style.display = 'none';
     });
 
     if (!isCardActive) {
         card.classList.add(activeClass);
-        stuImg.style.display = 'inline-block';
+        // stuImg.style.display = 'inline-block';
     }
 
     Flip.from(state, {
