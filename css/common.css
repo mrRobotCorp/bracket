@@ -88,17 +88,18 @@ footer .footerGnb li { margin: calc( 100vw * 23 / 1920 ) 0; font-size: calc( 100
 footer .footerInfo p { font-size: calc( 100vw * 15 / 1920 ); } 
 
 footer .contact { width: calc( 100vw * 600 / 1920 ); }
-footer .contact .content-head { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 22 / 1920 ); font-family: LBold; }
-footer .contact .form-elements fieldset { display: flex; align-items: flex-start; margin: calc( 100vw * 15 / 1920 ) 0; }
-footer .contact .form-elements fieldset label { width: calc( 100vw * 150 / 1920 ); padding-top: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); }
-footer .contact .form-elements fieldset input { width: 90%; padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; }
-footer .contact .form-elements fieldset textarea { width: 90%; height: calc( 100vw * 150 / 1920 ); padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; resize: none; }
+footer .contact h4 { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 22 / 1920 ); font-family: LBold; }
+footer .contact .formContent fieldset { display: flex; align-items: flex-start; margin: calc( 100vw * 15 / 1920 ) 0; }
+footer .contact .formContent fieldset label { width: calc( 100vw * 150 / 1920 ); padding-top: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); }
+footer .contact .formContent fieldset input { width: 90%; padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; }
+footer .contact .formContent fieldset textarea { width: 90%; height: calc( 100vw * 150 / 1920 ); padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; resize: none; }
 
-footer .contact .form-elements fieldset input:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
-footer .contact .form-elements fieldset textarea:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
+footer .contact .formContent fieldset input:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
+footer .contact .formContent fieldset textarea:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
 
-footer .contact .form-elements button { float: right; padding: calc( 100vw * 7 /1920 ) calc( 100vw * 19 / 1920 ); margin-top: calc( 100vw * 15 / 1920 ); background: #EC4636; color: #fff; border: none; border-radius: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; transition: all .4s; cursor: pointer; }
-footer .contact .form-elements button:hover { background: #1D1B1B; }
+footer .contact .formContent button { float: right; padding: calc( 100vw * 7 /1920 ) calc( 100vw * 19 / 1920 ); margin-top: calc( 100vw * 15 / 1920 ); background: #EC4636; color: #fff; border: none; border-radius: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; transition: all .4s; cursor: pointer; }
+footer .contact .formContent button:hover { background: #1D1B1B; }
+footer .contact .formContent button:focus { outline: none; box-shadow: calc( 100vw * 3 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 5 / 1920 ) #9d251a8b; }
 
-footer .contact .thankyou_message { display: none; }
-footer .contact .thankyou_message p { background: #fff; padding: calc( 100vw * 40 / 1920 ) calc( 100vw * 25 / 1920 ); margin-top: calc( 100vw * 30 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); line-height: 180%; text-align: center; }
+footer .contact .nextSending { display: none; }
+footer .contact .nextSending p { background: #fff; padding: calc( 100vw * 40 / 1920 ) calc( 100vw * 25 / 1920 ); margin-top: calc( 100vw * 30 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); line-height: 180%; text-align: center; }

@@ -62,31 +62,31 @@ window.addEventListener("mousemove", Trailer);
 // --------------------- footer contact box Insert ---------------------
 document.querySelector('footer').insertAdjacentHTML('beforeend', `
     <div class="contact">
-        <h4 class="content-head">Contact Me</h4>
+        <h4>Contact Me</h4>
 
-        <form class="gform pure-form pure-form-stacked" method="POST" data-email="depo89055@gmail.com"
+        <form class="formAll" method="POST" data-email="depo89055@gmail.com"
             action="https://script.google.com/macros/s/AKfycbwz1MqWC3Ub-CGKYgqbsnyHiRppekx_FAGdsbJErfRLvEj-CEuvE_GgTMKUxpM3qi18sA/exec">
 
-            <div class="form-elements">
-                <fieldset class="pure-group">
+            <div class="formContent">
+                <fieldset>
                     <label for="name">보내는 이 : </label>
                     <input id="name" name="name" placeholder="Your name" />
                 </fieldset>
 
-                <fieldset class="pure-group">
+                <fieldset>
                     <label for="message">메세지 : </label>
                     <textarea id="message" name="message" placeholder="Your message that you want to send"></textarea>
                 </fieldset>
 
-                <fieldset class="pure-group">
+                <fieldset>
                     <label for="email">메일 주소 : </label>
                     <input id="email" name="email" type="email" value="" required placeholder="your-address@email.com" />
                 </fieldset>
 
-                <button class="button-success">Send</button>
+                <button class="sendBtn">Send</button>
             </div>
 
-            <div class="thankyou_message">
+            <div class="nextSending">
                 <p>
                     연락 보내주셔서 감사합니다🌈 <br>
                     빠른 시일 내에 연락드리겠습니다.
@@ -169,11 +169,11 @@ document.querySelector('footer').insertAdjacentHTML('beforeend', `
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
             form.reset();
-            var formElements = form.querySelector(".form-elements")
+            var formElements = form.querySelector(".formContent")
             if (formElements) {
                 formElements.style.display = "none"; // hide form
             }
-            var thankYouMessage = form.querySelector(".thankyou_message");
+            var thankYouMessage = form.querySelector(".nextSending");
             if (thankYouMessage) {
                 thankYouMessage.style.display = "block";
             }
@@ -188,7 +188,7 @@ document.querySelector('footer').insertAdjacentHTML('beforeend', `
     
     function loaded() {
         // bind to the submit event of our form
-        var forms = document.querySelectorAll("form.gform");
+        var forms = document.querySelectorAll("form.formAll");
         for (var i = 0; i < forms.length; i++) {
         forms[i].addEventListener("submit", handleFormSubmit, false);
         }

@@ -6,74 +6,60 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
     el.style.setProperty('--posY',  y-t-h/2);
 })
 
-// --------------------- floating -------------------------------
+// ----------------------- floating bracket  -------------------------------
+document.querySelector('.main').insertAdjacentHTML('afterbegin', `
+  <div class="confetti-layer front" data-stellar-ratio="1.25">
+  <div class="c_inner"></div>
+  </div>
+  <div class="confetti-layer mid">
+  <div class="c_inner"></div>
+  </div>
+  <div class="confetti-layer back" data-stellar-ratio="0.75">
+  <div class="c_inner"></div>
+  </div>
+`);
 
-document.querySelector('.main article').insertAdjacentHTML('afterbegin', `
-  <div class='shape a'>{ }</div>
-  <div class='shape b'>{ }</div>
-  <div class='shape c'>{ }</div>
-  <div class='shape d'>{ }</div>
-  <div class='shape e'>{ }</div>
-  <div class='shape f'>{ }</div>
-  <div class='shape g'>{ }</div>
-`)
-
-
-function makeNewPosition(){
-  let shapeHeight = $('.main').height() - 50;
-  let shapeWidth = $('.main').width() - 80;
-
-  let nh = Math.floor(Math.random() * shapeHeight);
-  let nw = Math.floor(Math.random() * shapeWidth);
-
-  return [nh,nw];
+function makeConfetti(num, layer) {
+  var $layer = $('.confetti-layer.'+layer+' .c_inner');
+  $layer.append(new Array(num + 1).join('<span class="bracket">{  }</span>'));
 }
 
-let animate = function() {
-  animateShape('.a');
-  animateShape('.b');
-  animateShape('.c');
-  animateShape('.d');
-  animateShape('.e');
-  animateShape('.f');
-  animateShape('.g');
-};
+$(function() {
+  makeConfetti(7, 'front');
+  makeConfetti(12, 'mid');
+  makeConfetti(11, 'back');
+  
+  $('.bracket').each(function() {
+    // color random
+    let colorIndex = Math.floor(Math.random()*(confettiColors.length));
 
-animate();
+    $(this).attr('data-color', colorIndex).css({
+      'color': confettiColors[colorIndex]
+    });
 
-// Set loop with interval
-loop = window.setInterval(animate, 5000);
+    // random position 범위 조절
+    let x = (Math.random()*400) - 400;
+    let y = (Math.random()*600) - 230;
+    let scale = 1.6 - Math.random();
 
-function animateShape(shapeClass){
-  let newq = makeNewPosition();
-
-  $(shapeClass).css({
-    'transform' : 'translate(' + newq[1] +'px, ' + newq[0] + 'px)'});
-}
-
-function stopLoop(type) {
-  // Breaks the loop
-  clearInterval(loop);
-
-  // Speed up shapes repositioning
-  $('.shape').css({
-      // 'transform' : 'translate(50px, 50px)',
-      'transition': 'all 0.5s linear'
+    $(this).css({
+      'transform': 'translateX('+x+'%) translateY('+y+'%) scale('+scale+')'
+    });
+    
   });
-}
+  
+  $.stellar();
+  
+  $('.main').addClass('active');
+});
 
-function restartLoop() {
-  // Reset animation speed after repositioning
-  $('.shape').css({
-      'transition': 'all 5s linear'
-  });
-  // Restarts animation without waiting
-  animate();
-
-  // Restarts loop on same instance
-  loop = window.setInterval(animate, 5000);
-
-}
+let confettiColors = [
+  '#fff',
+  '#ffe4e2',
+  '#ffe9da',
+  '#ffdcc5',
+  '#ffdcc0'
+];
 
 // -------------------------------------------------------------
 document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
