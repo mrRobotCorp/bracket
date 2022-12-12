@@ -1,6 +1,6 @@
 @import './reset.css';
 
-.overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: space-around; align-items: center; background: url(../source/projectBg.jpg) center center no-repeat; background-size: cover; } 
+.overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: space-around; align-items: center; background: url(../source/projectBg2.png) center center no-repeat; background-size: cover; } 
 .mainHover { width: calc( 100vw * 80 / 1920 ); height: calc( 100vw * 200 / 1920 ); background: url(../source/downArrow.png) center center no-repeat; background-size: contain; }
 
 .overview article h3 { margin-bottom: calc( 100vw * 30 / 1920 ); font-family: LBold; font-size: calc( 100vw * 50 / 1920 );}
