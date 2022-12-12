@@ -38,7 +38,7 @@ $(function() {
 
     // random position 범위 조절
     let x = (Math.random()*500) - 400;
-    let y = (Math.random()*600) - 250;
+    let y = (Math.random()*600) - 290;
     let scale = 1.6 - Math.random();
 
     $(this).css({

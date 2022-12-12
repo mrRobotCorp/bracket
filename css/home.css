@@ -18,7 +18,7 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 .confetti-layer { position: absolute; left: 0; width: 100%; height: 100vh; text-align: center; } 
 
 .confetti-layer.front { z-index: 3; } 
-.confetti-layer.front .bracket { margin: 10% 5%; font-size: calc( 100vw * 170 / 1920 ); } 
+.confetti-layer.front .bracket { margin: 8% 5%; font-size: calc( 100vw * 170 / 1920 ); } 
 .confetti-layer.front .bracket:nth-child(even) { margin-top: 0; } 
 
 .confetti-layer.mid { z-index: 2; filter: blur(2px); } 
