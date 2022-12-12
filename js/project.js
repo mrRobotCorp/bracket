@@ -13,7 +13,7 @@ gsap.to(sections, {
 	}
 });
 
-// ----------------- thumbnail img change --------------------------
+// ----------------- thumbnail cursor --------------------------
 const thumbnail = document.querySelectorAll(".thumbnail");
 
 thumbnail.forEach(function (thumb) {
@@ -36,3 +36,32 @@ thumbnail.forEach(function (thumb) {
         window.addEventListener("mousemove", myCursor);
     });
 });
+
+// ----------- img change ---------------
+const thumb0 = document.querySelector(".thumbnail0");
+const miniImg0 = document.querySelectorAll(".img_bottom0");
+
+const thumb1 = document.querySelector(".thumbnail1");
+const miniImg1 = document.querySelectorAll(".img_bottom1");
+
+const thumb2 = document.querySelector(".thumbnail2");
+const miniImg2 = document.querySelectorAll(".img_bottom2");
+
+function changeImg(e) {
+    let targetImg0 = miniImg0[e - 1];
+    let imgAttr0 = targetImg0.getAttribute("src");
+
+    thumb0.setAttribute("src", imgAttr0);
+
+	// --------------------
+	let targetImg1 = miniImg1[e - 1];
+    let imgAttr1 = targetImg1.getAttribute("src");
+
+    thumb1.setAttribute("src", imgAttr1);
+
+	// -----------------------
+	let targetImg2 = miniImg2[e - 1];
+    let imgAttr2 = targetImg2.getAttribute("src");
+
+    thumb2.setAttribute("src", imgAttr2);
+};
