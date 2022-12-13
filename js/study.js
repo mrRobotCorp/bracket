@@ -52,4 +52,9 @@ card.addEventListener("click", () => {
     });
 });
 
+// ------------------
+$('.cardVanilla').click( function() {
+    $('.vanillaTxt').css('display', 'none');
+}); 
+
 

@@ -44,46 +44,66 @@
 
     <div class="stuAll inner">
         <section class="stuJS">
-            <h2></h2>
+            <h2 class="blind">순수 자바스크립트 공부</h2>
             <article>
                 <h3>{ Vanilla JS }</h3>
-                <p>
+                <p class="vanillaTxt">
                     다른 라이브러리 사용이 아닌 순수 자바스크립트의 사용을 공부하였습니다.
                     자바스크립트 라는 강의를 수강하면서 기초 문법부터 차근차근 공부해왔고,
                     추가로 익히고 싶은 기능들을 찾아보며 구현해보았습니다.
                 </p>
             </article>
             <div class='wrapper'>
-                <div class='card '>
+                <div class='card cardVanilla'>
                     <h4>Responsive menu</h4>
-                    <p class='cardTxt'>
-                        순수 자바스크립트를 사용하여 gnb 메뉴를 반응형으로 제작하였습니다.
-                        순수 자바스크립트를 사용하여 gnb 메뉴를 반응형으로 제작하였습니다.
-                    </p>
+                    <div class="cardContent">
+                        <p class='cardTxt'>
+                            순수 자바스크립트를 사용하여 gnb 메뉴를 반응형으로 제작하였습니다.
+                            button을 생성한 후, window의 innerWidth값을 조건으로, 
+                            클릭 시 햄버거 메뉴 창의 width 값 스타일을 100%로 설정하고 햄버거 버튼의 animation은
+                            active class를 추가하여 적용하였습니다.
+                        </p>
+                        <img src="./source/stu_menu.png">
+                    </div>
                     
                 </div>
-                <div class='card'>
+                <div class='card cardVanilla'>
                     <h4>Slider</h4>
-                    <p class='cardTxt'>
-                        
-                    </p>
+                    <div class="cardContent">
+                        <p class='cardTxt'>
+                            인디케이터, 좌우 이동 버튼 모두 동적 요소로 생성하였습니다.
+                            이미지 크기에 맞춰 이동했을 때의 left, right 값을 새로운 class에 적용하였고,
+                            동적으로 생성한 버튼에 setAttribute로 해당 클래스 속성을 넣었습니다.
+                            for 반복문을 통해 ( 이미지 크기 X 이미지 개수 ) 만큼의 이동 값을 적용하여
+                            style을 설정하였습니다.
+                        </p>
+                        <img src="./source/stu_analog.png">
+                    </div>
                 </div>
-                <div class='card c_js_analog'>
+                <div class='card cardVanilla c_js_analog'>
                     <h4>Analog Clock</h4>
                     <div class="cardContent cardContent1">
                         <p class='cardTxt'>
-                            setInterval 이벤트를 통해 매 시간을 업데이트하여 아날로그 시계 형식으로 제작하였습니다.
+                            setInterval 이벤트를 통해 1초씩 매 시간을 업데이트하여 아날로그 시계 형식으로 제작하였습니다.
                             시계 안 요소는 creatElement, setAttribute를 통해 동적으로 생성하였습니다.
                             html 안에서 올바른 마크업을 위해 appendChild를 사용하여 부모 요소와 자식 요소를 나눠주었습니다.
                             출력 할 시간은 new Date()를 통해 구하였고, 출력되는 시간을 계산하여 
-                            시침, 분침 요소에 style의 각도 값으로 주었습니다.
+                            시침, 분침 요소에 style의 각도 값으로 주었습니다. 각도 계산은 전체 360도에서 시간은
+                            12시간으로 나누어 시간 당 30도씩, 분은 60분으로 나누어 6도씩, 초 또한 60초로 나누어
+                            6도씩 transform을 주었습니다.
                         </p>
                         <img class="js_analog" src="./source/stu_analog.png">
                     </div>
                 </div>
-                <div class='card'>
+                <div class='card cardVanilla'>
                     <h4>Pop up</h4>
-                    <p class='cardTxt'></p>
+                    <div class="cardContent cardContent1">
+                        <p class='cardTxt'>
+                            레이어 팝업 요소를 동적으로 생성 후, 그 안 close 버튼은 click 이벤트를 설정하였습니다.
+                            버튼 클릭 시 레이어 팝업의 style을 display none으로 설정하였습니다.
+                        </p>
+                        <img src="./source/stu_analog.png">
+                    </div>
                 </div>
             </div>
         </section>
@@ -101,27 +121,35 @@
             <div class='wrapper'>
                 <div class='card'>
                     <h4>GSAP - scrollTrigger</h4>
-                    <p class='cardTxt'>
-
-                    </p>
+                    <div class="cardContent cardContent1">
+                        <p class='cardTxt'>
+    
+                        </p>
+                    </div>
                 </div>
                 <div class='card'>
                     <h4>React</h4>
-                    <p class='cardTxt'>
-
-                    </p>
+                    <div class="cardContent cardContent1">
+                        <p class='cardTxt'>
+    
+                        </p>
+                    </div>
                 </div>
                 <div class='card'>
                     <h4>fullPage</h4>
-                    <p class='cardTxt'>
-
-                    </p>
+                    <div class="cardContent cardContent1">
+                        <p class='cardTxt'>
+    
+                        </p>
+                    </div>
                 </div>
                 <div class='card'>
                     <h4>GSAP - Custom Mouse</h4>
-                    <p class='cardTxt'>
-
-                    </p>
+                    <div class="cardContent cardContent1">
+                        <p class='cardTxt'>
+    
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
