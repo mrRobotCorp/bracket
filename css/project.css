@@ -16,6 +16,7 @@
 #container .project h3 a { color: #fff; transition: all .3s; } 
 
 #container .project p { width: calc( 100vw * 550 / 1920 ); padding: 0 calc( 100vw * 10 / 1920 ) calc( 100vw * 20 / 1920 ) calc( 100vw * 10 / 1920 ); margin-bottom: calc( 100vw * 30 / 1920 ); border-bottom: calc( 100vw * 1 / 1920 ) solid #ffffff90; font-size: calc( 100vw * 17 / 1920 ); line-height: 165%; } 
+#container .project .more { color: #FFD72F; margin: 0 calc( 100vw * 10 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); font-family: LBold; line-height: 155%;}
 
 #container .project .pro_info { display: inline-block; width: 40%; margin-bottom: calc( 100vw * 25 / 1920 ); padding: 0 calc( 100vw * 10 / 1920 ); } 
 #container .project .pro_info dt { margin-bottom: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LSpecial; } 
