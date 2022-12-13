@@ -2,13 +2,13 @@ const gnbMenu = document.querySelectorAll('#gnb li');
 const scrollNum = document.querySelector('html').scrollTop;
 
 window.onscroll = function() {
-    if (scrollNum == 0 ) {
+    if (scrollNum < 500 ) {
         gnbMenu.forEach( function(menu) {
             menu.style.display = 'inline-block';
         });
     } 
 
-    if ( scrollNum > 1000) {
+    if ( scrollNum > 1500) {
         gnbMenu.forEach( function(menu) {
             menu.classList.add('hide');
             menu.classList.remove('show');

@@ -1,3 +1,4 @@
+AOS.init();
 // --------------------------- mainBanner bg ----------------------------
 document.querySelector('.main').addEventListener("pointermove", (e)=>{
     const { currentTarget: el, clientX: x, clientY: y } = e;
@@ -21,11 +22,11 @@ document.querySelector('.main').insertAdjacentHTML('afterbegin', `
 
 function makeConfetti(num, layer) {
   var $layer = $('.confetti-layer.'+layer+' .c_inner');
-  $layer.append(new Array(num + 1).join('<span class="bracket">{  }</span>'));
+  $layer.append(new Array(num + 1).join('<span class="bracket">{ <p class="bracketInner">안녕하세요 프론트엔드 개발자<br> <span class="name">김윤아</span> 입니다.</p> }</span>'));
 }
 
 $(function() {
-  makeConfetti(7, 'front');
+  makeConfetti(6, 'front');
   makeConfetti(10, 'mid');
   makeConfetti(11, 'back');
   
@@ -38,7 +39,7 @@ $(function() {
 
     // random position 범위 조절
     let x = (Math.random()*500) - 400;
-    let y = (Math.random()*600) - 290;
+    let y = (Math.random()*600) - 280;
     let scale = 1.6 - Math.random();
 
     $(this).css({
@@ -59,17 +60,59 @@ let confettiColors = [
   '#ffdcc0'
 ];
 
+// ---------------- bracket hover --------------------
+// const frontBracket = document.querySelectorAll('.front');
+// const bracketInner = document.querySelectorAll('.bracketInner');
+// // const f_bracket0 = frontBracket.children[0];
+// // const f_bracket1 = frontBracket.children[1];
+// // const f_bracket2 = frontBracket.children[2];
+
+// // f_bracket0.insertAdjacentHTML('afterbegin', `
+// //   <p class=bracketInner'>안녕하세요 프론트엔드 개발자 김윤아입니다.</p>`
+// // );
+
+// bracketInner.addEventListener('mouseover', (e) => {
+//   bracketInner.forEach( function(inner) {
+//     inner.classList.add('innerActive');
+//   });
+// });
+
+// bracketInner.addEventListener('mouseout', (e) => {
+//   bracketInner.forEach( function(inner) {
+//     inner.classList.remove('innerActive');
+//   });
+// });
+
+// ----------------------------------------------------
+const frontBracket = document.querySelectorAll(".front .bracket");
+
+frontBracket.forEach(function (inner) {
+  inner.addEventListener("mouseover", function () {
+        // cursor.classList.add("projectHover");
+        follower.classList.remove("cursor_follower");
+
+        window.addEventListener("mousemove", myCursor);
+    });
+	
+    inner.addEventListener("mouseleave", function () {
+        // cursor.classList.remove("projectHover");
+        follower.classList.add("cursor_follower");
+
+        window.addEventListener("mousemove", myCursor);
+    });
+});
+
 // -------------------------------------------------------------
 document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
-  <img class='overview_img0' src='./source/overview_img0.png'>
+  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" class='overview_img0' src='./source/overview_img0.png'>
 `)
 
 document.querySelector('.overview_stu').insertAdjacentHTML('beforeend', `
-  <img class='overview_img1' src='./source/overview_img0.png'>
+  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" class='overview_img1' src='./source/overview_img0.png'>
 `)
 
 document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
-  <img class='overview_img2' src='./source/overview_img2.png'>
+  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" class='overview_img2' src='./source/overview_img2.png'>
 `)
 
 // ------------------------- keyword scrollTrigger -----------------------------------

@@ -50,6 +50,7 @@ thumbnail.forEach(function (thumb) {
         }
         window.addEventListener("mousemove", myCursor);
     });
+	
     thumb.addEventListener("mouseleave", function () {
         cursor.classList.remove("projectHover");
         follower.classList.add("cursor_follower");
