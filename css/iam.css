@@ -77,7 +77,7 @@ header { background: rgba(224, 224, 224, 0.34); }
 
 /* ---------------------- getInTouch ------------------------- */
 
-.getInTouch { height: 90vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; } 
+.getInTouch { height: 80vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-bottom: calc( 100vw * 100 / 1920 ); } 
 .getInTouch h2 { color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
 
 .getInTouch .svgMail circle, .svgMail .svgPath, .svgMail .svgTxt { transition: all .4s; } 

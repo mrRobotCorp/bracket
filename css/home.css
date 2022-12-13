@@ -9,18 +9,18 @@ radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), #EC4636
 linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode: overlay, difference, difference, difference, difference; } 
 
 /* --------------- main bracket ---------------------------- */
-.main .confetti-layer { opacity: 0; transition: opacity 2s; } 
+.main .confetti-layer { opacity: 0; transition: opacity 2s; white-space: nowrap; overflow: hidden;} 
 
 .main.active .confetti-layer { opacity: 1; } 
 
 /* .bracket::before { content: '{ '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; z-index: 150; transition: all .3s; }
 .bracket::after { content: ' }'; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; z-index: 150; transition: all .3s;} */
-.bracket { position: relative; display: inline-block; vertical-align: middle; height: calc( 100vw * 50 / 1920 ); text-shadow: 0 0 calc( 100vw * 5 / 1920 ) rgba(26, 26, 26, 0.142); animation: 6s confettiDrop linear infinite alternate; font-family: LSpecial; } 
+.bracket { position: relative; display: inline-block; vertical-align: middle;  text-shadow: 0 0 calc( 100vw * 5 / 1920 ) rgba(26, 26, 26, 0.142); animation: 6s confettiDrop linear infinite alternate; font-family: LSpecial; } 
 
 .confetti-layer { position: absolute; left: 0; width: 100%; height: 100vh; text-align: center; } 
 
 .confetti-layer.front { z-index: 3; } 
-.confetti-layer.front .bracket { height: calc( 100vw * 150 / 1920 ); margin: 10% 2%; font-size: calc( 100vw * 190 / 1920 ); }
+.confetti-layer.front .bracket { margin: 10% 2%; font-size: calc( 100vw * 190 / 1920 );  line-height: 150%;}
 .confetti-layer.front .bracket:nth-child(even) { margin-top: 2%; } 
 
 .confetti-layer.front .bracket:hover { animation-play-state: paused; z-index: 10; }
@@ -31,11 +31,11 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 .bracket .bracketInner .name { color: rgba(0, 0, 0, 0.653); }
 
 .confetti-layer.mid { z-index: 2; filter: blur(2px); } 
-.confetti-layer.mid .bracket { margin: 10% 2.5%; font-size: calc( 100vw * 110 / 1920 ); opacity: .8; } 
+.confetti-layer.mid .bracket { height: calc( 100vw * 50 / 1920 ); margin: 10% 2.5%; font-size: calc( 100vw * 110 / 1920 ); opacity: .8; } 
 .confetti-layer.mid .bracket:nth-child(odd) { margin-top: 0; } 
 
 .confetti-layer.back { z-index: 1; filter: blur(3px); } 
-.confetti-layer.back .bracket { margin-top: calc( 100vw * 400 / 1920 ); font-size: calc( 100vw * 80 / 1920 ); opacity: .7; } 
+.confetti-layer.back .bracket { height: calc( 100vw * 50 / 1920 ); margin-top: calc( 100vw * 400 / 1920 ); font-size: calc( 100vw * 80 / 1920 ); opacity: .7; } 
 .confetti-layer.back .bracket:nth-child(even) { margin: 20% 5%; } 
 
 @keyframes confettiDrop { 
