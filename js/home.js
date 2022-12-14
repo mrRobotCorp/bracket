@@ -10,7 +10,9 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
 // ----------------------- floating bracket  -------------------------------
 document.querySelector('.main').insertAdjacentHTML('afterbegin', `
   <div class="confetti-layer front" data-stellar-ratio="1.25">
-    <div class="c_inner"></div>
+    <div class="c_inner">
+      <span class="bracket firstShow">{<p class="bracketInner show">안녕하세요 프론트엔드 개발자<br> <span class="name">김윤아</span> 입니다.</p> }</span>
+    </div>
   </div>
   <div class="confetti-layer mid">
     <div class="c_inner"></div>
@@ -22,11 +24,11 @@ document.querySelector('.main').insertAdjacentHTML('afterbegin', `
 
 function makeConfetti(num, layer) {
   var $layer = $('.confetti-layer.'+layer+' .c_inner');
-  $layer.append(new Array(num + 1).join('<span class="bracket">{ <p class="bracketInner">안녕하세요 프론트엔드 개발자<br> <span class="name">김윤아</span> 입니다.</p> }</span>'));
+  $layer.append(new Array(num + 1).join('<span class="bracket">{<p class="bracketInner"><span class="innerColor">무한한 가능성</span>을 가진<br>괄호 안 자유로운 개발자입니다.</p> }</span>'));
 }
 
 $(function() {
-  makeConfetti(6, 'front');
+  makeConfetti(5, 'front');
   makeConfetti(10, 'mid');
   makeConfetti(11, 'back');
   
@@ -38,10 +40,10 @@ $(function() {
     });
 
     // random position 범위 조절
-    let x = (Math.random()*500) - 400;
+    let x = (Math.random()*500) - 300;
     let y = (Math.random()*600) - 280;
     let scale = 1.6 - Math.random();
-
+    
     $(this).css({
       'transform': 'translateX('+x+'%) translateY('+y+'%) scale('+scale+')'
     });
@@ -61,29 +63,6 @@ let confettiColors = [
 ];
 
 // ---------------- bracket hover --------------------
-// const frontBracket = document.querySelectorAll('.front');
-// const bracketInner = document.querySelectorAll('.bracketInner');
-// // const f_bracket0 = frontBracket.children[0];
-// // const f_bracket1 = frontBracket.children[1];
-// // const f_bracket2 = frontBracket.children[2];
-
-// // f_bracket0.insertAdjacentHTML('afterbegin', `
-// //   <p class=bracketInner'>안녕하세요 프론트엔드 개발자 김윤아입니다.</p>`
-// // );
-
-// bracketInner.addEventListener('mouseover', (e) => {
-//   bracketInner.forEach( function(inner) {
-//     inner.classList.add('innerActive');
-//   });
-// });
-
-// bracketInner.addEventListener('mouseout', (e) => {
-//   bracketInner.forEach( function(inner) {
-//     inner.classList.remove('innerActive');
-//   });
-// });
-
-// ----------------------------------------------------
 const frontBracket = document.querySelectorAll(".front .bracket");
 
 frontBracket.forEach(function (inner) {
@@ -104,11 +83,11 @@ frontBracket.forEach(function (inner) {
 
 // -------------------------------------------------------------
 document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
-  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" class='overview_img0' src='./source/overview_img0.png'>
+  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250" class='overview_img0' src='./source/overview_img0.png'>
 `)
 
 document.querySelector('.overview_stu').insertAdjacentHTML('beforeend', `
-  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" class='overview_img1' src='./source/overview_img0.png'>
+  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250" class='overview_img1' src='./source/overview_img0.png'>
 `)
 
 document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
