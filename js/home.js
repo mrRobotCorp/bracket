@@ -81,19 +81,6 @@ frontBracket.forEach(function (inner) {
     });
 });
 
-// -------------------------------------------------------------
-document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
-  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250" class='overview_img0' src='./source/overview_img0.png'>
-`)
-
-document.querySelector('.overview_stu').insertAdjacentHTML('beforeend', `
-  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250" class='overview_img1' src='./source/overview_img0.png'>
-`)
-
-document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
-  <img data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300" class='overview_img2' src='./source/overview_img2.png'>
-`)
-
 // ------------------------- keyword scrollTrigger -----------------------------------
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,25 +101,65 @@ const showTxt = () => {
 
 showTxt();
 
+// ------------------------- thumbnail img change ------------------------------------
+document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
+  <div class="overview_img overview_img0" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
+    <img src='./source/project0.png'>
+    <img src='./source/overview_img0.png'>
+    <img src='./source/project2.png'>
+  </div>
+`)
+
+document.querySelector('.overview_stu').insertAdjacentHTML('beforeend', `
+  <div class="overview_img overview_img1" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
+  <img src='./source/overview_img0.png'>
+  <img src='./source/project2.png'>
+  <img src='./source/project0.png'>
+  </div>
+`)
+
+document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
+  <div class="overview_img overview_img2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
+    <img src='./source/project0.png'>
+    <img src='./source/project2.png'>
+    <img src='./source/overview_img0.png'>
+  </div>
+`)
 
 // ----------------- thumbnail img change --------------------------
 const overview_img0 = document.querySelector('.overview_img0');
+const overview_img1 = document.querySelector('.overview_img1');
 const overview_img2 = document.querySelector('.overview_img2');
 
-overview_img0.addEventListener('mouseover', (e) => {
-  overview_img0.setAttribute('src', './source/overview_img2.png');
-});
+$('.overview_img0 > img:gt(0)').hide();
 
-overview_img0.addEventListener('mouseout', (e) => {
-  overview_img0.setAttribute('src', './source/overview_img0.png');
-});
+setInterval(function() {
+  $('.overview_img0 > img:first')
+        .fadeOut(800)
+        .next()
+        .fadeIn(800)
+        .end()
+        .appendTo('.overview_img0');
+}, 2500);
 
-overview_img2.addEventListener('mouseover', (e) => {
-  overview_img2.setAttribute('src', './source/overview_img0.png');
-});
+$('.overview_img1 > img:gt(0)').hide();
 
-overview_img2.addEventListener('mouseout', (e) => {
-  overview_img2.setAttribute('src', './source/overview_img2.png');
-});
+setInterval(function() {
+  $('.overview_img1 > img:first')
+        .fadeOut(800)
+        .next()
+        .fadeIn(800)
+        .end()
+        .appendTo('.overview_img1');
+}, 2500);
 
+$('.overview_img2 > img:gt(0)').hide();
 
+setInterval(function() {
+  $('.overview_img2 > img:first')
+        .fadeOut(800)
+        .next()
+        .fadeIn(800)
+        .end()
+        .appendTo('.overview_img2');
+}, 2500);
