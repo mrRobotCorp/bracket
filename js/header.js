@@ -1,3 +1,24 @@
+// -------------------- page location -----------------------
+const gnb_home = document.querySelector('.gnb_home');
+const gnb_project = document.querySelector('.gnb_project');
+const gnb_study = document.querySelector('.gnb_study');
+const gnb_iam = document.querySelector('.gnb_iam');
+
+gnb_home.onclick = function() {
+    window.location.replace('index.html');
+};
+gnb_project.onclick = function() {
+    window.location.replace('project.html');
+};
+gnb_study.onclick = function() {
+    window.location.replace('study.html');
+};
+gnb_iam.onclick = function() {
+    window.location.replace('iam.html');
+};
+
+// ---------------------------------------------
+
 const gnbMenu = document.querySelectorAll('#gnb li');
 const scrollNum = document.querySelector('html').scrollTop;
 

@@ -1,5 +1,4 @@
 @import './reset.css';
-
 header { background: rgba(224, 224, 224, 0.34); } 
 
 .mainBanner { display: flex; align-items: center; height: 100vh; } 
@@ -34,14 +33,15 @@ header { background: rgba(224, 224, 224, 0.34); }
 .profile h2 { margin-bottom: calc( 100vw * 60 / 1920 ); color: #EC4636; font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
 .profile article { display: flex; justify-content: space-around; align-items: stretch; } 
 
-.profile .mainProfile { width: calc( 100vw * 480 / 1920 ); height: calc( 100vw * 600 / 1920 ); position: relative; margin-right: calc( 100vw * 150 / 1920 ); } 
-.profile .mainProfile::before { content: ''; position: absolute; top: calc( 100vw * 10/ 1920 ); background: #EC4636; width: calc( 100vw * 400 / 1920 ); height: calc( 100vw * 400 / 1920 ); border-radius: 50%; } 
+.profile .mainProfile { position: relative; margin-right: calc( 100vw * 120 / 1920 ); }
+.profile .mainProfile::before { content: ''; position: absolute; top: calc( 100vw * 110 / 1920 ); left: calc( 100vw * 20 / 1920 ); width: calc( 100vw * 320 / 1920 ); height: calc( 100vw * 320 / 1920 ); background: #ec4536; border-radius: 50%; z-index: -1; transition: all .3s; }
+.profile .mainProfile .profileImg { width: calc( 100vw * 420 / 1920 ); transition: all .3s;}
 
 .profile .profileInfo { display: flex; flex-wrap: wrap; justify-content: space-between; } 
 .profile .profileInfo dl dt { margin-bottom: calc( 100vw * 25 / 1920 ); font-size: calc( 100vw * 25 / 1920 ); font-family: LBold; } 
-.profile .profileInfo dl dd { font-size: calc( 100vw * 20 / 1920 ); line-height: 160%; }
+.profile .profileInfo dl dd { font-size: calc( 100vw * 20 / 1920 ); line-height: 160%; } 
 
-.profile .profileInfo dl.education .edu_year { display: inline-block; width: calc( 100vw * 70 / 1920 ); color: #00000078; font-family: LRegular; }
+.profile .profileInfo dl.education .edu_year { display: inline-block; width: calc( 100vw * 70 / 1920 ); color: #00000078; font-family: LRegular; } 
 
 .profile .profileInfo .skills dd { display: inline-block; position: relative; padding: calc( 100vw * 10 / 1920 ) calc( 100vw * 30 / 1920 ) calc( 100vw * 10 / 1920 ) calc( 100vw * 70 / 1920 ); margin: calc( 100vw * 15 / 1920 ) calc( 100vw * 6 / 1920 ); border: calc( 100vw * 2 / 1920 ) solid #444; border-radius: calc( 100vw * 40 / 1920 ); transition: all .3s; user-select: none; cursor: pointer; } 
 .profile .profileInfo .skills dd:hover { background: #ffd52f58; border: calc( 100vw * 2 / 1920 ) solid #deb40a; } 
@@ -72,7 +72,7 @@ header { background: rgba(224, 224, 224, 0.34); }
 .mystory .experience .stu_program { top: calc( 100vw * 2820 / 1920 ); left: calc( 100vw * 450 / 1920 ); text-align: center; } 
 
 .mystory .experience .svgLine { display: block; margin: 0 auto; } 
-/* .mystory .experience .svgLine .path { stroke-dasharray: 0; stroke-dashoffset: 0; }  */
+/* .mystory .experience .svgLine .path { stroke-dasharray: 0; stroke-dashoffset: 0; } */
 
 /* ---------------------- getInTouch ------------------------- */
 

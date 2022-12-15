@@ -37,16 +37,14 @@ header { position: fixed; width: 100vw; display: flex; justify-content: center; 
 header nav #gnb::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; transition: all .3s; } 
 header nav #gnb::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; transition: all .3s; } 
 
-header nav #gnb li { display: inline-block; margin: 0 calc( 100vw * 40 / 1920 ); padding: calc( 100vw * 8 / 1920 ) calc( 100vw * 18 / 1920 ); border-radius: calc( 100vw * 20 / 1920 ); font-family: LBlack; font-size: calc( 100vw * 20 / 1920 ); transition: all .3s ease-out; } 
-header nav #gnb li a { transition: all .2s ease-in-out; }
-header nav #gnb li:hover { background-color: #EC4636;  }
-header nav #gnb li:hover a { color: #fff; }
+header nav #gnb li { display: inline-block; margin: 0 calc( 100vw * 40 / 1920 ); padding: calc( 100vw * 8 / 1920 ) calc( 100vw * 18 / 1920 ); border-radius: calc( 100vw * 20 / 1920 ); color: #000; font-family: LBlack; font-size: calc( 100vw * 20 / 1920 ); cursor: pointer; transition: all .3s ease-out; } 
+header nav #gnb li:hover { color: #fff; background-color: #EC4636;  }
+
 
 .show { animation: show .6s ease-out; } 
 .hide { opacity: 0; animation: hide .4s ease-out; white-space: nowrap; } 
 
-header nav #gnb li.active { background-color: #EC4636; } 
-header nav #gnb li.active a { color: #fff; } 
+header nav #gnb li.active { color: #fff; background-color: #EC4636; }  
 
 @keyframes show { 
  0% { opacity: 0; margin: 0 calc( 100vw * -50 / 1920 ); } 

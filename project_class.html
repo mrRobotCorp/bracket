@@ -28,15 +28,20 @@
 <body>
     <header>
         <nav>
-            <h1></h1>
             <ul id="gnb">
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./project.html">Project</a></li>
-                <li><a href="./study.html">Study</a></li>
-                <li><a href="./iam.html">Iam</a></li> 
+                <li class="gnb_home">Home</li>
+                <li class="gnb_project">Project</li>
+                <li class="gnb_study">Study</li>
+                <li class="gnb_iam">Iam</li>
             </ul>
         </nav>
     </header>
+
+    <ul class="projectNav">
+        <li class="navAl"></li>
+        <li class="navVp"></li>
+        <li class="navCls"></li>
+    </ul>
 
     <section class="projectImg projectClass">
         <h2 class="blind"></h2>
@@ -53,24 +58,25 @@
         <article>
             <h3>반응형 GNB 구조 설계</h3>
             <p>
-                페이지의 자연스러운 연결을 위해 사용할 수 있는 FullPage 라이브러리를 응용할 수 있습니다. 
-                응용할 수 있는 범위와 속성들의 개념을 인지할 수 있습니다.
+                CSS3 뿐만 아니라 JS를 통해서도 모바일과 PC의 유연한 메뉴를 설계해보았습니다.
+                window의 가로 넓이를 조건으로 하여 메뉴 요소를 변형시키고, JS로 class를 제어하여 쉽게 스타일을 적용시켰습니다.
             </p>
             <img src="./source/class_code0.png">
         </article>
         <article>
             <h3>GSAP을 통한 커스텀 마우스 설정</h3>
             <p>
-                처음 HTML5의 기초부터 배우면서 시작했던 웹 퍼블리싱의 작업물들을 확인해보세요. 
-                기초 코딩의 개념을 배우고 마크업 이해하며 발전된 코드의 진행 상황을 확인할 수 있어요.
+                gsap 라이브러리를 통해 마우스 요소를 새롭게 디자인 할 수 있습니다.
+                기본 커서의 페이지 위치값을 알아내어 새로운 커서에 대입시키는 메소드를 생성합니다.
+                mousemove 이벤트를 사용하여 해당 메소드를 실행시키는 것으로 커스텀 마우스를 완성합니다.
             </p>
             <img src="./source/class_code1.png">
         </article>
         <article>
             <h3>jQeury를 활용한 slick 라이브러리 제어</h3>
             <p>
-                JS에서 쓰이는 배열의 개념을 익히고 이를 활용하여 콘텐트 요소를 변경시킬 수 있습니다. 
-                이를 for문으로 대입하여 반복 작업을 최소화하고 콘텐츠를 새롭게 진행할 수 있습니다.
+                slick 슬라이드를 원하는 스타일에 맞춰 유연하게 적용 시키기 위해 새롭게 설정해볼 수 있습니다.
+                조건 요소들의 속성명과 속성값을 인지하고 추가하고 제거할 수 있습니다.
             </p>
             <img src="./source/class_code2.png">
         </article>

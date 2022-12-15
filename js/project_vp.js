@@ -1,3 +1,19 @@
+// --------------- side nav page -------------------
+const navAl = document.querySelector('.navAl');
+const navVp = document.querySelector('.navVp');
+const navCls = document.querySelector('.navCls');
+
+navAl.onclick = function() {
+    window.location.replace('project_alpick.html');
+};
+navVp.onclick = function() {
+    window.location.replace('project_vp.html');
+};
+navCls.onclick = function() {
+    window.location.replace('project_class.html');
+};
+
+
 // ------------------ img hover custom mouse ------------------
 const thumbnail = document.querySelectorAll(".pro_thumbnail");
 
