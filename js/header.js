@@ -57,7 +57,7 @@ $(window).on('load', function(){
     } else if (pageUrl.indexOf('iam') > -1) {
         $('header #gnb > li').eq(3).addClass('active');
     } else {
-        // home - index
+        // home (index)
         $('header #gnb > li').eq(0).addClass('active'); 
     }
 });
