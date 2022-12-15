@@ -13,6 +13,31 @@ navCls.onclick = function() {
     window.location.replace('project_class.html');
 };
 
+// ---------------- side nav motion --------------------
+const lagAmount = 50;
+const maxSpeed = 90;
+const frameRate = 20;
+const selector = '.projectNav';
+
+let scrollTop = 0;
+let pinTop = 0;
+let lastTime;
+
+const updatePinPosition = time => {
+    if (!lastTime)
+    lastTime = time;
+    let delta = time - lastTime;
+    if (delta >= frameRate) {
+        scrollTop = $(window).scrollTop();
+        let move = (scrollTop - pinTop) * delta / (lagAmount + delta);
+        let direction = move === 0 ? 0 : move / Math.abs(move);
+        pinTop = pinTop + Math.min(Math.abs(move), maxSpeed) * direction;
+        $(selector).css('transform', `translateY(${-move}px`);
+        lastTime = time;
+    }
+    requestAnimationFrame(updatePinPosition);
+};
+requestAnimationFrame(updatePinPosition);
 
 // ------------------ img hover custom mouse ------------------
 const thumbnail = document.querySelectorAll(".pro_thumbnail");

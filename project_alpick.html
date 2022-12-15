@@ -56,42 +56,50 @@
     <section class="codeEx">
         <h2>G<span class="italic">o into C</span>ode.</h2>
         <article>
-            <h3>인터렉티브한 헤더 설정</h3>
-            <p>
-                사용자의 움직임을 통해 인터렉티브한 헤더를 설정할 수 있습니다. 사용자의 움직임은 스크롤링과
-                마우스의 위치를 통해 나누어서 이벤트를 설정하였습니다. scrollTop이 0일 때 
-                즉, 스크롤링을 하지 않았을 때와 스크롤이 어느정도 진행됐을 때를 if문을 통해 나눠서 style을 주었습니다.
-                또한 마우스 움직임이 있을 시, 헤더와 가까워졌을 때와 멀어졌을 때를 나누어 style을 주어 인터렉티브한 헤더를 구현하였습니다.
-            </p>
+            <div>
+                <h3>인터렉티브한 헤더 설정</h3>
+                <p>
+                    사용자의 움직임을 통해 인터렉티브한 헤더를 설정할 수 있습니다. 사용자의 움직임은 스크롤링과
+                    마우스의 위치를 통해 나누어서 이벤트를 설정하였습니다. scrollTop이 0일 때 
+                    즉, 스크롤링을 하지 않았을 때와 스크롤이 어느정도 진행됐을 때를 if문을 통해 나눠서 style을 주었습니다.
+                    또한 마우스 움직임이 있을 시, 헤더와 가까워졌을 때와 멀어졌을 때를 나누어 style을 주어 인터렉티브한 헤더를 구현하였습니다.
+                </p>
+            </div>
             <img class="alpick_code0" src="./source/alpick_code0.png">
         </article>
         <article>
-            <h3>scrollTop 값을 활용한 스크롤 진행 바</h3>
-            <p>
-                scrollTop과 scrollHeight, clientHeight의 의미를 알고 구분하여 스크롤의 진행 상태를 
-                알 수 있는 progress bar를 구현하였습니다. 동적으로 생성한 progress bar를 scroll 이벤트 
-                발생 시 가져와 계산한 스크롤의 진행 percentage를 적용하였습니다. 스크롤의 진행 퍼센트는
-                스크롤 높이 값을 ( 콘텐츠의 높이 값 - 요소 내부의 높이 값 )으로 나누고 100을 곱하여 구하였습니다. 
-            </p>
+            <div>
+                <h3>scrollTop 값을 활용한 스크롤 진행 바</h3>
+                <p>
+                    scrollTop과 scrollHeight, clientHeight의 의미를 알고 구분하여 스크롤의 진행 상태를 
+                    알 수 있는 progress bar를 구현하였습니다. 동적으로 생성한 progress bar를 scroll 이벤트 
+                    발생 시 가져와 계산한 스크롤의 진행 percentage를 적용하였습니다. 스크롤의 진행 퍼센트는
+                    스크롤 높이 값을 ( 콘텐츠의 높이 값 - 요소 내부의 높이 값 )으로 나누고 100을 곱하여 구하였습니다. 
+                </p>
+            </div>
             <img src="./source/alpick_code1.png">
         </article>
         <article>
-            <h3>scrollTrigger 라이브러리를 통한 스크롤 모션 설정</h3>
-            <p>
-                JS 라이브러리 GSAP의 플러그인 중 scrollTrigger를 사용하여 요소 움직임을 주었습니다.
-                플러그인을 등록 후 움직임을 줄 요소에 timeline을 설정합니다. 그 안에서 트리거 요소와 
-                시작 상태와 끝 상태, 움직임 등의 옵션을 설정하여 유연하게 활용할 수 있습니다.
-            </p>
+            <div>
+                <h3>scrollTrigger 라이브러리를 통한 스크롤 모션 설정</h3>
+                <p>
+                    JS 라이브러리 GSAP의 플러그인 중 scrollTrigger를 사용하여 요소 움직임을 주었습니다.
+                    플러그인을 등록 후 움직임을 줄 요소에 timeline을 설정합니다. 그 안에서 트리거 요소와 
+                    시작 상태와 끝 상태, 움직임 등의 옵션을 설정하여 유연하게 활용할 수 있습니다.
+                </p>
+            </div>
             <img src="./source/alpick_code2.png">
         </article>
         <article>
-            <h3>jQuery로 미디어 타입 요소 제어 </h3>
-            <p>
-                CSS로만으로는 커스텀이 어려운 미디어 타입의 오디오를 jQuery를 통해 제어하였습니다.
-                html 상으로 컨트롤러를 없애고 컨트롤러를 대신 할 요소를 생성합니다. 대체 요소에 click 이벤트를 
-                설정해 play()와 pause()의 이벤트를 적용하였습니다. 해당 이벤트는 if문을 통해 data-click 값이 
-                0일 때와 1일 때를 나누어 설정하였습니다.
-            </p>
+            <div>
+                <h3>jQuery로 미디어 타입 요소 제어 </h3>
+                <p>
+                    CSS로만으로는 커스텀이 어려운 미디어 타입의 오디오를 jQuery를 통해 제어하였습니다.
+                    html 상으로 컨트롤러를 없애고 컨트롤러를 대신 할 요소를 생성합니다. 대체 요소에 click 이벤트를 
+                    설정해 play()와 pause()의 이벤트를 적용하였습니다. 해당 이벤트는 if문을 통해 data-click 값이 
+                    0일 때와 1일 때를 나누어 설정하였습니다.
+                </p>
+            </div>
             <img src="./source/alpick_code3.png">
         </article>
     </section>
