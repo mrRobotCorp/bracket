@@ -21,12 +21,12 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 .confetti-layer.front .bracket { margin: 5% 2%; font-size: calc( 100vw * 190 / 1920 );  line-height: 150%;}
 .confetti-layer.front .bracket:nth-child(even) { margin-top: 2%; } 
 
-.bracket .bracketInner { display: inline-block; width: 0; color: #fff; font-size: calc( 100vw * 40 / 1920 ); font-family: LBold; line-height: 160%; white-space: nowrap; overflow: hidden; transition: width .5s ease-out;  }
+.bracket .bracketInner { display: inline-block; width: 0; color: #fff; font-size: calc( 100vw * 40 / 1920 ); font-family: LWhite; line-height: 140%; white-space: nowrap; overflow: hidden; transition: width .5s ease-out;  }
 .confetti-layer.front .bracket:hover { animation-play-state: paused; z-index: 10; }
 .confetti-layer.front .bracket:hover .bracketInner { width: 90%; }
 
-.bracket .bracketInner .name { color: rgba(0, 0, 0, 0.724); }
-.bracket .bracketInner .innerColor { color: #EC4636;}
+/* .bracket .bracketInner .name { color: rgba(0, 0, 0, 0.792); text-shadow: none; } */
+.bracket .bracketInner .innerColor { color: #191919; text-shadow: none; font-family: LBold;}
 
 .front .bracket .show { width: 90%;}
 
