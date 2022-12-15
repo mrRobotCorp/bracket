@@ -36,13 +36,13 @@ document.querySelector('.introBanner article').insertAdjacentHTML('afterbegin', 
 `);
 
 // ----------------- skill page location -----------------
-const skills = document.querySelectorAll('.skillL');
+// const skillL = document.querySelectorAll('.skillL');
 
-skills.forEach( function() {
-    this.onclick = function() {
-        window.location.replace('study.html');
-    };
-});
+// skillL.forEach( function() {
+//     this.onclick = function() {
+//         window.location.replace('study.html');
+//     };
+// });
 
 // ------------------ skill hover ------------------------
 // const skillJs = document.querySelector(".skillJs");

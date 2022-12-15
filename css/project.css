@@ -35,8 +35,3 @@
 .cardImgs .content-right .img_bottom { display: flex; } 
 .cardImgs .content-right .img_bottom img { width: calc( 100vw * 90 / 1920 ); height: calc( 100vw * 75 / 1920 ); margin-left: calc( 100vw * 15 / 1920 ); object-fit: cover; object-position: center; transition: all .3s; cursor: pointer; } 
 .cardImgs .content-right .img_bottom img:hover { opacity: .75; } 
-
-/* ------------------------------------------------------- */
-/* .section01 { background: #e4e4e4; } 
-.section02 { background: rgb(198, 198, 198); } 
-.section03 { background: #dadada; } */

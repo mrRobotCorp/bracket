@@ -40,7 +40,7 @@ $(function() {
     });
 
     // random position 범위 조절
-    let x = (Math.random()*500) - 300;
+    let x = (Math.random()*450) - 200;
     let y = (Math.random()*600) - 280;
     let scale = 1.5 - Math.random();
     
