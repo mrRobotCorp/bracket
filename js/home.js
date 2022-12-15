@@ -101,6 +101,45 @@ const showTxt = () => {
 
 showTxt();
 
+// ----------------------- keyword mouseover ------------------------------
+
+
+$('.k0').hover( function() {
+  $(this).addClass('active'); 
+  $('.keywordOver0').addClass('active');
+  $('.keyword0').addClass('active');
+}, function() {
+  $(this).removeClass('active'); 
+  $('.keywordOver0').removeClass('active');
+  $('.keyword0').removeClass('active');
+});
+
+$('.k1').hover( function() {
+  $(this).addClass('active'); 
+  $('.keywordOver1').addClass('active');
+  $('.keyword1').addClass('active');
+}, function() {
+  $(this).removeClass('active'); 
+  $('.keywordOver1').removeClass('active');
+  $('.keyword1').removeClass('active');
+});
+
+
+// ---------------- btn page location ------------------
+const projectBtn = document.querySelector('.projectBtn');
+const studyBtn = document.querySelector('.studyBtn');
+const iamBtn = document.querySelector('.iamBtn');
+
+projectBtn.onclick = function() {
+  window.location.replace('project.html');
+};
+studyBtn.onclick = function() {
+  window.location.replace('study.html');
+};
+iamBtn.onclick = function() {
+  window.location.replace('iam.html');
+};
+
 // ------------------------- thumbnail img change ------------------------------------
 document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
   <div class="overview_img overview_img0" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
@@ -108,7 +147,7 @@ document.querySelector('.overview_pro').insertAdjacentHTML('beforeend', `
     <img src='./source/overview_img0.png'>
     <img src='./source/project2.png'>
   </div>
-`)
+`);
 
 document.querySelector('.overview_stu').insertAdjacentHTML('beforeend', `
   <div class="overview_img overview_img1" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
@@ -116,7 +155,7 @@ document.querySelector('.overview_stu').insertAdjacentHTML('beforeend', `
   <img src='./source/project2.png'>
   <img src='./source/project0.png'>
   </div>
-`)
+`);
 
 document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
   <div class="overview_img overview_img2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="250">
@@ -124,7 +163,7 @@ document.querySelector('.overview_iam').insertAdjacentHTML('beforeend', `
     <img src='./source/project2.png'>
     <img src='./source/overview_img0.png'>
   </div>
-`)
+`);
 
 // ----------------- thumbnail img change --------------------------
 const overview_img0 = document.querySelector('.overview_img0');
