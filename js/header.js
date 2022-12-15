@@ -23,7 +23,7 @@ const gnbMenu = document.querySelectorAll('#gnb li');
 const scrollNum = document.querySelector('html').scrollTop;
 
 window.onscroll = function() {
-    if (scrollNum < 500 ) {
+    if (scrollNum < 500 || window.location == 'index.html' ) {
         gnbMenu.forEach( function(menu) {
             menu.style.display = 'inline-block';
         });

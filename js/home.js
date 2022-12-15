@@ -124,6 +124,36 @@ $('.k1').hover( function() {
   $('.keyword1').removeClass('active');
 });
 
+$('.k2').hover( function() {
+  $(this).addClass('active'); 
+  $('.keywordOver2').addClass('active');
+  $('.keyword2').addClass('active');
+}, function() {
+  $(this).removeClass('active'); 
+  $('.keywordOver2').removeClass('active');
+  $('.keyword2').removeClass('active');
+});
+
+$('.k3').hover( function() {
+  $(this).addClass('active'); 
+  $('.keywordOver3').addClass('active');
+  $('.keyword3').addClass('active');
+}, function() {
+  $(this).removeClass('active'); 
+  $('.keywordOver3').removeClass('active');
+  $('.keyword3').removeClass('active');
+});
+
+$('.k4').hover( function() {
+  $(this).addClass('active'); 
+  $('.keywordOver4').addClass('active');
+  $('.keyword4').addClass('active');
+}, function() {
+  $(this).removeClass('active'); 
+  $('.keywordOver4').removeClass('active');
+  $('.keyword4').removeClass('active');
+});
+
 
 // ---------------- btn page location ------------------
 const projectBtn = document.querySelector('.projectBtn');

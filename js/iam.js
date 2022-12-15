@@ -35,47 +35,56 @@ document.querySelector('.introBanner article').insertAdjacentHTML('afterbegin', 
     </p>
 `);
 
+// ----------------- skill page location -----------------
+const skills = document.querySelectorAll('.skillL');
+
+skills.forEach( function() {
+    this.onclick = function() {
+        window.location.replace('study.html');
+    };
+});
+
 // ------------------ skill hover ------------------------
-const skillJs = document.querySelector(".skillJs");
-const skillCCS = document.querySelector(".skillCCS");
+// const skillJs = document.querySelector(".skillJs");
+// const skillCCS = document.querySelector(".skillCCS");
 
-skillJs.addEventListener("mouseover", function () {
-    cursor.classList.add("jsHover");
-    follower.classList.remove("cursor_follower");
-    function myCursor(e) {
-        cursor.style.top = e.pageY + 80 + "px";
-        cursor.style.left = e.pageX + 60 + "px";
-    }
-    window.addEventListener("mousemove", myCursor);
-});
-skillJs.addEventListener("mouseleave", function () {
-    cursor.classList.remove("jsHover");
-    follower.classList.add("cursor_follower");
-    function myCursor(e) {
-        cursor.style.top = e.pageY + 10 + "px";
-        cursor.style.left = e.pageX + 10 + "px";
-    }
-    window.addEventListener("mousemove", myCursor);
-});
+// skillJs.addEventListener("mouseover", function () {
+//     cursor.classList.add("jsHover");
+//     follower.classList.remove("cursor_follower");
+//     function myCursor(e) {
+//         cursor.style.top = e.pageY + 80 + "px";
+//         cursor.style.left = e.pageX + 60 + "px";
+//     }
+//     window.addEventListener("mousemove", myCursor);
+// });
+// skillJs.addEventListener("mouseleave", function () {
+//     cursor.classList.remove("jsHover");
+//     follower.classList.add("cursor_follower");
+//     function myCursor(e) {
+//         cursor.style.top = e.pageY + 10 + "px";
+//         cursor.style.left = e.pageX + 10 + "px";
+//     }
+//     window.addEventListener("mousemove", myCursor);
+// });
 
-skillCCS.addEventListener("mouseover", function () {
-    cursor.classList.add("cssHover");
-    follower.classList.remove("cursor_follower");
-    function myCursor(e) {
-        cursor.style.top = e.pageY - 160 + "px";
-        cursor.style.left = e.pageX + 80 + "px";
-    }
-    window.addEventListener("mousemove", myCursor);
-});
-skillCCS.addEventListener("mouseleave", function () {
-    cursor.classList.remove("cssHover");
-    follower.classList.add("cursor_follower");
-    function myCursor(e) {
-        cursor.style.top = e.pageY + 10 + "px";
-        cursor.style.left = e.pageX + 10 + "px";
-    }
-    window.addEventListener("mousemove", myCursor);
-});
+// skillCCS.addEventListener("mouseover", function () {
+//     cursor.classList.add("cssHover");
+//     follower.classList.remove("cursor_follower");
+//     function myCursor(e) {
+//         cursor.style.top = e.pageY - 160 + "px";
+//         cursor.style.left = e.pageX + 80 + "px";
+//     }
+//     window.addEventListener("mousemove", myCursor);
+// });
+// skillCCS.addEventListener("mouseleave", function () {
+//     cursor.classList.remove("cssHover");
+//     follower.classList.add("cursor_follower");
+//     function myCursor(e) {
+//         cursor.style.top = e.pageY + 10 + "px";
+//         cursor.style.left = e.pageX + 10 + "px";
+//     }
+//     window.addEventListener("mousemove", myCursor);
+// });
 
 
 // --------------------- original svg ------------------------
@@ -99,42 +108,3 @@ $win.on('scroll', function() {
     var p = $win.scrollTop() / max;
     $svg.drawsvg('progress', p);
 });
-
-
-// ---------------- scrollTrigger ------------------
-// const path = document.querySelector('.path');
-// const svgAll = document.querySelector('.svgLine');
-
-// let pathLength = path.getTotalLength();
-
-// path.style.strokeDasharray = pathLength;
-// path.style.strokeDashoffset = pathLength;
-
-// function svgDraw() {
-//     let scrollPercentage = (document.body.scrollTop + document.documentElement.scrollTop + 900) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-//     // let scrollPercentage = ( window.scrollY + window.innerHeight - svgAll.offsetTop ) / svgAll.offsetHeight;
-//     let draw = pathLength * scrollPercentage;
-    
-//     path.style.strokeDashoffset = pathLength - draw;
-// }
-
-// window.addEventListener("scroll", svgDraw);
-
-
-// // ------------------------------ youtube ---------------------------
-// path.style.strokeDasharray  = pathLength;
-// path.style.strokeDashoffset = calcDashoffset(window.innerHeight * 0.8, svgAll, pathLength);
-// // path.style.strokeDashoffset = pathLength;
-
-// function calcDashoffset(scrollY, element, length) {
-//     const ratio = (scrollY - element.offsetTop) / element.offsetHeight
-//     const value = length - (length * ratio)
-//     return value < 0 ? 0 : value > length ? length : value
-// }
-
-// function scrollHandler() {
-//     const scrollY = window.scrollY + (window.innerHeight * 0.8)
-//     path.style.strokeDashoffset = calcDashoffset(scrollY, svgAll, pathLength)
-// }
-
-// window.addEventListener('scroll', scrollHandler)

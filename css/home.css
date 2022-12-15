@@ -50,9 +50,12 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 .wordsAll .wrapper li:hover { background: #ec453634; } 
 
 .wordsAll .wrapper .keyLine { transition: all .4s;}
-.wordsAll .wrapper .k0.active { width: calc( 100vw * 600 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
-.wordsAll .wrapper .k1.active { width: calc( 100vw * 500 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
 
+.wordsAll .wrapper .k0.active { width: calc( 100vw * 600 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
+.wordsAll .wrapper .k1.active { width: calc( 100vw * 600 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
+.wordsAll .wrapper .k2.active { width: calc( 100vw * 500 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
+.wordsAll .wrapper .k3.active { width: calc( 100vw * 550 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
+.wordsAll .wrapper .k4.active { width: calc( 100vw * 550 / 1920 ); padding: calc( 100vw * 45 / 1920 ) calc( 100vw * 80 / 1920 ); }
 
 .wordsAll .wrapper li .keyword { transition: all .3s; }
 .wordsAll .wrapper li .keyword.active { padding-bottom: calc( 100vw * 30 / 1920 ); font-family: LRegular; font-size: calc( 100vw * 47 / 1920 ); }
@@ -61,11 +64,10 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 .wordsAll .wrapper li .keywordOver.active { opacity: 1; }
 
 
-
 /* ----------------- overview --------------------- */
 .overview { height: 180vh; } 
-.overview article { display: flex; justify-content: space-between; align-items: center; } 
-.overview article { margin: calc( 100vw * 180 / 1920 ) 0; } 
+.overview article { display: flex; justify-content: space-between; align-items: center; margin: calc( 100vw * 140 / 1920 ) 0; padding-bottom: calc( 100vw * 100 / 1920 ); border-bottom: calc( 100vw * 2 / 1920 ) solid rgba(153, 153, 153, 0.279); } 
+.overview article:last-child { border: none; } 
 .overview article div h3 { color: #EC4636; margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 50 / 1920 ); font-family: LSpecial; } 
 .overview article div p { width: calc( 100vw * 490 / 1920 ); font-size: calc( 100vw * 19 / 1920 ); line-height: 155%; } 
 .overview article div .overviewBtn { position: relative; padding: calc( 100vw * 3 / 1920 ) 0; margin: calc( 100vw * 20 / 1920 ) 0; color: #191919; background: transparent; border: none; font-family: LRegular; font-size: calc( 100vw * 18 / 1920 ); cursor: pointer; transition: all .3s; }
