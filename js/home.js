@@ -50,8 +50,8 @@ $(function() {
     
   });
   
-  $.stellar();
-  $('.main').addClass('active');
+  // $.stellar();
+  // $('.main').addClass('active');
 });
 
 let confettiColors = [
