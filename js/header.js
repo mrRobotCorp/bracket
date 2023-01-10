@@ -114,12 +114,12 @@ document.querySelector('footer').insertAdjacentHTML('beforeend', `
             <div class="formContent">
                 <fieldset>
                     <label for="name">보내는 이 : </label>
-                    <input id="name" name="name" placeholder="Your name" />
+                    <input id="name" name="name" placeholder="이름을 적어주세요." />
                 </fieldset>
 
                 <fieldset>
                     <label for="message">메세지 : </label>
-                    <textarea id="message" name="message" placeholder="Your message that you want to send"></textarea>
+                    <textarea id="message" name="message" placeholder="보내고 싶은 내용을 적어주세요."></textarea>
                 </fieldset>
 
                 <fieldset>

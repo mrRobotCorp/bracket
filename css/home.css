@@ -47,7 +47,7 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 
 .wordsAll .wrapper { display: flex; } 
 .wordsAll .wrapper li { position: relative; flex-shrink: 0; padding-right: 1rem; padding: calc( 100vw * 90 / 1920 ) calc( 100vw * 80 / 1920 ); font-size: calc( 100vw * 60 / 1920 ); box-shadow: calc( 100vw * 2 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 20 / 1920 ) #acacac85; } 
-.wordsAll .wrapper li:hover { background: #ec453634; } 
+.wordsAll .wrapper li:hover { background: #faac3757; } 
 
 .wordsAll .wrapper .keyLine { transition: all .4s;}
 
