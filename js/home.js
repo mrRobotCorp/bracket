@@ -1,4 +1,5 @@
 AOS.init();
+
 // --------------------------- mainBanner bg ----------------------------
 document.querySelector('.main').addEventListener("pointermove", (e)=>{
     const { currentTarget: el, clientX: x, clientY: y } = e;
@@ -10,9 +11,7 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
 // ----------------------- floating bracket  -------------------------------
 document.querySelector('.main').insertAdjacentHTML('afterbegin', `
   <div class="confetti-layer front" data-stellar-ratio="1.25">
-    <div class="c_inner">
-      <span class="bracket firstShow">{<p class="bracketInner show">안녕하세요 프론트엔드 개발자<br> <span class="name">김윤아</span> 입니다.</p> }</span>
-    </div>
+    <div class="c_inner"></div>
   </div>
   <div class="confetti-layer mid">
     <div class="c_inner"></div>
@@ -50,8 +49,8 @@ $(function() {
     
   });
   
-  // $.stellar();
-  // $('.main').addClass('active');
+  $.stellar();
+  $('.main').addClass('active');
 });
 
 let confettiColors = [

@@ -9,11 +9,15 @@ radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), #EC4636
 linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode: overlay, difference, difference, difference, difference;  white-space: nowrap;  } 
 
 /* --------------- main bracket ---------------------------- */
-.main .confetti-layer { opacity: 0; transition: opacity 2s;overflow: hidden;} 
+.firstShow { position: absolute; top: 43%; left: 35%; color: #3f2010; font-size: calc( 100vw * 110 / 1920 ); font-family: LSpecial; text-align: center; }
+.show { display: inline-block; margin: 0 calc( 100vw * 27 / 1920 ); font-family: LBold; font-size: calc( 100vw * 35 / 1920 ); line-height: 135%; }
+
+/* -------------- */
+.main .confetti-layer { opacity: 0; transition: opacity 2s; overflow: hidden;} 
 
 .main.active .confetti-layer { opacity: 1; } 
 
-.bracket { position: relative; display: inline-block; vertical-align: middle;  text-shadow: 0 0 calc( 100vw * 4 / 1920 ) rgba(1, 1, 1, 0.185); animation: 6s confettiDrop linear infinite alternate; font-family: LSpecial; } 
+.bracket { position: relative; display: inline-block; vertical-align: middle;  text-shadow: 0 0 calc( 100vw * 4 / 1920 ) rgba(1, 1, 1, 0.185); animation: 7s confettiDrop linear infinite alternate; font-family: LSpecial; } 
 
 .confetti-layer { position: absolute; left: 0; width: 100%; height: 100vh; text-align: center; } 
 
@@ -21,14 +25,12 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 .confetti-layer.front .bracket { margin: 5% 2%; font-size: calc( 100vw * 190 / 1920 ); line-height: 150%; }
 .confetti-layer.front .bracket:nth-child(even) { margin-top: 2%; } 
 
-.bracket .bracketInner { display: inline-block; width: 0; color: #fff; font-size: calc( 100vw * 40 / 1920 ); font-family: LWhite; line-height: 140%; white-space: nowrap; overflow: hidden; transition: width .5s ease-out;  }
+.bracket .bracketInner { display: inline-block; width: 0; color: #fff; font-size: calc( 100vw * 40 / 1920 ); font-family: LWhite; line-height: 140%; white-space: nowrap; overflow: hidden; transition: width .6s ease-out;  }
 .confetti-layer.front .bracket:hover { animation-play-state: paused; z-index: 10; }
 .confetti-layer.front .bracket:hover .bracketInner { width: 90%; }
 
 .bracket .bracketInner .name { font-family: LBold; }
 .bracket .bracketInner .innerColor { color: #3f2010; text-shadow: none; font-family: LBold;}
-
-.front .bracket .show { width: 90%;}
 
 .confetti-layer.mid { z-index: 2; filter: blur(2px); } 
 .confetti-layer.mid .bracket { height: calc( 100vw * 50 / 1920 ); margin: 10% 2.5%; font-size: calc( 100vw * 110 / 1920 ); opacity: .8; } 

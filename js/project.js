@@ -45,8 +45,6 @@ down.onclick = function() {
 	});
 }
 
-
-
 // ----------------- thumbnail cursor --------------------------
 const thumbnail = document.querySelectorAll(".thumbnail");
 
