@@ -1,3 +1,15 @@
+// ------------------ loading --------------------
+document.querySelector('body').insertAdjacentHTML('afterbegin', `
+    <div class="loader">
+        <div class="animate">Loading</div>
+    </div>
+`)
+
+window.onload = function() {
+    document.querySelector(".loader").style.visibility = "hidden";
+};
+
+
 // -------------------- page location -----------------------
 const gnb_home = document.querySelector('.gnb_home');
 const gnb_project = document.querySelector('.gnb_project');
