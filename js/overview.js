@@ -5,9 +5,7 @@ let option = {
     time: 0.3 
 };
 
-/*--------------------
-Init Scrollbar
--------------------*/
+// ------------------ Init Scrollbar --------------------
 const scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
 overscrollEffect: 'bounce',
 alwaysShowTracks: true });
