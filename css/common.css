@@ -1,35 +1,10 @@
 @import './reset.css';
-
 body { overflow-x: hidden; } 
 
 /* -------------------------------------------------- */
-.cursor {
-    width: calc(100vw * 18 / 1920);
-    height: calc(100vw * 18 / 1920);
-    border-radius: 50%;
-    background-color: #EC4636;
-    position: absolute;
-    z-index: 150;
-    top: 0;
-    right: 0;
-    transform: translate(-50%, -50%);
-    transform-origin: 100% 100%;
-    transition: all 0.3s ease;
-    transition-property: background, transform;
-}
+.cursor { width: calc(100vw * 18 / 1920); height: calc(100vw * 18 / 1920); border-radius: 50%; background-color: #EC4636; position: absolute; z-index: 150; top: 0; right: 0; transform: translate(-50%, -50%); transform-origin: 100% 100%; transition: all 0.3s ease; transition-property: background, transform; } 
 
-.cursor_follower {
-    position: absolute;
-    width: calc(100vw * 53 / 1920);
-    height: calc(100vw * 53 / 1920);
-    background: transparent;
-    z-index: 120;
-    border: calc( 100vw * 2 / 1920 ) solid #e4ca00;
-    border-radius: 50%;
-    user-select: none;
-    pointer-events: none;
-    transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
-}
+.cursor_follower { position: absolute; width: calc(100vw * 53 / 1920); height: calc(100vw * 53 / 1920); background: transparent; z-index: 120; border: calc( 100vw * 2 / 1920 ) solid #e4ca00; border-radius: 50%; user-select: none; pointer-events: none; transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out; } 
 
 /* ------------------- header ------------------- */
 header { position: fixed; width: 100vw; display: flex; justify-content: center; align-items: center; top: 0; height: calc( 100vw * 83 / 1920 ); background: rgba(255, 255, 255, 0.304); backdrop-filter: blur(5px); z-index: 100; transition: all .4s; } 
@@ -38,25 +13,25 @@ header nav #gnb::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 
 header nav #gnb::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 30 / 1920 ); font-weight: 600; z-index: 150; transition: all .3s; } 
 
 header nav #gnb li { display: inline-block; margin: 0 calc( 100vw * 40 / 1920 ); padding: calc( 100vw * 8 / 1920 ) calc( 100vw * 18 / 1920 ); border-radius: calc( 100vw * 20 / 1920 ); color: #000; font-family: LBlack; font-size: calc( 100vw * 20 / 1920 ); cursor: pointer; transition: all .3s ease-out; } 
-header nav #gnb li:hover { color: #fff; background-color: #EC4636;  }
+header nav #gnb li:hover { color: #fff; background-color: #EC4636; } 
 
 
 .show { animation: show .6s ease-out; } 
 .hide { opacity: 0; animation: hide .4s ease-out; white-space: nowrap; } 
 
-header nav #gnb li.active { color: #fff; background-color: #EC4636; }  
+header nav #gnb li.active { color: #fff; background-color: #EC4636; } 
 
 @keyframes show { 
  0% { opacity: 0; margin: 0 calc( 100vw * -50 / 1920 ); } 
  30% { opacity: .3; margin: 0 calc( 100vw * -10 / 1920 ); } 
  100% { opacity: 1; margin: 0 calc( 100vw * 40 / 1920 ); } 
-}
+ }
 
 @keyframes hide { 
  0% { opacity: 1; margin: 0 calc( 100vw * 40 / 1920 ); } 
  30% { opacity: .3; margin: 0 calc( 100vw * -30 / 1920 ); } 
  100% { opacity: 0; margin: 0 calc( 100vw * -50 / 1920 ); } 
-}
+ }
 
 /* ------------------------------------------------- */
 ::selection { color: #fff; background: #EC4636; } 
@@ -72,35 +47,41 @@ header nav #gnb li.active { color: #fff; background-color: #EC4636; }
 .bold { font-family: LBlack; } 
 
 /* ------------------------ loading ---------------------------- */
-.loader { background-color: #111; color: white; z-index: 1000; width: 100vw; height: 100vh; position: fixed; top: 0; } 
-.animate { font-size: calc( 100vw * 20 / 1920 ); font-family: LBold; display: flex; justify-content: center; align-items: center; height:100%; margin: auto; animation: load 1.2s infinite 0s ease-in-out; animation-direction: alternate; text-shadow: 0 0 1px white; } 
+.loader { background-color: #1D1B1B; color: #EC4636; z-index: 1000; width: 100vw; height: 100vh; position: fixed; top: 0; } 
+.animate { font-size: calc( 100vw * 30 / 1920 ); font-family: LBold; display: flex; justify-content: center; align-items: center; height:100%; margin: auto; animation: load 1.2s infinite 0s ease-in-out; animation-direction: alternate;  } 
+
+@keyframes load { 
+0% { opacity: 0.08; filter: blur(5px); letter-spacing: calc( 100vw * 6 / 1920 ); } 
+
+100% { letter-spacing: calc( 100vw * 3 / 1920 ); } 
+}
 
 /* ---------------------- footer --------------------------- */
 
-footer { height: calc( 100vw * 600 / 1920 ); display: flex; justify-content: space-around; align-items: center; background: #f5f5f5; }
-footer .footerInfo { height: 100%; display: flex; align-items: flex-start; justify-content: space-evenly; flex-direction: column; }
+footer { height: calc( 100vw * 600 / 1920 ); display: flex; justify-content: space-around; align-items: center; background: #f5f5f5; } 
+footer .footerInfo { height: 100%; display: flex; align-items: flex-start; justify-content: space-evenly; flex-direction: column; } 
 
 footer .footerBI { color: #EC4636; font-family: LSpecialIt; font-size: calc( 100vw * 38 / 1920 ); user-select: none; } 
-footer .footerBI::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 50 / 1920 ); }
-footer .footerBI::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 50 / 1920 ); }
+footer .footerBI::before { content: ' { '; margin-right: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 50 / 1920 ); } 
+footer .footerBI::after { content: ' } '; margin-left: calc( 100vw * 13 / 1920 ); font-family: LSpecial; font-size: calc( 100vw * 50 / 1920 ); } 
 
-footer .footerGnb { width: calc( 100vw * 250 / 1920 ); padding-top: calc( 100vw * 10 / 1920 ); border-top: calc( 100vw * 1.5 / 1920 ) solid #1D1B1B; }
-footer .footerGnb li { margin: calc( 100vw * 23 / 1920 ) 0; font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular;}
+footer .footerGnb { width: calc( 100vw * 250 / 1920 ); padding-top: calc( 100vw * 10 / 1920 ); border-top: calc( 100vw * 1.5 / 1920 ) solid #1D1B1B; } 
+footer .footerGnb li { margin: calc( 100vw * 23 / 1920 ) 0; font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; } 
 footer .footerInfo p { font-size: calc( 100vw * 15 / 1920 ); } 
 
-footer .contact { width: calc( 100vw * 600 / 1920 ); }
-footer .contact h4 { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 22 / 1920 ); font-family: LBold; }
-footer .contact .formContent fieldset { display: flex; align-items: flex-start; margin: calc( 100vw * 15 / 1920 ) 0; }
-footer .contact .formContent fieldset label { width: calc( 100vw * 150 / 1920 ); padding-top: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); }
-footer .contact .formContent fieldset input { width: 90%; padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; }
-footer .contact .formContent fieldset textarea { width: 90%; height: calc( 100vw * 150 / 1920 ); padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; resize: none; }
+footer .contact { width: calc( 100vw * 600 / 1920 ); } 
+footer .contact h4 { margin-bottom: calc( 100vw * 30 / 1920 ); font-size: calc( 100vw * 22 / 1920 ); font-family: LBold; } 
+footer .contact .formContent fieldset { display: flex; align-items: flex-start; margin: calc( 100vw * 15 / 1920 ) 0; } 
+footer .contact .formContent fieldset label { width: calc( 100vw * 150 / 1920 ); padding-top: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); } 
+footer .contact .formContent fieldset input { width: 90%; padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; } 
+footer .contact .formContent fieldset textarea { width: 90%; height: calc( 100vw * 150 / 1920 ); padding: calc( 100vw * 10 / 1920 ); border: calc( 100vw * 1 / 1920 ) solid #0000005d; border-radius: calc( 100vw * 13 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); font-family: LWhite; resize: none; } 
 
-footer .contact .formContent fieldset input:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
-footer .contact .formContent fieldset textarea:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; }
+footer .contact .formContent fieldset input:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; } 
+footer .contact .formContent fieldset textarea:focus { outline: calc( 100vw * 2 / 1920 ) solid #EC4636; } 
 
-footer .contact .formContent button { float: right; padding: calc( 100vw * 7 /1920 ) calc( 100vw * 19 / 1920 ); margin-top: calc( 100vw * 15 / 1920 ); background: #EC4636; color: #fff; border: none; border-radius: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; transition: all .4s; cursor: pointer; }
-footer .contact .formContent button:hover { background: #1D1B1B; }
-footer .contact .formContent button:focus { outline: none; box-shadow: calc( 100vw * 3 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 5 / 1920 ) #9d251a8b; }
+footer .contact .formContent button { float: right; padding: calc( 100vw * 7 /1920 ) calc( 100vw * 19 / 1920 ); margin-top: calc( 100vw * 15 / 1920 ); background: #EC4636; color: #fff; border: none; border-radius: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); font-family: LRegular; transition: all .4s; cursor: pointer; } 
+footer .contact .formContent button:hover { background: #1D1B1B; } 
+footer .contact .formContent button:focus { outline: none; box-shadow: calc( 100vw * 3 / 1920 ) calc( 100vw * 4 / 1920 ) calc( 100vw * 5 / 1920 ) #9d251a8b; } 
 
-footer .contact .nextSending { display: none; }
-footer .contact .nextSending p { background: #fff; padding: calc( 100vw * 40 / 1920 ) calc( 100vw * 25 / 1920 ); margin-top: calc( 100vw * 30 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); line-height: 180%; text-align: center; }
+footer .contact .nextSending { display: none; } 
+footer .contact .nextSending p { background: #fff; padding: calc( 100vw * 40 / 1920 ) calc( 100vw * 25 / 1920 ); margin-top: calc( 100vw * 30 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); font-size: calc( 100vw * 16 / 1920 ); line-height: 180%; text-align: center; } 
