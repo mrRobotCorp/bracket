@@ -9,76 +9,79 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
 })
 
 // ----------------------- floating bracket  -------------------------------
-document.querySelector('.main').insertAdjacentHTML('afterbegin', `
-  <div class="confetti-layer front" data-stellar-ratio="1.25">
-    <div class="c_inner"></div>
-  </div>
-  <div class="confetti-layer mid">
-    <div class="c_inner"></div>
-  </div>
-  <div class="confetti-layer back" data-stellar-ratio="0.75">
-    <div class="c_inner"></div>
-  </div>
-`);
+if(window.innerWidth > 1024) {
 
-function makeConfetti(num, layer) {
-  var $layer = $('.confetti-layer.'+layer+' .c_inner');
-  $layer.append(new Array(num + 1).join('<span class="bracket">{<p class="bracketInner"><span class="innerColor">무한한 가능성</span>을 가진<br>괄호 안 자유로운 개발자입니다.</p> }</span>'));
-}
-
-$(function() {
-  makeConfetti(5, 'front');
-  makeConfetti(10, 'mid');
-  makeConfetti(11, 'back');
+  document.querySelector('.main').insertAdjacentHTML('afterbegin', `
+    <div class="confetti-layer front" data-stellar-ratio="1.25">
+      <div class="c_inner"></div>
+    </div>
+    <div class="confetti-layer mid">
+      <div class="c_inner"></div>
+    </div>
+    <div class="confetti-layer back" data-stellar-ratio="0.75">
+      <div class="c_inner"></div>
+    </div>
+  `);
   
-  $('.bracket').each(function() {
-    let colorIndex = Math.floor(Math.random()*(confettiColors.length));
-
-    $(this).attr('data-color', colorIndex).css({
-      'color': confettiColors[colorIndex]
-    });
-
-    // random position 범위 조절
-    let x = (Math.random()*450) - 200;
-    let y = (Math.random()*600) - 280;
-    let scale = 1.5 - Math.random();
+  function makeConfetti(num, layer) {
+    var $layer = $('.confetti-layer.'+layer+' .c_inner');
+    $layer.append(new Array(num + 1).join('<span class="bracket">{<p class="bracketInner"><span class="innerColor">무한한 가능성</span>을 가진<br>괄호 안 자유로운 개발자입니다.</p> }</span>'));
+  }
+  
+  $(function() {
+    makeConfetti(5, 'front');
+    makeConfetti(10, 'mid');
+    makeConfetti(11, 'back');
     
-    $(this).css({
-      'transform': 'translateX('+x+'%) translateY('+y+'%) scale('+scale+')'
+    $('.bracket').each(function() {
+      let colorIndex = Math.floor(Math.random()*(confettiColors.length));
+  
+      $(this).attr('data-color', colorIndex).css({
+        'color': confettiColors[colorIndex]
+      });
+  
+      // random position 범위 조절
+      let x = (Math.random()*450) - 200;
+      let y = (Math.random()*600) - 280;
+      let scale = 1.5 - Math.random();
+      
+      $(this).css({
+        'transform': 'translateX('+x+'%) translateY('+y+'%) scale('+scale+')'
+      });
+      
     });
     
+    $.stellar();
+    $('.main').addClass('active');
   });
   
-  $.stellar();
-  $('.main').addClass('active');
-});
-
-let confettiColors = [
-  '#fff',
-  '#ffe4e2',
-  '#ffe9da',
-  '#ffdcc5',
-  '#ffdcc0'
-];
-
-// ---------------- bracket hover --------------------
-const frontBracket = document.querySelectorAll(".front .bracket");
-
-frontBracket.forEach(function (inner) {
-  inner.addEventListener("mouseover", function () {
-        // cursor.classList.add("projectHover");
-        follower.classList.remove("cursor_follower");
-
-        window.addEventListener("mousemove", myCursor);
-    });
-	
-    inner.addEventListener("mouseleave", function () {
-        // cursor.classList.remove("projectHover");
-        follower.classList.add("cursor_follower");
-
-        window.addEventListener("mousemove", myCursor);
-    });
-});
+  let confettiColors = [
+    '#fff',
+    '#ffe4e2',
+    '#ffe9da',
+    '#ffdcc5',
+    '#ffdcc0'
+  ];
+  
+  // ---------------- bracket hover --------------------
+  const frontBracket = document.querySelectorAll(".front .bracket");
+  
+  frontBracket.forEach(function (inner) {
+    inner.addEventListener("mouseover", function () {
+          // cursor.classList.add("projectHover");
+          follower.classList.remove("cursor_follower");
+  
+          window.addEventListener("mousemove", myCursor);
+      });
+    
+      inner.addEventListener("mouseleave", function () {
+          // cursor.classList.remove("projectHover");
+          follower.classList.add("cursor_follower");
+  
+          window.addEventListener("mousemove", myCursor);
+      });
+  });
+}
 
 // ------------------------- keyword scrollTrigger -----------------------------------
 gsap.registerPlugin(ScrollTrigger);
