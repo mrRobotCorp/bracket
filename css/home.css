@@ -91,6 +91,10 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
     .main { display: flex; align-items: center; justify-content: center;}
     .firstShow { position: inherit; }
     .show { font-size: 18px; }
+
+
+
+    .overview { height: auto; }
 }
 
 @media screen and (min-width: 1024px) { body { } 
