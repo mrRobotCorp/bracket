@@ -45,30 +45,34 @@ down.onclick = function() {
 	});
 }
 
-// ----------------- thumbnail cursor --------------------------
-const thumbnail = document.querySelectorAll(".thumbnail");
+if(window.innerWidth > 1024) {
+    // ----------------- thumbnail cursor --------------------------
+    const thumbnail = document.querySelectorAll(".thumbnail");
+    
+    thumbnail.forEach(function (thumb) {
+        thumb.addEventListener("mouseover", function () {
+            cursor.classList.add("projectHover");
+            follower.classList.remove("cursor_follower");
+            function myCursor(e) {
+                cursor.style.top = e.pageY + 45 + "px";
+                cursor.style.left = e.pageX + 45 + "px";
+            }
+            window.addEventListener("mousemove", myCursor);
+        });
+        
+        thumb.addEventListener("mouseleave", function () {
+            cursor.classList.remove("projectHover");
+            follower.classList.add("cursor_follower");
+            function myCursor(e) {
+                cursor.style.top = e.pageY + 10 + "px";
+                cursor.style.left = e.pageX + 10 + "px";
+            }
+            window.addEventListener("mousemove", myCursor);
+        });
+    });
 
-thumbnail.forEach(function (thumb) {
-    thumb.addEventListener("mouseover", function () {
-        cursor.classList.add("projectHover");
-        follower.classList.remove("cursor_follower");
-        function myCursor(e) {
-            cursor.style.top = e.pageY + 45 + "px";
-            cursor.style.left = e.pageX + 45 + "px";
-        }
-        window.addEventListener("mousemove", myCursor);
-    });
-	
-    thumb.addEventListener("mouseleave", function () {
-        cursor.classList.remove("projectHover");
-        follower.classList.add("cursor_follower");
-        function myCursor(e) {
-            cursor.style.top = e.pageY + 10 + "px";
-            cursor.style.left = e.pageX + 10 + "px";
-        }
-        window.addEventListener("mousemove", myCursor);
-    });
-});
+}
+
 
 // ----------- img change ---------------
 const thumb0 = document.querySelector(".thumbnail0");

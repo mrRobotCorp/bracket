@@ -28,54 +28,7 @@ gnb_iam.onclick = function () {
     window.location.replace('iam.html');
 };
 
-// ---------------------------------------------
 
-const gnbMenu = document.querySelectorAll('#gnb li');
-const scrollNum = document.querySelector('html').scrollTop;
-
-window.onscroll = function () {
-    if (scrollNum < 500 || window.location == 'index.html') {
-        gnbMenu.forEach(function (menu) {
-            menu.style.display = 'inline-block';
-        });
-    }
-
-    if (scrollNum > 1500) {
-        gnbMenu.forEach(function (menu) {
-            menu.classList.add('hide');
-            menu.classList.remove('show');
-            menu.style.display = 'none';
-        })
-    } else {
-        gnbMenu.forEach(function (menu) {
-            menu.style.display = 'inline-block';
-            menu.classList.add('show');
-            menu.classList.remove('hide');
-        })
-    }
-
-    // --------------------------
-
-    gnbMenu.forEach(function (menu) {
-        menu.style.display = 'none';
-    });
-
-    document.querySelector('header').addEventListener('mouseover', (e) => {
-        gnbMenu.forEach(function (menu) {
-            menu.style.display = 'inline-block';
-            menu.classList.add('show');
-            menu.classList.remove('hide');
-        })
-    });
-
-    document.querySelector('header').addEventListener('mouseout', (e) => {
-        gnbMenu.forEach(function (menu) {
-            menu.classList.add('hide');
-            menu.classList.remove('show');
-            menu.style.display = 'none';
-        });
-    });
-}
 
 // ----------------- gnb active ---------------------------
 let pageUrl = window.location.href;
@@ -95,15 +48,64 @@ $(window).on('load', function () {
 });
 
 if (window.innerWidth < 768) {
-    let copyRight = document.querySelector(".footerInfo p");
-    console.log("ch");
 
+    document.querySelector("header").setAttribute("id", "myHeader");
+
+    let nav = document.querySelector("header nav");
+    nav.insertAdjacentHTML('beforeend', `<button id="openmenu">
+        <span></span>
+        <span></span>
+    </button>`);
+
+    // ------------- sticky gnb header ------------------------
+    let header = document.getElementById('myHeader');
+    let page = document.getElementById('page');
+    let openMenuButton = document.getElementById('openmenu');
+
+    window.addEventListener('scroll', function () {
+        // page.classList.remove('menuopen');
+
+        if (window.scrollY >= 100) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+
+    // Event listener to remove the sticky class when the button is clicked
+    openMenuButton.addEventListener('click', function () {
+        header.classList.remove('sticky');
+        // page.classList.add('menuopen');
+    });
+
+    var links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            // Prevent the default action
+            event.preventDefault();
+
+            // Get the target element
+            var targetId = this.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
+
+            // Smooth scroll to target
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+
+
+    let copyRight = document.querySelector(".footerInfo p");
     copyRight.innerHTML = "";
 
 }
 
 window.onresize = function () {
-    console.log("onresize");
     console.log(window.innerWidth);
 
     if (window.innerWidth < 768) {
@@ -132,6 +134,61 @@ window.onresize = function () {
 
         window.addEventListener("mousemove", myCursor);
         window.addEventListener("mousemove", Trailer);
+
+        // ----------------------- gnb action ------------------------------
+
+        const gnbMenu = document.querySelectorAll('#gnb li');
+        const scrollNum = document.querySelector('html').scrollTop;
+
+        window.onscroll = function () {
+            if (scrollNum < 500 || window.location == 'index.html') {
+                gnbMenu.forEach(function (menu) {
+                    menu.style.display = 'inline-block';
+                });
+            }
+
+            if (scrollNum > 1500) {
+                gnbMenu.forEach(function (menu) {
+                    menu.classList.add('hide');
+                    menu.classList.remove('show');
+                    menu.style.display = 'none';
+                })
+            } else {
+                gnbMenu.forEach(function (menu) {
+                    menu.style.display = 'inline-block';
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                })
+            }
+
+            // --------------------------
+
+            gnbMenu.forEach(function (menu) {
+                menu.style.display = 'none';
+            });
+
+            document.querySelector('header').addEventListener('mouseover', (e) => {
+                gnbMenu.forEach(function (menu) {
+                    menu.style.display = 'inline-block';
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                })
+            });
+
+            document.querySelector('header').addEventListener('mouseout', (e) => {
+                gnbMenu.forEach(function (menu) {
+                    menu.classList.add('hide');
+                    menu.classList.remove('show');
+                    menu.style.display = 'none';
+                });
+            });
+        }
+
+
+
+
+
+
     }
 }
 

@@ -1,6 +1,5 @@
 @import './reset.css';
 .overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; background: url(../source/projectBg.png) center center no-repeat; background-size: cover; } 
-/* .mainHover { width: calc( 100vw * 80 / 1920 ); height: calc( 100vw * 200 / 1920 ); background: url(../source/downArrow.png) center center no-repeat; background-size: contain; } */
 
 .overview article h3 { margin-bottom: calc( 100vw * 30 / 1920 ); font-family: LBold; font-size: calc( 100vw * 50 / 1920 ); } 
 .overview article p { width: calc( 100vw * 1100 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); line-height: 160%; } 
