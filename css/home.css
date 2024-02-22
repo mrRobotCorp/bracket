@@ -91,12 +91,12 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
     .firstShow { position: inherit; }
     .show { font-size: 18px; }
 
-    .wordsAll .wrapper li { padding: 20px 40px; font-size: 17px; }
+    .wordsAll .wrapper li { padding: 25px 40px; font-size: 17px; }
     
 
 
 
-    .overview { height: auto; }
+    .overview { height: auto; margin-top: 60px;}
     .overview article { flex-direction: column; }
     .overview article div:first-child { margin-bottom: 30px; }
     .overview article div h3 { font-size: 27px; }

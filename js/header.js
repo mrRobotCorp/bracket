@@ -94,25 +94,39 @@ $(window).on('load', function(){
     }
 });
 
-// ----------------------- custom mouse --------------------------------
-const cursor = document.createElement("div");
-cursor.setAttribute("class", "cursor");
-const follower = document.createElement("div");
-follower.setAttribute("class", "cursor_follower");
+window.onresize = function(){
+    console.log("onresize");
+    console.log(window.innerWidth);
+    
+    if(window.innerWidth > 768){
+        
+    }
 
-document.querySelector("body").prepend(cursor, follower);
 
-function myCursor(e) {
-    cursor.style.top = e.pageY + 10 + "px";
-    cursor.style.left = e.pageX + 10 + "px";
+    if(window.innerWidth > 1024) {
+        
+        // ----------------------- custom mouse --------------------------------
+        const cursor = document.createElement("div");
+        cursor.setAttribute("class", "cursor");
+        const follower = document.createElement("div");
+        follower.setAttribute("class", "cursor_follower");
+        
+        document.querySelector("body").prepend(cursor, follower);
+        
+        function myCursor(e) {
+            cursor.style.top = e.pageY + 10 + "px";
+            cursor.style.left = e.pageX + 10 + "px";
+        }
+        
+        function Trailer(e) {
+            gsap.to(follower, { duration: 0.5, left: e.pageX - 10, top: e.pageY - 10 });
+        }
+        
+        window.addEventListener("mousemove", myCursor);
+        window.addEventListener("mousemove", Trailer);
+    }
 }
 
-function Trailer(e) {
-    gsap.to(follower, { duration: 0.5, left: e.pageX - 10, top: e.pageY - 10 });
-}
-
-window.addEventListener("mousemove", myCursor);
-window.addEventListener("mousemove", Trailer);
 
 // --------------------- footer contact box Insert ---------------------
 document.querySelector('footer').insertAdjacentHTML('beforeend', `
