@@ -9,6 +9,12 @@ document.querySelector('.main').addEventListener("pointermove", (e)=>{
 })
 
 // ----------------------- floating bracket  -------------------------------
+window.onresize = function(){
+  
+}
+if(window.innerWidth < 768) {
+}
+
 if(window.innerWidth > 1024) {
 
   document.querySelector('.main').insertAdjacentHTML('afterbegin', `

@@ -91,10 +91,10 @@ footer .contact .nextSending p { background: #fff; padding: calc( 100vw * 40 / 1
 
 
 @media screen and (max-width: 768px) { 
-    footer { height: 550px; flex-direction: column; align-items: flex-start; }
+    footer { height: 580px; flex-direction: column; align-items: flex-start; justify-content: center; }
     footer .footerInfo, footer .contact { width: 80%; margin: 0 auto;}
     footer .footerBI { font-size: 15px; }
-    footer .footerInfo { height: auto; }
+    footer .footerInfo { margin-bottom: 30px; height: auto; }
     footer .footerInfo p { font-size: 10px; }
     footer .footerGnb { border: none;}
     footer .footerGnb li { margin: 12px 0; font-size: 14px; }
@@ -108,6 +108,7 @@ footer .contact .nextSending p { background: #fff; padding: calc( 100vw * 40 / 1
     footer .contact .formContent fieldset textarea:focus { border-color: transparent; outline-color: #EC4636; }
     
     footer .contact .formContent button { padding: 4px 10px; margin-top: 0; font-size: 13px; border-radius: 8px; }
+    footer .contact .cpRight { margin-top: 40px; font-size: 10px; }
 
 }
 
