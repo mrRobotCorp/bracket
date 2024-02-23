@@ -1,5 +1,4 @@
-@import './reset.css';
-.overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; background: url(../source/projectBg.png) center center no-repeat; background-size: cover; } 
+@import './reset.css';.overview { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; background: url(../source/projectBg.png) center center no-repeat; background-size: cover; } 
 
 .overview article h3 { margin-bottom: calc( 100vw * 30 / 1920 ); font-family: LBold; font-size: calc( 100vw * 50 / 1920 ); } 
 .overview article p { width: calc( 100vw * 1100 / 1920 ); font-size: calc( 100vw * 20 / 1920 ); line-height: 160%; } 
@@ -7,25 +6,20 @@
 .scrollDown { position: absolute; bottom: 10%; padding-top: calc( 100vw * 70 / 1920 ); color: #EC4636; font-size: calc( 100vw * 16 / 1920 ); font-family: LRegular; cursor: pointer; } 
 .scrollDown span { position: absolute; top: 0; left: 50%; width: calc( 100vw * 24 / 1920 ); height: calc( 100vw * 24 / 1920 ); margin-left: calc( 100vw * -12 / 1920 ); border-left: calc( 100vw * 2 / 1920 ) solid #EC4636; border-bottom: calc( 100vw * 2 / 1920 ) solid #EC4636; transform: rotate(-45deg); animation: sdb05 1.5s infinite; } 
 
-@-webkit-keyframes sdb05 { 
-0% { -webkit-transform: rotate(-45deg) translate(0, 0); opacity: 0; } 
+@-webkit-keyframes sdb05 {0% { -webkit-transform: rotate(-45deg) translate(0, 0); opacity: 0; } 
 50% { opacity: 1; } 
 100% { -webkit-transform: rotate(-45deg) translate(-20px, 20px); opacity: 0; } 
-}
-@keyframes sdb05 { 
-0% { transform: rotate(-45deg) translate(0, 0); opacity: 0; } 
+ }
+@keyframes sdb05 {0% { transform: rotate(-45deg) translate(0, 0); opacity: 0; } 
 50% { opacity: 1; } 
 100% { transform: rotate(-45deg) translate(-20px, 20px); opacity: 0; } 
-}
+ }
 
 /* ------------------------------------------ */
-#container { width: 500%; height: 100vh; display: flex; flex-wrap: nowrap; } 
+
 
 #container .project { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: space-around; align-items: center; background: #1D1B1B; color: #fff; } 
-#container .project h3 { display: inline-block; padding: calc( 100vw * 25 / 1920 ) calc( 100vw * 33 / 1920 ); margin-bottom: calc( 100vw * 20 / 1920 ); color: #fff; border: calc( 100vw * 2 / 1920) solid #fff; border-radius: calc( 100vw * 55 / 1920 ); font-size: calc( 100vw * 35 / 1920 ); font-family: LBold; transition: all .3s; } 
-#container .project h3:hover { border: calc( 100vw * 2 / 1920) solid #EC4636; } 
-#container .project h3:hover a { color: #EC4636; } 
-#container .project h3 a { color: #fff; transition: all .3s; } 
+
 
 #container .project p { width: calc( 100vw * 550 / 1920 ); padding: 0 calc( 100vw * 10 / 1920 ) calc( 100vw * 20 / 1920 ) calc( 100vw * 10 / 1920 ); margin-bottom: calc( 100vw * 30 / 1920 ); border-bottom: calc( 100vw * 1 / 1920 ) solid #ffffff90; font-size: calc( 100vw * 17 / 1920 ); word-spacing: calc( 100vw * 2 /1920 ); line-height: 170%; } 
 #container .project .more { color: #FFD72F; margin: 0 calc( 100vw * 10 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); font-family: LBold; line-height: 155%; transition: all .2s; } 
@@ -47,3 +41,27 @@
 .cardImgs .content-right .img_bottom { display: flex; } 
 .cardImgs .content-right .img_bottom img { width: calc( 100vw * 90 / 1920 ); height: calc( 100vw * 75 / 1920 ); margin-left: calc( 100vw * 15 / 1920 ); object-fit: cover; object-position: center; transition: all .3s; cursor: pointer; } 
 .cardImgs .content-right .img_bottom img:hover { opacity: .75; } 
+
+
+/* ------------------ responsive --------------------- */
+
+
+@media screen and (max-width: 768px){
+ .overview article h3 { margin-bottom: 20px; width: 100%; font-size: 23px; } 
+ .overview article p { width: 100%; font-size: 14px; } 
+
+ #container .project { padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; } 
+ .project .cardImgs { width: 300px; } 
+ .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 300px; height: 100%; border-radius: 8px; } 
+ }
+
+@media screen and (min-width: 1024px){
+ #container { width: 500%; height: 100vh; display: flex; flex-wrap: nowrap; } 
+ #container .project h3 { display: inline-block; padding: calc( 100vw * 25 / 1920 ) calc( 100vw * 33 / 1920 ); margin-bottom: calc( 100vw * 20 / 1920 ); color: #fff; border: calc( 100vw * 2 / 1920) solid #fff; border-radius: calc( 100vw * 55 / 1920 ); font-size: calc( 100vw * 35 / 1920 ); font-family: LBold; transition: all .3s; } 
+#container .project h3:hover { border: calc( 100vw * 2 / 1920) solid #EC4636; } 
+#container .project h3:hover a { color: #EC4636; } 
+#container .project h3 a { color: #fff; transition: all .3s; } 
+ }
+
+@media screen and (min-width: 1440px) { body { } 
+ }
