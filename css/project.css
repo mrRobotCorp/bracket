@@ -18,11 +18,11 @@
 /* ------------------------------------------ */
 
 
-#container .project { width: 100vw; height: 100vh; position: relative; display: flex; justify-content: space-around; align-items: center; background: #1D1B1B; color: #fff; } 
+#container .project { height: 100vh; position: relative; display: flex; justify-content: space-around; align-items: center; background: #1D1B1B; color: #fff; } 
 
 
-#container .project p { width: calc( 100vw * 550 / 1920 ); padding: 0 calc( 100vw * 10 / 1920 ) calc( 100vw * 20 / 1920 ) calc( 100vw * 10 / 1920 ); margin-bottom: calc( 100vw * 30 / 1920 ); border-bottom: calc( 100vw * 1 / 1920 ) solid #ffffff90; font-size: calc( 100vw * 17 / 1920 ); word-spacing: calc( 100vw * 2 /1920 ); line-height: 170%; } 
-#container .project .more { color: #FFD72F; margin: 0 calc( 100vw * 10 / 1920 ); font-size: calc( 100vw * 17 / 1920 ); font-family: LBold; line-height: 155%; transition: all .2s; } 
+#container .project p { width: calc( 100vw * 550 / 1920 ); padding: 0 calc( 100vw * 10 / 1920 ) 0 calc( 100vw * 10 / 1920 ); margin-bottom: calc( 100vw * 15 / 1920 );  font-size: calc( 100vw * 17 / 1920 ); word-spacing: calc( 100vw * 2 /1920 ); line-height: 170%; } 
+#container .project .more { display: block; padding-bottom: 15px; margin: 0 0 15px 10px; color: #FFD72F; border-bottom: calc( 100vw * 1 / 1920 ) solid #ffffff90; font-size: calc( 100vw * 17 / 1920 ); font-family: LBold; line-height: 155%; transition: all .2s; } 
 #container .project .more:hover { color: #df830b; } 
 
 #container .project .pro_info { display: inline-block; width: 40%; margin-bottom: calc( 100vw * 25 / 1920 ); padding: 0 calc( 100vw * 10 / 1920 ); } 
@@ -49,11 +49,25 @@
 @media screen and (max-width: 768px){
  .overview article h3 { margin-bottom: 20px; width: 100%; font-size: 23px; } 
  .overview article p { width: 100%; font-size: 14px; } 
+ .scrollDown { padding-top: 0; bottom: 12%; font-size: 13px; }
+ .scrollDown span { margin-left: 0; width: 20px; height: 20px; left: 20%; }
 
- #container .project { padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; } 
- .project .cardImgs { width: 300px; } 
- .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 300px; height: 100%; border-radius: 8px; } 
- }
+ #container { margin: 0 auto; width: 80%;}
+ #container .project { margin: 0 auto; padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; } 
+ .project .cardImgs { width: 300px; margin-bottom: 25px; } 
+ .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 300px; height: 100%; border: 1px solid #ddd; border-radius: 8px; } 
+ .cardImgs .content-right .img_bottom img { width: 60px; height: 35px; border: 1px solid #ddd; border-radius: 5px; }
+
+ #container .project h3 { display: inline-block; padding: 6px 12px; margin-bottom: 10px; border: 2px solid #000; border-radius: 20px; font-size: 19px; font-family: LBold; } 
+ #container .project p { margin: 0 auto; padding-bottom: 5px; width: 300px; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+ #container .project .more { margin: 0 0 0 5px; color: #df830b; font-size: 12px; }
+ 
+ #container .project .pro_info { width: 45%; margin-bottom: 15px; padding: 0 5px;}
+ #container .project .pro_info dt { margin: 7px 0; padding-bottom: 5px; border-bottom: 1px solid #999; font-size: 14px; }
+ #container .project .pro_info dd { font-size: 13px; }
+
+
+}
 
 @media screen and (min-width: 1024px){
  #container { width: 500%; height: 100vh; display: flex; flex-wrap: nowrap; } 
@@ -64,4 +78,7 @@
  }
 
 @media screen and (min-width: 1440px) { body { } 
+
+#container .project { width: 100vw; }
+
  }
