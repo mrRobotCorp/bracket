@@ -88,8 +88,8 @@ linear-gradient(60deg, rgb(255 000 000), rgb(0, 94, 255)); background-blend-mode
 
 @media screen and (max-width: 768px) { 
     .main { display: flex; align-items: center; justify-content: center;}
-    .firstShow { position: inherit; }
-    .show { font-size: 18px; }
+    .firstShow { position: inherit; font-size: 45px; }
+    .show { padding: 0 10px; font-size: 18px; }
 
     .wordsAll .wrapper li { padding: 25px 40px; font-size: 17px; }
     

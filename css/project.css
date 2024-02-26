@@ -47,13 +47,14 @@
 
 
 @media screen and (max-width: 768px){
- .overview article h3 { margin-bottom: 20px; width: 100%; font-size: 23px; } 
+ .overview article h3 { margin-bottom: 20px; width: 100%; font-size: 23px; line-height: 140%; } 
  .overview article p { width: 100%; font-size: 14px; } 
- .scrollDown { padding-top: 0; bottom: 12%; font-size: 13px; }
- .scrollDown span { margin-left: 0; width: 20px; height: 20px; left: 20%; }
+ .scrollDown { padding-top: 0; bottom: 12%; color: #0000006e; font-size: 13px; }
+ .scrollDown span { margin-left: 0; border-color: #0000006e; width: 20px; height: 20px; left: 20%; }
 
  #container { margin: 0 auto; width: 80%;}
- #container .project { margin: 0 auto; padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; } 
+ #container .project { margin: 0 auto; padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; border-bottom: 1px solid #ddd; } 
+ #container .project:last-child { border: none;}
  .project .cardImgs { width: 300px; margin-bottom: 25px; } 
  .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 300px; height: 100%; border: 1px solid #ddd; border-radius: 8px; } 
  .cardImgs .content-right .img_bottom img { width: 60px; height: 35px; border: 1px solid #ddd; border-radius: 5px; }

@@ -84,3 +84,35 @@ header { background: rgba(224, 224, 224, 0.34); }
 .getInTouch .svgMail:hover circle, .svgMail:hover .svgPath { fill: #fff; } 
 .getInTouch .svgMail:hover .svgTxt { fill: #ec4536; } 
 .getInTouch .svgMail:hover .svgPath { stroke-dashoffset: -13.5; } 
+
+
+@media screen and (max-width: 768px){
+
+    .mainBanner article { flex-direction: column; margin-top: 4cap;}
+    .mainBanner .introduce { margin-bottom: 40px;}
+    .mainBanner .introduce p { width: 100%; font-size: 15px;}
+    .mainBanner .introduce p:first-child { font-size: 18px;}
+
+    .mainBanner .mainVisual { margin-top: 60px; width: 88%; height: 170px;}
+    .mainBanner .mainVisual p:first-child { top: -60px; font-size: 24px; }
+    .mainBanner .mainVisual p:nth-child(2) { top: -40px; left: 100px; font-size: 27px; }
+    .mainBanner .mainVisual p:nth-child(3) { top: 20px; font-size: 22px; }
+    .mainBanner .mainVisual p:nth-child(4) { top: 0; left: 150px; font-size: 22px;}
+
+    .introBanner { height: 22vh;}
+    .introBanner article p { font-size: 17px; }
+
+    .profile { height: 50vh;}
+    .profile h2 { font-size: 22px; }
+
+    .mystory .experience .svgLine { display: none; } 
+
+   }
+   
+   @media screen and (min-width: 1024px){
+    }
+   
+   @media screen and (min-width: 1440px) { body { } 
+   
+   
+    }

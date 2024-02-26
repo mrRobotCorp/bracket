@@ -67,7 +67,7 @@ footer .contact .nextSending p { background: #fff; padding: calc( 100vw * 40 / 1
 header { z-index: 999; position: relative; } 
 header nav { padding: 0 30px; position: fixed; left: 0; right: 0; width: fit-content; margin: 0 auto; top: 15px; background-color: #3636360c; border: 1px solid #ffffff6c; border-radius: 200px; z-index: 9; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s; } 
 header nav #gnb { display: flex; height: 55px; justify-content: center; align-items: center;  border-radius: 30px; }
-header nav #gnb li { display: block; padding: 5px 12px; color: #444; line-height: 1; font-size: 15px; font-family: LBold; letter-spacing: 0.5px; text-transform: lowercase; transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s; } 
+header nav #gnb li { display: block; padding: 5px 12px; color: #333; line-height: 1; font-size: 15px; font-family: LBold; letter-spacing: 0.5px; text-transform: lowercase; transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s; } 
 
 header nav button { -webkit-appearance: none; background: rgba(0, 0, 0, 0.527); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; z-index: 99; left: 0; margin: auto; right: 0; top: 0; bottom: 0; width: 40px; height: 40px; border-radius: 100%; outline: 0; border: 0; cursor: pointer; transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s; transform: scale(0); } 
 header nav button span { width: 50%; background: #fff; height: 2px; display: block; margin: 5px auto; transform: scalex(0); transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s margin ease-in 0s; } 
