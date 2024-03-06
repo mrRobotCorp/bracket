@@ -52,15 +52,16 @@
  .scrollDown { padding-top: 0; bottom: 12%; color: #0000006e; font-size: 13px; }
  .scrollDown span { margin-left: 0; border-color: #0000006e; width: 20px; height: 20px; left: 20%; }
 
- #container { margin: 0 auto; width: 80%;}
+ #container { margin: 0 auto; width: 90%;}
  #container .project { margin: 0 auto; padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; border-bottom: 1px solid #ddd; } 
  #container .project:last-child { border: none;}
  .project .cardImgs { width: 300px; margin-bottom: 25px; } 
  .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 300px; height: 100%; border: 1px solid #ddd; border-radius: 8px; } 
  .cardImgs .content-right .img_bottom img { width: 60px; height: 35px; border: 1px solid #ddd; border-radius: 5px; }
 
- #container .project h3 { display: inline-block; padding: 6px 12px; margin-bottom: 10px; border: 2px solid #000; border-radius: 20px; font-size: 19px; font-family: LBold; } 
- #container .project p { margin: 0 auto; padding-bottom: 5px; width: 300px; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+ #container .project h3 { display: inline-block; padding: 6px 12px; margin-bottom: 10px; border: 2px solid #000000b2; border-radius: 20px; font-size: 16px; font-family: LBold; } 
+ #container .project h3 a { color: #000000b2; }
+ #container .project p { margin: 0 auto; padding-bottom: 5px; width: 320px; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
  #container .project .more { margin: 0 0 0 5px; color: #df830b; font-size: 12px; }
  
  #container .project .pro_info { width: 45%; margin-bottom: 15px; padding: 0 5px;}
