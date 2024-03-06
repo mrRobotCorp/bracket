@@ -90,7 +90,7 @@ footer { height: 580px; flex-direction: column; align-items: flex-start; justify
  footer .footerGnb { border: none; } 
  footer .footerGnb li { margin: 12px 0; font-size: 14px; } 
  
- footer .contact h4 { margin-bottom: 15px; font-size: 16px; } 
+ footer .contact h4 { margin-bottom: 10px; font-size: 17px; } 
  footer .contact .formContent fieldset { flex-direction: column; } 
  footer .contact .formContent fieldset label { margin-bottom: 10px; width: 100%; font-size: 12px; } 
  footer .contact .formContent fieldset input { padding: 8px 12px; margin-bottom: 6px; width: 95%; border: 2px solid #0000005d; outline: 2px solid transparent; font-size: 13px; border-radius: 6px; } 
