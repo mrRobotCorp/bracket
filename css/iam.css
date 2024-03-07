@@ -106,13 +106,13 @@
  .introBanner { height: 22vh; background: url(../source/gradient2_mb.jpg) center center no-repeat; background-size: cover; }
  .introBanner article p { font-size: 17px; } 
 
- .profile { height: 50vh; }
+ .profile { height: auto; }
  .profile.inner { width: 85%;}
- .profile h2 { font-size: 22px; } 
+ .profile h2 { font-size: 23px; } 
  .profile .profileInfo { flex-direction: column; flex-wrap: nowrap;}
 
  .profile .profileInfo dl { margin-bottom: 20px; }
- .profile .profileInfo dl dt { font-size: 15px; }
+ .profile .profileInfo dl dt { margin-bottom: 10px; font-size: 15px; }
  .profile .profileInfo dl dd { font-size: 13px; }
  .profile .profileInfo dl.education .edu_year { width: auto; }
 
@@ -127,13 +127,26 @@
 .profile .profileInfo .skills dd:nth-child(8)::before { top: 5px; left: 7px; width: 20px; height: 20px; } 
 
 .profile .profileInfo .contact img { width: 28px;}
-.profile .profileInfo .cpRight { font-size: 11px; }
+.profile .profileInfo .cpRight { margin-top: 20px; font-size: 11px; }
 
+.mystory { margin-top: 100px; }
+.mystory h2 { font-size: 23px; margin-bottom: 30px; }
+.mystory .experience { display: flex; align-items: center; flex-direction: column; }
+.mystory .experience div { position: relative; margin-bottom: 30px; width: 90%; text-align: center; }
+.mystory .experience .stu_finance { top: auto; right: auto;}
+.mystory .experience .stu_health { top: auto; left: auto;}
+.mystory .experience .stu_design { top: auto; right: auto;}
+.mystory .experience .stu_program { top: auto; left: auto;}
 
-
-
+.mystory .experience div h4 { font-size: 18px;}
  .mystory .experience .svgLine { display: none; } 
- .mystory .experience div { position: relative;}
+
+ .getInTouch { height: auto; margin-bottom: 60px; }
+ .getInTouch h2 { font-size: 23px; }
+ .getInTouch article { margin-top: 30px; }
+ .getInTouch .svgMail { width: 190px; height: 212px; }
+
+
 }
  
  @media screen and (min-width: 1024px) { } 

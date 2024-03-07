@@ -108,3 +108,13 @@ $win.on('scroll', function() {
     var p = $win.scrollTop() / max;
     $svg.drawsvg('progress', p);
 });
+
+
+
+// ------------- responsive ---------------------
+
+if(window.innerWidth < 768) {
+    let mainProfile = document.querySelector(".mainProfile");
+
+    mainProfile.innerHTML = `<div class="circle"></div> <div class="profileImg"></div`;
+}

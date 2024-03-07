@@ -55,8 +55,8 @@
  #container { margin: 0 auto; width: 90%;}
  #container .project { margin: 0 auto; padding: 50px 0; height: auto; flex-direction: column-reverse; background-color: #fff; color: #000; border-bottom: 1px solid #ddd; } 
  #container .project:last-child { border: none;}
- .project .cardImgs { width: 300px; margin-bottom: 25px; } 
- .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 300px; height: 100%; border: 1px solid #ddd; border-radius: 8px; } 
+ .project .cardImgs { width: 320px; margin-bottom: 25px; } 
+ .project .cardImgs .thumbnail0, .project .cardImgs .thumbnail1, .project .cardImgs .thumbnail2 { width: 320px; height: 100%; border: 1px solid #ddd; border-radius: 8px; } 
  .cardImgs .content-right .img_bottom img { width: 60px; height: 35px; border: 1px solid #ddd; border-radius: 5px; }
 
  #container .project h3 { display: inline-block; padding: 6px 12px; margin-bottom: 10px; border: 2px solid #000000b2; border-radius: 20px; font-size: 16px; font-family: LBold; } 
