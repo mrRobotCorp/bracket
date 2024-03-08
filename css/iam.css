@@ -129,53 +129,49 @@
 .profile .profileInfo .contact img { width: 28px; } 
 .profile .profileInfo .cpRight { margin-top: 20px; font-size: 11px; } 
 
-.mystory { margin: 100px auto; }
-.mystory.inner { width: 90%; }
+.mystory { margin: 100px auto; } 
+.mystory.inner { width: 90%; } 
 .mystory h2 { font-size: 23px; text-align: center; margin-bottom: 10px; } 
 .mystory .experience div { position: relative; width: 100%; text-align: center; background-color: transparent; } 
-.mystory .experience .timelineHead { padding: 0;}
+.mystory .experience .timelineHead { padding: 0; } 
 
 .mystory .experience div h4 { font-size: 18px; } 
- .mystory .experience .svgLine { display: none; } 
+.mystory .experience .svgLine { display: none; } 
 
 :root { --hue: 223; --bg: hsl(var(--hue),10%,90%); --fg: hsl(var(--hue),10%,10%); --primary: hsl(var(--hue),90%,50%); --trans-timing: cubic-bezier(0.65,0,0.35,1); } 
 
-.timeBtns { display: flex; justify-content: flex-end;}
-.timeBtn { margin-right: 10px; padding: 5px 10px; background-color: #bbbbbb; border-radius: 6px; border: none; color: #fff; font-size: 12px; font-family: LRegular; } 
+.timeBtns { display: flex; justify-content: center; } 
+.timeBtn { margin-right: 10px; padding: 5px 12px; background-color: #00000063; border-radius: 15px; border: none; color: #fff; font-size: 12px; font-family: LRegular; } 
 
 .timeline { margin: auto; width: 100%; max-width: 36em; } 
 .timeArrow { background-color: transparent; border: none; flex-shrink: 0; margin: 5px 0; margin-inline-end: 0.25em; outline: transparent; width: 40px; height: 40px; transition:
-background-color calc(0.3s / 2) linear,
-color 0.3s; -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; } 
-.timeArrow:focus-visible { background-color: hsl(var(--hue),10%,50%,0.4); } 
-.timeArrowIcon { display: block; pointer-events: none; transform: rotate(-90deg); transition: transform 0.3s var(--trans-timing); width: 100%; height: auto; } 
+background-color calc(0.3s / 2) linear, color 0.3s; -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; } 
+.timeArrowIcon { display: block; color: #000; pointer-events: none; transform: rotate(-90deg); transition: transform 0.3s var(--trans-timing); width: 100%; height: auto; } 
 .timeline__date { font-size: 0.833em; line-height: 2.4; } 
-.timeDot { background-color: currentColor; border-radius: 50%; display: inline-block; flex-shrink: 0; margin: 20px 0; margin-inline-end: 1em; position: relative; width: 0.75em; height: 0.75em; } 
+.timeDot { background-color: #000; border-radius: 50%; display: inline-block; flex-shrink: 0; margin: 20px 0; margin-inline-end: 1em; position: relative; width: 0.75em; height: 0.75em; } 
 .exStudy { position: relative; padding-bottom: 2.25em; } 
-.exStudy:not(:last-child):before { background-color: currentColor; content: ""; display: block; position: absolute; top: 33px; left: 49px; width: 0.125em; height: 100%; transform: translateX(-50%); } 
+.exStudy:not(:last-child):before { background-color: #000; content: ""; display: block; position: absolute; top: 33px; left: 49px; width: 0.125em; height: 100%; transform: translateX(-50%); } 
 [dir="rtl"] .timeArrowIcon { transform: rotate(90deg); } 
 [dir="rtl"] .exStudy:not(:last-child):before { right: 2.625em; left: auto; transform: translateX(50%); } 
+
 .timelineHead { display: flex; } 
 .tlBody { border-radius: 0.375em; overflow: hidden; margin-top: 0.5em; margin-inline-start: 4em; height: 0; } 
-.tlContent {  padding: 10px 10px; width: 75%; background-color: hsl(var(--hue),10%,50%,0.2); opacity: 0; visibility: hidden; border-radius: 10px; transition:
+.tlBody .tlContent { padding: 10px 10px; width: 75%; background-color: #ebbf1238; opacity: 0; visibility: hidden; border-radius: 10px; transition:
 opacity 0.3s var(--trans-timing),
 visibility 0.3s steps(1,end); } 
 .timeline__meta { width: 80%; } 
 .tlTitle { font-size: 1.5em; line-height: 1.333; } 
-/* Expanded state */
+
 .tlBody--expanded { height: auto; } 
 .tlBody--expanded .tlContent { opacity: 1; visibility: visible; transition-delay: 0.3s, 0s; } 
 .timeArrow[aria-expanded="true"] .timeArrowIcon { transform: rotate(0); } 
-
-
-
 
 
  .getInTouch { height: auto; margin-bottom: 60px; } 
  .getInTouch h2 { font-size: 23px; } 
  .getInTouch article { margin-top: 30px; } 
  .getInTouch .svgMail { width: 190px; height: 212px; } 
-}
+ }
  
  @media screen and (min-width: 1024px) { } 
  

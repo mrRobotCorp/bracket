@@ -143,7 +143,7 @@ if (window.innerWidth < 768) {
             </button>
             <span class="timeDot"></span>
             <span id="item1-name" class="timeline__meta">
-                <time class="timeline__date" datetime="1973-10-17">2016</time>
+                <time class="timeline__date" datetime="2016-03-02">2016</time>
                 <h4>studied financial</h4>
             </span>
         </div>
@@ -164,7 +164,7 @@ if (window.innerWidth < 768) {
             </button>
             <span class="timeDot"></span>
             <span id="item2-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2033-05-18">2019</time><br>
+                <time class="timeline__date" datetime="2019-03-03">2019</time><br>
                 <h4>studied public nature health</h4>
             </span>
         </div>
@@ -186,7 +186,7 @@ if (window.innerWidth < 768) {
             </button>
             <span class="timeDot"></span>
             <span id="item3-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2038-01-19">2020</time><br>
+                <time class="timeline__date" datetime="2020-03-02">2020</time><br>
                 <h4>studied ui/ux design</h4>
             </span>
         </div>
@@ -207,7 +207,7 @@ if (window.innerWidth < 768) {
             </button>
             <span class="timeDot"></span>
             <span id="item4-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2038-01-19">2022</time><br>
+                <time class="timeline__date" datetime="2022-03-03">2022</time><br>
                 <h4>and programming</h4>
             </span>
         </div>
