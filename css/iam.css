@@ -1,4 +1,4 @@
-@import './reset.css';header { background: rgba(224, 224, 224, 0.34); } 
+@import './reset.css'; header { background: rgba(224, 224, 224, 0.34); } 
 
 .mainBanner { display: flex; align-items: center; height: 100vh; } 
 .mainBanner article { width: 100%; display: flex; justify-content: space-between; align-items: center; } 
@@ -85,7 +85,7 @@
 .getInTouch .svgMail:hover .svgPath { stroke-dashoffset: -13.5; } 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
  .mainBanner article { flex-direction: column; margin-top: 4cap; } 
  .mainBanner .introduce { margin-bottom: 40px; } 
  .mainBanner .introduce p { width: 100%; font-size: 15px; } 
@@ -103,18 +103,18 @@
 .mainVisual .visual_circle span:nth-child(3) { top: 5px; left: 95px; background: #5344FF; } 
 .mainVisual .visual_circle span:last-child { top: 40px; left: 190px; background: #EC4636; } 
 
- .introBanner { height: 22vh; background: url(../source/gradient2_mb.jpg) center center no-repeat; background-size: cover; }
+ .introBanner { height: 22vh; background: url(../source/gradient2_mb.jpg) center center no-repeat; background-size: cover; } 
  .introBanner article p { font-size: 17px; } 
 
- .profile { height: auto; }
- .profile.inner { width: 85%;}
+ .profile { height: auto; } 
+ .profile.inner { width: 85%; } 
  .profile h2 { font-size: 23px; } 
- .profile .profileInfo { flex-direction: column; flex-wrap: nowrap;}
+ .profile .profileInfo { flex-direction: column; flex-wrap: nowrap; } 
 
- .profile .profileInfo dl { margin-bottom: 20px; }
- .profile .profileInfo dl dt { margin-bottom: 10px; font-size: 15px; }
- .profile .profileInfo dl dd { font-size: 13px; }
- .profile .profileInfo dl.education .edu_year { width: auto; }
+ .profile .profileInfo dl { margin-bottom: 20px; } 
+ .profile .profileInfo dl dt { margin-bottom: 10px; font-size: 15px; } 
+ .profile .profileInfo dl dd { font-size: 13px; } 
+ .profile .profileInfo dl.education .edu_year { width: auto; } 
 
 .profile .profileInfo .skills dd { padding: 5px 10px 5px 28px; margin: 5px 3px; border: calc( 100vw * 2 / 1920 ) solid rgba(68, 68, 68, 0.747); border-radius: 15px; } 
 
@@ -126,31 +126,58 @@
 .profile .profileInfo .skills dd:nth-child(7)::before { top: 5px; left: 7px; width: 20px; height: 20px; } 
 .profile .profileInfo .skills dd:nth-child(8)::before { top: 5px; left: 7px; width: 20px; height: 20px; } 
 
-.profile .profileInfo .contact img { width: 28px;}
-.profile .profileInfo .cpRight { margin-top: 20px; font-size: 11px; }
+.profile .profileInfo .contact img { width: 28px; } 
+.profile .profileInfo .cpRight { margin-top: 20px; font-size: 11px; } 
 
-.mystory { margin-top: 100px; }
-.mystory h2 { font-size: 23px; margin-bottom: 30px; }
-.mystory .experience { display: flex; align-items: center; flex-direction: column; }
-.mystory .experience div { position: relative; margin-bottom: 30px; width: 90%; text-align: center; }
-.mystory .experience .stu_finance { top: auto; right: auto;}
-.mystory .experience .stu_health { top: auto; left: auto;}
-.mystory .experience .stu_design { top: auto; right: auto;}
-.mystory .experience .stu_program { top: auto; left: auto;}
+.mystory { margin: 100px auto; }
+.mystory.inner { width: 90%; }
+.mystory h2 { font-size: 23px; text-align: center; margin-bottom: 10px; } 
+.mystory .experience div { position: relative; width: 100%; text-align: center; background-color: transparent; } 
+.mystory .experience .timelineHead { padding: 0;}
 
-.mystory .experience div h4 { font-size: 18px;}
+.mystory .experience div h4 { font-size: 18px; } 
  .mystory .experience .svgLine { display: none; } 
 
- .getInTouch { height: auto; margin-bottom: 60px; }
- .getInTouch h2 { font-size: 23px; }
- .getInTouch article { margin-top: 30px; }
- .getInTouch .svgMail { width: 190px; height: 212px; }
+:root { --hue: 223; --bg: hsl(var(--hue),10%,90%); --fg: hsl(var(--hue),10%,10%); --primary: hsl(var(--hue),90%,50%); --trans-timing: cubic-bezier(0.65,0,0.35,1); } 
+
+.timeBtns { display: flex; justify-content: flex-end;}
+.timeBtn { margin-right: 10px; padding: 5px 10px; background-color: #bbbbbb; border-radius: 6px; border: none; color: #fff; font-size: 12px; font-family: LRegular; } 
+
+.timeline { margin: auto; width: 100%; max-width: 36em; } 
+.timeArrow { background-color: transparent; border: none; flex-shrink: 0; margin: 5px 0; margin-inline-end: 0.25em; outline: transparent; width: 40px; height: 40px; transition:
+background-color calc(0.3s / 2) linear,
+color 0.3s; -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; } 
+.timeArrow:focus-visible { background-color: hsl(var(--hue),10%,50%,0.4); } 
+.timeArrowIcon { display: block; pointer-events: none; transform: rotate(-90deg); transition: transform 0.3s var(--trans-timing); width: 100%; height: auto; } 
+.timeline__date { font-size: 0.833em; line-height: 2.4; } 
+.timeDot { background-color: currentColor; border-radius: 50%; display: inline-block; flex-shrink: 0; margin: 20px 0; margin-inline-end: 1em; position: relative; width: 0.75em; height: 0.75em; } 
+.exStudy { position: relative; padding-bottom: 2.25em; } 
+.exStudy:not(:last-child):before { background-color: currentColor; content: ""; display: block; position: absolute; top: 33px; left: 49px; width: 0.125em; height: 100%; transform: translateX(-50%); } 
+[dir="rtl"] .timeArrowIcon { transform: rotate(90deg); } 
+[dir="rtl"] .exStudy:not(:last-child):before { right: 2.625em; left: auto; transform: translateX(50%); } 
+.timelineHead { display: flex; } 
+.tlBody { border-radius: 0.375em; overflow: hidden; margin-top: 0.5em; margin-inline-start: 4em; height: 0; } 
+.tlContent {  padding: 10px 10px; width: 75%; background-color: hsl(var(--hue),10%,50%,0.2); opacity: 0; visibility: hidden; border-radius: 10px; transition:
+opacity 0.3s var(--trans-timing),
+visibility 0.3s steps(1,end); } 
+.timeline__meta { width: 80%; } 
+.tlTitle { font-size: 1.5em; line-height: 1.333; } 
+/* Expanded state */
+.tlBody--expanded { height: auto; } 
+.tlBody--expanded .tlContent { opacity: 1; visibility: visible; transition-delay: 0.3s, 0s; } 
+.timeArrow[aria-expanded="true"] .timeArrowIcon { transform: rotate(0); } 
 
 
+
+
+
+ .getInTouch { height: auto; margin-bottom: 60px; } 
+ .getInTouch h2 { font-size: 23px; } 
+ .getInTouch article { margin-top: 30px; } 
+ .getInTouch .svgMail { width: 190px; height: 212px; } 
 }
  
  @media screen and (min-width: 1024px) { } 
  
  @media screen and (min-width: 1440px) { body { } 
- 
  }

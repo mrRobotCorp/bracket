@@ -170,7 +170,7 @@ window.onresize = function () {
 
 
 
-    if (window.innerWidth > 1024 && window.innerWidth < 1440) {
+    if (window.innerWidth > 1024 || window.innerWidth < 1440) {
 
         // ----------------------- custom mouse --------------------------------
 
