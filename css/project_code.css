@@ -62,15 +62,23 @@ header { background: rgba(255, 255, 255, 0.804); }
 /* ------------------ responsive --------------------- */
 
 @media screen and (max-width: 768px) { 
-    .projectNav { padding: 10px; top: 90px; border: 2px solid #eee; border-radius: 10px; background: #e0e0e049; }
-    .projectNav li { margin-bottom: 10px; width: 50px; height: 50px; border-radius: 5px; }
+    .projectNav { display: none; padding: 10px; top: 90px; border: 2px solid #eee; border-radius: 10px; background: #e0e0e049; }
+    /* .projectNav li { margin-bottom: 10px; width: 50px; height: 50px; border-radius: 5px; }
     .projectNav li:last-child { margin-bottom: 0;}
-    .projectNav .navAl, .projectNav .navVp, .projectNav .navCls { background-size: cover;}
+    .projectNav .navAl, .projectNav .navVp, .projectNav .navCls { background-size: cover;} */
 
     .chevron { width: 22px; height: 5px;}
 
 
-    .projectVp::before { background: none; }
+    .projectVp::before { height: 60vh; background-size: contain; }
+    .projectImg article { height: 60vh; }
+
+
+    .codeEx h2 { font-size: 22px; }
+    .codeEx article { flex-direction: column; }
+    .codeEx article h3 { font-size: 15px; }
+    .codeEx article p { width: 100%; font-size: 13px; }
+    .codeEx article img { margin-top: 20px; width: 100%; border-radius: 8px; }
  }
  
  @media screen and (min-width: 1024px) { 
