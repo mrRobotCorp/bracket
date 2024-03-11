@@ -156,7 +156,7 @@ background-color calc(0.3s / 2) linear, color 0.3s; -webkit-appearance: none; ap
 
 .timelineHead { display: flex; } 
 .tlBody { border-radius: 0.375em; overflow: hidden; margin-top: 0.5em; margin-inline-start: 4em; height: 0; } 
-.tlBody .tlContent { padding: 10px 10px; width: 75%; background-color: #ebbf1238; opacity: 0; visibility: hidden; border-radius: 10px; transition:
+.tlBody .tlContent { padding: 15px 20px; width: 70%; background-color: #eb941238; font-size: 14px; line-height: 150%; opacity: 0; visibility: hidden; border-radius: 10px; transition:
 opacity 0.3s var(--trans-timing),
 visibility 0.3s steps(1,end); } 
 .timeline__meta { width: 80%; } 
