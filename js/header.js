@@ -48,41 +48,46 @@ $(window).on('load', function () {
 });
 
 // --------------------- footer contact box Insert ---------------------
-document.querySelector('footer').insertAdjacentHTML('beforeend', `
-    <div class="contact">
-        <h4>Contact Me</h4>
+function footerTxtInsert() {
+    document.querySelector('footer').insertAdjacentHTML('beforeend', `
+        <div class="contact">
+            <h4>Contact Me</h4>
+    
+            <form class="formAll" method="POST" data-email="depo89055@gmail.com"
+                action="https://script.google.com/macros/s/AKfycbwz1MqWC3Ub-CGKYgqbsnyHiRppekx_FAGdsbJErfRLvEj-CEuvE_GgTMKUxpM3qi18sA/exec">
+    
+                <div class="formContent">
+                    <fieldset>
+                        <label for="name">보내는 이 : </label>
+                        <input id="name" name="name" placeholder="이름을 적어주세요." />
+                    </fieldset>
+    
+                    <fieldset>
+                        <label for="message">메세지 : </label>
+                        <textarea id="message" name="message" placeholder="보내고 싶은 내용을 적어주세요."></textarea>
+                    </fieldset>
+    
+                    <fieldset>
+                        <label for="email">메일 주소 : </label>
+                        <input id="email" name="email" type="email" value="" required placeholder="your-address@email.com" />
+                    </fieldset>
+    
+                    <button class="sendBtn">Send</button>
+                </div>
+    
+                <div class="nextSending">
+                    <p>
+                        연락 보내주셔서 감사합니다🌈 <br>
+                        빠른 시일 내에 연락드리겠습니다.
+                    </p>
+                </div>
+            </form>
+        </div>
+    `);
 
-        <form class="formAll" method="POST" data-email="depo89055@gmail.com"
-            action="https://script.google.com/macros/s/AKfycbwz1MqWC3Ub-CGKYgqbsnyHiRppekx_FAGdsbJErfRLvEj-CEuvE_GgTMKUxpM3qi18sA/exec">
+}
 
-            <div class="formContent">
-                <fieldset>
-                    <label for="name">보내는 이 : </label>
-                    <input id="name" name="name" placeholder="이름을 적어주세요." />
-                </fieldset>
-
-                <fieldset>
-                    <label for="message">메세지 : </label>
-                    <textarea id="message" name="message" placeholder="보내고 싶은 내용을 적어주세요."></textarea>
-                </fieldset>
-
-                <fieldset>
-                    <label for="email">메일 주소 : </label>
-                    <input id="email" name="email" type="email" value="" required placeholder="your-address@email.com" />
-                </fieldset>
-
-                <button class="sendBtn">Send</button>
-            </div>
-
-            <div class="nextSending">
-                <p>
-                    연락 보내주셔서 감사합니다🌈 <br>
-                    빠른 시일 내에 연락드리겠습니다.
-                </p>
-            </div>
-        </form>
-    </div>
-`);
+footerTxtInsert();
 
 // ---- custom mouse ------
 const cursor = document.createElement("div");
@@ -244,7 +249,7 @@ if (window.innerWidth < 768) {
 
 
     // ---------------------- footer Contact ------------------------------
-    (function () {
+    function contact() {
         // get all data in form and return object
         function getFormData(form) {
             var elements = form.elements;
@@ -348,4 +353,5 @@ if (window.innerWidth < 768) {
                 buttons[i].disabled = true;
             }
         }
-    });
+    };
+    contact();
