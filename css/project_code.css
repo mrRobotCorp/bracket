@@ -67,13 +67,17 @@ header { background: rgba(255, 255, 255, 0.804); }
     .projectNav li:last-child { margin-bottom: 0;}
     .projectNav .navAl, .projectNav .navVp, .projectNav .navCls { background-size: cover;} */
 
-    .chevron { width: 22px; height: 5px;}
+    .chevron { margin-top: 60px; width: 22px; height: 5px; }
+    .chevron:before,
+    .chevron:after { background: #999;}
 
 
     .projectVp::before { height: 60vh; background-size: contain; }
+    .projectAl::before { height: 60vh; background-size: contain; }
+    .projectClass::before { height: 60vh; background-size: contain; }
     .projectImg article { height: 60vh; }
 
-
+    .codeEx { padding: 0 40px 50px 40px;}
     .codeEx h2 { font-size: 22px; }
     .codeEx article { flex-direction: column; }
     .codeEx article h3 { font-size: 15px; }
@@ -86,4 +90,4 @@ header { background: rgba(255, 255, 255, 0.804); }
  
  @media screen and (min-width: 1440px) {
 
- }
+ } 
