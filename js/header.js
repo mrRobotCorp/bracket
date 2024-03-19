@@ -89,7 +89,7 @@ function footerTxtInsert() {
 
 footerTxtInsert();
 
-// ---- custom mouse ------
+// ----  mouse element ------
 const cursor = document.createElement("div");
 cursor.setAttribute("class", "cursor");
 const follower = document.createElement("div");
