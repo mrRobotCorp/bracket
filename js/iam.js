@@ -149,8 +149,8 @@ if (window.innerWidth < 768) {
         </div>
         <div class="tlBody" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
             <p class="tlContent">
-                저는 처음 경제 분야의 진로를 목표로 회계 금융 공부를 하였습니다.
-                이 공부를 계기로 숫자의 정확성을 알게되고 수치를 정밀하게 보는 습관을 가지게 되었습니다.
+                저는 고등학생 시절 경제 분야 진로를 목표로 금융 공부를 하고 관련 자격증을 취득하였습니다.
+                이 공부를 계기로 수치를 정밀하게 보는 습관을 가지게 되었습니다.
             </p>
         </div>
     </div>
@@ -170,9 +170,9 @@ if (window.innerWidth < 768) {
         </div>
         <div class="tlBody" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
             <p class="tlContent">
-                적성을 찾아보는 과정에서 저는 보건 분야를 경험해보았습니다.
-                화학 계산식을 배우면서 숫자를 계산하고 이를 여러 화학 물질에 직접 대입하여 실험을 진행하였습니다.
-                이를 통해 자신의 계산과 활용의 절차에 익숙해졌습니다.
+                적성을 찾아보는 과정에서 저는 보건 분야를 공부해보았습니다.
+                화학 계산식을 배우고 이를 여러 화학 물질에 직접 대입하여 실험을 진행하였습니다.
+                이를 통해 자신의 계산과 활용 절차에 익숙해졌습니다.
             </p>
         </div>
     </div>
@@ -192,8 +192,8 @@ if (window.innerWidth < 768) {
         </div>
         <div class="tlBody" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
             <p class="tlContent">
-                디자인 분야의 공부를 시작하였을 때는 uiux로 시작하여 영상과 3D 디자인 등 다양한 미디어 디자인을 경험하였습니다.
-                그 중 웹페이지의 ui 디자인에 가장 관심을 가지고 공부하였습니다.
+                전공으로 디자인 분야를 접하였을 때는 uiux로 시작하여 영상과 3D 디자인 등 다양한 미디어 디자인을 경험하였습니다.
+                그 중 웹페이지 ui 디자인에 가장 관심을 가지고 공부하였습니다.
             </p>
         </div>
     </div>
@@ -213,7 +213,7 @@ if (window.innerWidth < 768) {
         </div>
         <div class="tlBody" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
             <p class="tlContent">
-                숫자의 정확성과 학습의 응용, 웹페이지 기획에 관심을 가졌던 제가 정착한 마지막 종착지는 프로그래밍이었습니다.
+                숫자의 정확성과 학습의 응용을 익히고, 웹페이지 ui/ux에 관심을 가졌던 제가 정착한 마지막 종착지는 프로그래밍이었습니다.
             </p>
         </div>
     </div>
